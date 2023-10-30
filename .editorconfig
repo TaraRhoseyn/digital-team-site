@@ -1,0 +1,33 @@
+# .editorconfig - Coding Conventions
+
+# Top-level Configuration
+root = true
+
+# Default Charset
+[*]
+charset = utf-8
+
+# Indentation Style
+[*]
+indent_style = tab
+indent_size = 1
+
+# Line Endings
+[*]
+end_of_line = lf
+
+# Trim trailing whitespace
+[*]
+trim_trailing_whitespace = true
+
+# Insert final newline
+[*]
+insert_final_newline = true
+
+# JavaScript/TypeScript files
+[*.js]
+indent_size = 2
+
+# Markdown files
+[*.md]
+trim_trailing_whitespace = false

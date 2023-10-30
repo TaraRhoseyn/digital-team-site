@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  },
+  "name": "digital-team-site",
+  "description": "- [Tailwind UI](https://tailwindui.com/)\r - [Flowbite](https://flowbite.com/)\r - [Nunjucks](https://mozilla.github.io/nunjucks/)",
+  "version": "1.0.0",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node js/nunjucks.js"
+  },
+  "author": "Sport Wales",
+  "license": "MIT"
+}
