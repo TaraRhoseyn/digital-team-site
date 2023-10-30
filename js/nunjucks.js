@@ -27,6 +27,7 @@ class Page {
 const pages = [
     new Page('index', 'Home'),
     new Page('principles', 'Principles'),
+    new Page('about', 'About'),
 ]
 
 // entry point:
