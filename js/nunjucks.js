@@ -24,6 +24,34 @@ class Page {
     }
 }
 
+/* for later blogs
+class Blog {
+    constructor(filename, pageTitle, blogAuthor, timedate, profilePic) {
+        this.filename = filename;
+        this.pageTitle = pageTitle;
+        this.blogAuthor = timedate;
+        this.profilePic = profilePic;
+    }
+
+    create() {
+        // adapts file if it's the index.html or 404.html (needs unique file paths and output location)
+        const relFilePath = this.filename !== 'index' && this.filename !== '404' ? '../' : '';
+        const outputLocation = this.filename !== 'index' && this.filename !== '404' ? './pages/' : '';
+
+        fs.writeFileSync(
+            `${outputLocation}${this.filename}.html`,
+            nunjucks.render(`${this.filename}.njk`, {
+                pageTitle: `${this.pageTitle} | Digital and Service Design Team`,
+                filePath: relFilePath,
+                blogAuthor: `${this.blogAuthor}`,
+                profilePic: `${this.profilePic}`,
+            })
+        );
+    }
+}
+
+*/
+
 const pages = [
     new Page('index', 'Home'),
     new Page('principles', 'Principles'),
