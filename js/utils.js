@@ -11,3 +11,15 @@ const calvinProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/
 const steffProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/steffan-bercow.png?raw=true';
 const tomProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tom-morgan.png?raw=true';
 const rhianProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/rhian-evans.png?raw=true';
+
+/*
+idea for automatically tieing author to profile pic:
+1. remove 'ProfileURL' from vars
+2. iterate through this list of profile urls and list of authors
+3. find matches between these vars and list of authors (what to do about owens) 
+4. tie url to author
+
+or - just use a weight/number for each
+or - just use a bunch of if statements (gross)
+
+*/
