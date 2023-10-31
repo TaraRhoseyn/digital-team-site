@@ -1,4 +1,5 @@
 const nunjucks = require('nunjucks');
+
 const fs = require('fs');
 
 nunjucks.configure('./templates', { autoescape: true });
