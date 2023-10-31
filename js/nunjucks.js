@@ -4,6 +4,7 @@ const fs = require('fs');
 nunjucks.configure('./templates', { autoescape: true });
 
 // utils for blogs:
+// TODO: move to 'utils' and import
 const taraProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tara-rhoseyn.png?raw=true';
 const owenSProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owen-sullivan.png?raw=true';
 const owenBProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owen-burgess.png?raw=true';
@@ -22,7 +23,7 @@ const philJob = 'Information Security Lead';
 const paulJob = 'Digital Programme Lead';
 const taraJob = 'Digital and Service Design Programme Manager';
 
-
+// TODO: move to dynamic JSON file to write/read
 const blogData = [
     {
         title: "Why we need a Digital and Service Design Team",
