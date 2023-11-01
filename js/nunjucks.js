@@ -62,12 +62,39 @@ const blogData = [
     },
 ]
 
+class Blog {
+    constructor(filename, pageTitle, author, authorTitle, date, picture) {
+        this.filename = filename;
+        this.pageTitle = pageTitle;
+        this.author = author;
+        this.authorTitle = authorTitle;
+        this.date = date;
+        this.picture = picture;
+    }
+
+    create() {
+
+        fs.writeFileSync(
+            `${outputLocation}${this.filename}.html`,
+            nunjucks.render(`${this.filename}.njk`, {
+                pageTitle: `${this.pageTitle} | Digital and Service Design Team`,
+                author: author,
+                authorTitle: authorTitle,
+                date: date,
+                picture: picture
+            })
+        );
+    }
+}
+
 
 class Page {
     constructor(filename, pageTitle) {
         this.filename = filename;
         this.pageTitle = pageTitle;
     }
+
+    
 
     create() {
         // adapts file if it's the index.html or 404.html (needs unique file paths and output location)
@@ -92,10 +119,17 @@ const pages = [
     new Page('about', 'About'),
 ]
 
+const blogs = [
+    new Blog('blog1', 'My new blog', 'Paul Batcup', 'Boss Man', 'Oct 11', paulProfileURL),
+]
+
 // entry point:
 try {
     for (const page of pages) {
         page.create();
+    }
+    for (const blog of blogs) {
+        blog.create();
     }
     console.log('Pages successfully created.');
 } catch (error) {
