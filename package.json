@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "test",
-    "start": "node js/nunjucks.js"
+    "start": "node app.js"
   },
   "author": "Sport Wales",
   "license": "MIT"

@@ -1,29 +1,10 @@
-// configuring nunjucks:
+import * as util from 'app/utils'
+
 const nunjucks = require('nunjucks');
 const fs = require('fs');
-nunjucks.configure('./templates', { autoescape: true });
+nunjucks.configure('src', { autoescape: true });
 
-// utils for blogs:
-// TODO: move to 'utils' and import
-const taraProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tara-rhoseyn.png?raw=true';
-const owenSProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owen-sullivan.png?raw=true';
-const owenBProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owen-burgess.png?raw=true';
-const anselmProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/anselm-powell.png?raw=true';
-const owainProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owain-morris.png?raw=true';
-const philProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/phil-stephens.png?raw=true';
-const paulProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/paul-batcup.png?raw=true';
-const mattKProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/matt-kinnear.png?raw=true';
-const mathewProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/mathew-james.png?raw=true';
-const calvinProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/calvin-ley.png?raw=true';
-const steffProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/steffan-bercow.png?raw=true';
-const tomProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tom-morgan.png?raw=true';
-const rhianProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/rhian-evans.png?raw=true';
-const genericProfileURL = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/generic-user.png?raw=true'
-const philJob = 'Information Security Lead';
-const paulJob = 'Digital Programme Lead';
-const taraJob = 'Digital and Service Design Programme Manager';
 
-// TODO: move to dynamic JSON file to write/read
 const blogData = [
     {
         title: "Why we need a Digital and Service Design Team",
@@ -41,9 +22,9 @@ const blogData = [
     },
     {
         title: "Lost at the National Centre",
-        profilePicture: paulProfileURL,        
+        profilePicture: util.profile.paul_batcup_profile,        
         author: "Paul Batcup",
-        authorTitle: paulJob,
+        authorTitle: util.job.paul_batcup_job,
         date: "October 15, 2023",
     },
     {
@@ -62,18 +43,31 @@ const blogData = [
     },
 ]
 
+function returnProfile(author) {
+    profilePicture = author.lowercase();
+    profilePicture = profilePicture.replaceAll(" ", "_");
+    profilePicture = 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/'+profilePicture+'.png?raw=true';
+    return profilePicture
+}
+
+function returnJob(author) {
+    job = author.lowercase();
+    job = job.replaceAll(" ", "_");
+    job = job+'_job';
+    return job
+}
+
 class Blog {
-    constructor(filename, pageTitle, author, authorTitle, date, picture) {
+    constructor(filename, pageTitle, author, authorTitle, date, profilePicture) {
         this.filename = filename;
         this.pageTitle = pageTitle;
         this.author = author;
-        this.authorTitle = authorTitle;
+        this.authorTitle = returnJob(author);
         this.date = date;
-        this.picture = picture;
+        this.profilePicture = returnProfile(author);
     }
 
     create() {
-
         fs.writeFileSync(
             `${outputLocation}${this.filename}.html`,
             nunjucks.render(`${this.filename}.njk`, {
@@ -81,7 +75,7 @@ class Blog {
                 author: author,
                 authorTitle: authorTitle,
                 date: date,
-                picture: picture
+                profilePicture: profilePicture
             })
         );
     }
@@ -94,12 +88,10 @@ class Page {
         this.pageTitle = pageTitle;
     }
 
-    
-
     create() {
         // adapts file if it's the index.html or 404.html (needs unique file paths and output location)
         const relFilePath = this.filename !== 'index' && this.filename !== '404' ? '../' : '';
-        const outputLocation = this.filename !== 'index' && this.filename !== '404' ? './pages/' : '';
+        const outputLocation = 'dist/';
 
         fs.writeFileSync(
             `${outputLocation}${this.filename}.html`,
