@@ -9,7 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "test",
-    "start": "node app.js"
+    "start": "node --trace-warnings --experimental-modules app/app.js"
   },
   "author": "Sport Wales",
   "license": "MIT"
