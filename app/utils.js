@@ -1,3 +1,7 @@
+/*
+This file offers utility
+variables to keep code DRY
+*/
 const profile = {
     tara_rhoseyn_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tara-rhoseyn.png?raw=true',
     owen_sullivan_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/owen-sullivan.png?raw=true',
