@@ -13,6 +13,7 @@ const profile = {
     tom_morgan_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/tom-morgan.png?raw=true',
     rhian_evans_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/rhian-evans.png?raw=true',
     yusra_hussain_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/yusra-hussain.png?raw=true',
+    generic_user_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/assets/img/profiles/generic-user.png?raw=true',
 }
 
 const job = {

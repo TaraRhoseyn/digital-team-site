@@ -2,16 +2,9 @@
 
 const util = require('./utils');
 const nunjucks = require('nunjucks');
-const fs = require('fs');
-nunjucks.configure('src', { autoescape: true });
-
-const taraProfileURL = util.profile.tara_rhoseyn_profile;
-const owenSProfileURL = util.profile.owen_sullivan_profile;
-const paulJob = util.job.paul_batcup_job;
-
-
 const Page = require('./page');
 const Blog = require('./blog');
+nunjucks.configure('src', { autoescape: true });
 
 const pages = [
     // Page(filename of njk and html, page title)
@@ -22,20 +15,23 @@ const pages = [
 
 const blogs = [
     // Blog(filename, title, author, authorJob, date, profilePicture)
-    new Blog('blog1', 'My new blog', 'Paul Batcup', util.profile.paul_batcup_job, 'Oct 11', util.profile.paul_batcup_profile),
-    new Blog('blog2', 'Another blog', 'Tara Rhoseyn', util.profile.tara_rhoseyn_job, 'Oct 11', util.profile.tara_rhoseyn_profile),
+    new Blog('blog1', 'Lost at the National Centre', 'Paul Batcup', util.profile.paul_batcup_job, 'October 15, 2023', util.profile.paul_batcup_profile),
+    new Blog('blog2', 'How we created the new Digital and Service Design Principles', 'Tara Rhoseyn', util.profile.tara_rhoseyn_job, 'Oct 11', util.profile.tara_rhoseyn_profile),
+    new Blog('blog3', 'Why we need a Digital and Service Design Team', 'Phil Stephens', util.profile.phil_stephens_job, 'October 1, 2023', util.profile.phil_stephens_profile),
+    new Blog('blog4', 'National Centre - The Digital Journey Begins', 'Craig Nowell', 'Assistant Director National Sport Facilities, Infrastructure and Capital', 'October 15, 2023', util.profile.generic_user_profile),
+    new Blog('blog5', 'Take a giant leap... With one small step', 'Paul Batcup', util.profile.paul_batcup_job, 'October 15, 2023', util.profile.paul_batcup_profile),
 ]
 
-// entry point:
-try {
-    for (const page of pages) {
-        page.create();
+function createPages(type) {
+    try {
+        for (const i of type) {
+            i.create();
+        }
+        console.log('Pages successfully created.');
+    } catch (error) {
+        console.error('Error rendering or writing pages:', error);
     }
-    for (const blog of blogs) {
-        blog.create();
-    }
-    console.log('Pages successfully created.');
-} catch (error) {
-    console.error('Error rendering or writing pages:', error);
 }
 
+createPages(blogs)
+createPages(pages)
