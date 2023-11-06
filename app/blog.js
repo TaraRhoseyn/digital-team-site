@@ -12,27 +12,23 @@ class Blog {
 		this.profilePicture = profilePicture;
 	}
 
-	static appendDataToJSON(filePath, newData, callback) {
+	static readDataFromJSONFile(filePath, callback) {
 		fs.readFile(filePath, "utf8", (err, data) => {
 			if (err) return callback(err);
 
-			let existingData = JSON.parse(data);
-			existingData.push(newData);
+			const jsonData = JSON.parse(data);
+			callback(null, jsonData);
+		});
+	}
 
-			fs.writeFile(
-				filePath,
-				JSON.stringify(existingData, null, 2),
-				"utf8",
-				(err) => {
-					callback(err);
-				}
-			);
+	static writeDataToJSONFile(filePath, data, callback) {
+		fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf8", (err) => {
+			callback(err);
 		});
 	}
 
 	create() {
-
-        const filePath = './blogData.json';
+        const filePath = './data/blogData.json';
         const newData = {
             filename: this.filename,
 		    pageTitle: this.pageTitle,
@@ -42,13 +38,22 @@ class Blog {
 		    profilePicture: this.profilePicture,
         }
 
-        appendDataToJSONFile(filePath, newData, (err) => {
-            if (err) {
-              console.error('Error appending data to JSON file:', err);
-            } else {
-              console.log('Data successfully appended to JSON file.');
+        Blog.readDataFromJSONFile(filePath, (readErr, existingData) => {
+            if (readErr) {
+                console.error('Error reading the JSON file with blog data:', readErr);
+                return;
             }
-          });
+
+            existingData.push(newData);
+
+            Blog.writeDataToJSONFile(filePath, existingData, (writeErr) => {
+                if (writeErr) {
+                    console.error('Error writing data to JSON file:', writeErr);
+                } else {
+                    console.log('Data successfully appended to JSON file.');
+                }
+            });
+        });
 
 		// append to the blogData.json for index.html
 		const outputLocation = "dist/";

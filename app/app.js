@@ -23,6 +23,7 @@ const pages = [
 const blogs = [
     // Blog(filename, title, author, authorJob, date, profilePicture)
     new Blog('blog1', 'My new blog', 'Paul Batcup', util.profile.paul_batcup_job, 'Oct 11', util.profile.paul_batcup_profile),
+    new Blog('blog2', 'Another blog', 'Tara Rhoseyn', util.profile.tara_rhoseyn_job, 'Oct 11', util.profile.tara_rhoseyn_profile),
 ]
 
 // entry point:
