@@ -1,0 +1,182 @@
+[
+    {
+        "term": "Cloud",
+        "definition": "The ‘cloud’ refers to remote servers and data storage that’s accessible via the internet, enabling businesses and individuals to access and use computing resources without the need for physical infrastructure."
+    },
+    {
+        "term": "CDPS",
+        "definition": "Centre for Digital Public Services. Established by the Welsh Government to support the design and improvement of digital public services in Wales."
+    },
+    {
+        "term": "Infrastructure",
+        "definition": "‘Infrastructure’ encompasses the fundamental hardware and software components that support the operation of IT systems, including servers, networks, storage and more."
+    },
+    {
+        "term": "Service design",
+        "definition": "Service design is a multidisciplinary approach focussed on creating and improving services to enhance user experience, combining elements of user research, prototyping and user-centred design."
+    },
+    {
+        "term": "User experience (UX)",
+        "definition": "User experience refers to the overall interaction and satisfaction that users have when engaging with a product, service, or system. UX design focuses on creating experiences that are intuitive, efficient, and enjoyable for users, considering their needs and preferences throughout the design process."
+    },
+    {
+        "term": "User-centred design",
+        "definition": "The process of designing products or interfaces with a focus on providing a positive and user-friendly experience."
+    },
+    {
+        "term": "Content design",
+        "definition": "Content design involves crafting and structuring digital content to be clear, user-friendly, and engaging, considering the needs and preferences of the target audience."
+    },
+    {
+        "term": "Website development",
+        "definition": "Website development encompasses the entire process of creating and maintaining a website, including tasks like coding, designing, and content integration."
+    },
+    {
+        "term": "Frontend",
+        "definition": "The frontend refers to the user interface of a website or application that users interact with directly. It involves designing and coding elements that users see and interact with."
+    },
+    {
+        "term": "Backend",
+        "definition": "The backend is the hidden part of a website or application that manages data, processing, and server interactions. It includes the server, database, and application logic."
+    },
+    {
+        "term": "Fullstack",
+        "definition": "Full stack development is work that requires expertise in both front-end and back-end development, capable of working on all aspects of a digital project."
+    },
+    {
+        "term": "Database",
+        "definition": "A database is a structured collection of data that is organized and stored for efficient retrieval and manipulation, commonly used to store and manage information in applications."
+    },
+    {
+        "term": "Server",
+        "definition": "A server is a computer or system that provides services, data, or resources to other devices or clients over a network, such as hosting websites or handling data storage."
+    },
+    {
+        "term": "Switch",
+        "definition": "A network switch is a hardware device used to connect and manage data traffic between multiple devices on a local area network (LAN)."
+    },
+    {
+        "term": "Waterfall",
+        "definition": "The Waterfall model is a traditional, sequential project management methodology where each phase of a project (requirements, design, implementation, testing, deployment, and maintenance) must be completed before moving on to the next. It's characterized by its rigid, linear approach, with limited opportunities for feedback and changes once a phase is completed."
+    },
+    {
+        "term": "Network",
+        "definition": "A network is a system of interconnected devices and components that enable data communication and resource sharing, either locally or globally."
+    },
+    {
+        "term": "Azure",
+        "definition": "Microsoft Azure is a cloud computing platform that offers a wide range of services, including hosting, virtual machines, databases, and more, for building, deploying, and managing applications."
+    },
+    {
+        "term": "API (Application Programming Interface)",
+        "definition": "A set of rules and protocols that allows different software applications to communicate and interact with each other. You can think of APIs like restaurant wait staff bringing food to your table from the kitchen, your table is your own software application, the food is what you want (usually data) from elsewhere, and the kitchen is the software application."
+    },
+    {
+        "term": "Agile",
+        "definition": "A project management and software development methodology that emphasizes flexibility, collaboration, and iterative development. In agile projects, outputs are typically released in cyclical phases called ‘iterations’."
+    },
+    {
+        "term": "Sprint",
+        "definition": "In the context of agile project management, a sprint is a time-boxed development cycle typically lasting 2-4 weeks during which a cross-functional team works on a defined set of tasks or user stories, aiming to produce a potentially shippable product increment."
+    },
+    {
+        "term": "SaaS (Software as a Service)",
+        "definition": "Software delivered over the internet, usually on a subscription basis, allowing users to access and use applications without local installations."
+    },
+    {
+        "term": "Wireframe",
+        "definition": "A wireframe is a simplified visual representation of a webpage or application's layout, illustrating the placement of elements without detailed design, used to plan and communicate the structure of a user interface."
+    },
+    {
+        "term": "Prototype",
+        "definition": "A prototype is a working or non-working model of a digital product or service created for testing and evaluation, helping designers and stakeholders visualize the final product and gather user feedback."
+    },
+    {
+        "term": "Persona",
+        "definition": "Personas are fictional characters or user profiles created to represent the typical traits, behaviors, and needs of different user groups, aiding in user-centered design and decision-making."
+    },
+    {
+        "term": "A/B Testing",
+        "definition": "A/B testing, also known as split testing, is a method of comparing two or more variations of a webpage or feature to determine which one performs better in terms of user engagement, conversions, or other metrics."
+    },
+    {
+        "term": "Responsive Design",
+        "definition": "Responsive design is an approach to web design that ensures a website or application adapts and displays correctly on various devices and screen sizes, providing a consistent user experience."
+    },
+    {
+        "term": "Content Management System (CMS)",
+        "definition": "A CMS is a software platform that allows users to create, manage, and update digital content, making it easier to publish and maintain websites and applications."
+    },
+    {
+        "term": "DevOps",
+        "definition": "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to streamline and automate the software development and delivery process, improving collaboration and deployment efficiency."
+    },
+    {
+        "term": "Information Architecture",
+        "definition": "Information architecture involves organizing and structuring content and data within a website or application to enhance usability and findability for users."
+    },
+    {
+        "term": "User Flow",
+        "definition": "User flow represents the path users take through a website or application to achieve a specific goal, helping designers visualize the user journey and optimize the user experience."
+    },
+    {
+        "term": "CI/CD (Continuous Integration/Continuous Deployment)",
+        "definition": "CI/CD is a software development practice that automates the integration, testing, and deployment of code changes, ensuring a more efficient and reliable development process."
+    },
+    {
+        "term": "User Testing",
+        "definition": "User testing is a research method in which real users interact with a product, service, or prototype to evaluate its usability and functionality. Insights gathered from user testing help designers and developers identify issues, gather feedback, and make improvements to enhance the user experience."
+    },
+    {
+        "term": "User Research",
+        "definition": "User research involves various methods, such as interviews, surveys, and observations, to gain insights into user behavior, needs, and preferences to inform the design process."
+    },
+    {
+        "term": "Service Blueprint",
+        "definition": "A service blueprint is a visual representation of a service's components, processes, and interactions, helping to analyze and improve service design and delivery."
+    },
+    {
+        "term": "Accessibility",
+        "definition": "Accessibility in design ensures that digital products and services are usable by people with disabilities, addressing issues such as visual, auditory, motor, and cognitive impairments."
+    },
+    {
+        "term": "Web Content Accessibility Guidelines (WCAG)",
+        "definition": "WCAG is a set of internationally recognized standards developed by the World Wide Web Consortium (W3C) to ensure that digital content, such as websites and web applications, is accessible to people with disabilities. These guidelines provide specific criteria for making web content perceivable, operable, understandable, and robust for all users, regardless of their abilities or disabilities. WCAG compliance is crucial for creating inclusive and accessible digital experiences."
+    },
+    {
+        "term": "Interaction Design",
+        "definition": "Interaction design focuses on designing the interactive elements and behaviors of a digital product to provide a seamless and engaging user experience."
+    },
+    {
+        "term": "Cybersecurity",
+        "definition": "Cybersecurity involves the practice of protecting computer systems, networks, and data from cyber threats and attacks, ensuring data confidentiality, integrity, and availability."
+    },
+    {
+        "term": "Firewall",
+        "definition": "A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic, acting as a barrier between a trusted network and untrusted networks (like the internet)."
+    },
+    {
+        "term": "Malware",
+        "definition": "Malware is malicious software designed to harm or compromise computer systems, including viruses, spyware, ransomware, and Trojans."
+    },
+    {
+        "term": "Git",
+        "definition": "Git is a distributed version control system used by developers to track changes in code, collaborate with others, and manage software projects."
+    },
+    {
+        "term": "GitHub",
+        "definition": "GitHub is a web-based platform and version control system that enables developers to collaborate on code, manage software projects, and track changes. It provides features for code hosting, issue tracking, and collaborative development, making it a central hub for software development teams to work together and manage their code repositories."
+    },
+    {
+        "term": "Debugging",
+        "definition": "Debugging is the process of identifying and resolving issues or defects in software code to ensure it functions correctly."
+    },
+    {
+        "term": "Integrated Development Environment (IDE)",
+        "definition": "An IDE is a software suite that provides tools for coding, debugging, testing, and project management in a single integrated environment."
+    },
+    {
+        "term": "Customer Relationship Management (CRM)",
+        "definition": "CRM is a technology and strategy for managing interactions and relationships with customers, clients, or potential leads. It involves storing and analyzing customer data to improve communication, personalize interactions, and enhance customer satisfaction, often used in sales, marketing, and customer support."
+    }
+]

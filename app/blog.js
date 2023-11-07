@@ -7,7 +7,7 @@ That blog information is to be used in previews
 */
 const nunjucks = require('nunjucks');
 const fs = require('fs');
-const blogData = require('./data');
+const { blogData } = require('./data');
 nunjucks.configure('src', { autoescape: true });
 
 class Blog {

@@ -18,6 +18,7 @@ const pages = [
     new Page('index', 'Home'),
     new Page('principles', 'Principles'),
     new Page('about', 'About'),
+    new Page('glossary', 'Glossary'),
 ]
 
 const blogs = [
