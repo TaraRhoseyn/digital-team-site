@@ -8,7 +8,6 @@ const path = require('path');
 
 const blogData = []
 
-
 function readGlossaryData() {
     const filePath = path.join(__dirname, 'data', 'glossary.json');
     try {
@@ -20,9 +19,9 @@ function readGlossaryData() {
     }
 }
 
-
+// populates arr from json:
 glossaryData = readGlossaryData();
-
+// sorts glossary alphabetically:
 glossaryData.sort((a, b) => a.term.localeCompare(b.term));
 
 module.exports = {

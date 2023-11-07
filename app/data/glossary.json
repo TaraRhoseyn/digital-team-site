@@ -81,7 +81,7 @@
     },
     {
         "term": "SaaS (Software as a Service)",
-        "definition": "Software delivered over the internet, usually on a subscription basis, allowing users to access and use applications without local installations."
+        "definition": "Software delivered over the internet, usually on a subscription basis, allowing users to access and use applications without local installations. An example of this would be Microsoft Office 365, Advanced Financials, Mailchimp, G-Mail etc."
     },
     {
         "term": "Wireframe",
@@ -178,5 +178,33 @@
     {
         "term": "Customer Relationship Management (CRM)",
         "definition": "CRM is a technology and strategy for managing interactions and relationships with customers, clients, or potential leads. It involves storing and analyzing customer data to improve communication, personalize interactions, and enhance customer satisfaction, often used in sales, marketing, and customer support."
+    },
+    {
+        "term": "On-prem (on-premise)",
+        "definition": "IT Infrastructure installed and accessed whilst connected to the corporate network."
+    },
+    {
+        "term": "Client",
+        "definition": "A PC, Laptop, tablet, mobile phone or other device that is capable of obtaining information and applications from a server."
+    },
+    {
+        "term": "Application (App)",
+        "definition": "An application is a software program that's designed to perform a specific function directly for the user or, in some cases, for another application program."
+    },
+    {
+        "term": "Structured Query Language (SQL)",
+        "definition": "Structured Query Language is a domain-specific language used in programming and designed for managing data held in a relational database management system, or for stream processing in a relational data stream management system. It's a common database language used in the backend to store data that can be connected to other data."
+    },
+    {
+        "term": "Data Centre",
+        "definition": "A facility that centralizes an organisation's IT operations and equipment for the purposes of storing, processing and disseminating data and applications. Because they house an organisation's most critical and proprietary assets, data centres are vital to the continuity of daily operations."
+    },
+    {
+        "term": "User Interface (UI)",
+        "definition": "User Interface is the point of human-computer interaction and communication in a device. This can include display screens, keyboards, a mouse and the appearance of a desktop."
+    },
+    {
+        "term": "Hosted",
+        "definition": "This is effectively the same as running the application(s) on-premise except the servers are held within a data centre.  This data centre could be shared or it could be a simple infrastructure located in the providers own facilities.  Access is normally via VPN or published Desktop application using Terminal Services."
     }
 ]
