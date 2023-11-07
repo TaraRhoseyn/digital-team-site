@@ -16,14 +16,12 @@ class Page {
     }
 
     create() {
-        const relFilePath = this.filename !== 'index' && this.filename !== '404' ? '../' : '';
         // renders html in dist dir from njk:
         const outputLocation = 'dist/';
         fs.writeFileSync(
             `${outputLocation}${this.filename}.html`,
             nunjucks.render(`${this.filename}.njk`, {
                 pageTitle: `${this.pageTitle} | Digital and Service Design Team`,
-                filePath: relFilePath,
                 // sends blog data for previews:
                 blogs: blogData
             })
