@@ -1,22 +1,21 @@
 {% extends "base.njk" %}
 {% block content %}
-    <div class="container mx-auto px-9">
-        <h1 class="my-20 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+    <div class="container mx-auto px-9 max-w-screen-xl">
+        <h1 class="mt-20 mb-10 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
             Glossary</h1>
         <!-- search input -->
-        {# <input type="text" id="searchInput" placeholder="Search for a term..."> #}
         <div class="input-container">
-            <label for="searchInput" class="block mb-2 text-lg font-large text-black-900 dark:text-white">Search</label>
-            <input type="text" id="searchInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search for a term...">
+            <label for="searchInput" class="block mb-2 text-lg font-large text-black-900 dark:text-white">Search for a term:</label>
+            <input type="text" id="searchInput" class="mb-10 bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start typing in a term...">
         </div>
         <!-- glossary items -->
         <div id="glossaryContainer">
             {% for gloss in glossary %}
                 <div class="glossary-item">
-                    <p class="term text-2xl text-black-700 dark:text-white">{{ gloss.term }}</p>
+                    <p class="term text-2xl text-black-700 dark:text-white font-semibold">{{ gloss.term }}</p>
                     <p class="my-5">{{ gloss.definition }}</p>
                 </div>
             {% endfor %}
         </div>
     </div>
-    {% endblock %}
+{% endblock %}

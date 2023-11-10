@@ -68,7 +68,7 @@
         "definition": "Microsoft Azure is a cloud computing platform that offers a wide range of services, including hosting, virtual machines, databases, and more, for building, deploying, and managing applications."
     },
     {
-        "term": "API (Application Programming Interface)",
+        "term": "Application Programming Interface (API)",
         "definition": "A set of rules and protocols that allows different software applications to communicate and interact with each other. You can think of APIs like restaurant wait staff bringing food to your table from the kitchen, your table is your own software application, the food is what you want (usually data) from elsewhere, and the kitchen is the software application."
     },
     {
