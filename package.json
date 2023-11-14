@@ -6,7 +6,6 @@
   "description": "- [Tailwind UI](https://tailwindui.com/)\r - [Flowbite](https://flowbite.com/)\r - [Nunjucks](https://mozilla.github.io/nunjucks/)",
   "version": "1.0.0",
   "main": "index.html",
-  "devDependencies": {},
   "scripts": {
     "test": "test",
     "start": "node --trace-warnings --experimental-modules app/app.js"
