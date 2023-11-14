@@ -1,70 +1,80 @@
 {% extends "base.njk" %}
 {% block content %}
-<h1>How we created the new Digital and Service Design Principles</h1>
-<h2>By {{author}}</h2>
-<p>Sporting performance is often marked out of 10, so it’s a nice fit that we’ll have 10 principles to judge potential digital projects.</p>
-<p>Not that we set out to make it 10…but I think, after lots of tweaks and changes, we’ve got a good mix.</p>
-<p>As a new team we wanted to set out how we want to work with each other and the rest of the organisation.</p>
-<p>Sport Wales previously created a set of Digital Principles to govern how digital projects work, but they weren’t well communicated and we felt they needed a revamp. We wanted our principles to be clear, understandable, and agile.</p>
-<p>We decided to go through an iterative process (creating new versions based on feedback) to create our new principles. We needed our principles to help us achieve these goals:</p>
-<ul>
-    <li>all our software is integrated, sustainable and accessible</li>
-    <li>we work to best practice in the public sector and digital space</li>
-    <li>we have clear ways of working with colleagues and procured partners</li>
+    <div class="container mx-auto px-9 max-w-screen-xl">
+    <h1 class="mt-20 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        How we created the new Digital and Service Design Principles</h1>
+    <p class="mt-2 mb-7 text-slate-500">{{ date }}</p>
+    <div class="flex justify-left items-left mb-7">
+        <img
+            src="{{ profilePicture }}"
+            alt="{{ author }}'s Picture"
+            class="h-10 w-10 rounded-full bg-gray-50 mr-3">
+        <h2 class="mt-2 text-slate-500">By {{author}}</h2>
+    </div>
+<p class="mt-3">Sporting performance is often marked out of 10, so it’s a nice fit that we’ll have 10 principles to judge potential digital projects.</p>
+<p class="mt-3">Not that we set out to make it 10…but I think, after lots of tweaks and changes, we’ve got a good mix.</p>
+<p class="mt-3">As a new team we wanted to set out how we want to work with each other and the rest of the organisation.</p>
+<p class="mt-3">Sport Wales previously created a set of Digital Principles to govern how digital projects work, but they weren’t well communicated and we felt they needed a revamp. We wanted our principles to be clear, understandable, and agile.</p>
+<p class="mt-3">We decided to go through an iterative process (creating new versions based on feedback) to create our new principles. We needed our principles to help us achieve these goals:</p>
+<ul class="list-disc pl-10 mt-3">
+    <li class="mb-2">all our software is integrated, sustainable and accessible</li>
+    <li class="mb-2">we work to best practice in the public sector and digital space</li>
+    <li class="mb-2">we have clear ways of working with colleagues and procured partners</li>
 </ul>
-<p>And we now have a version of the principles ready for use. We have a long-form version that has an explanation of each principle and a short-form version for easy distribution.</p>
-<h3>Short-form principles</h3>
-<ol>
-    <li>Design services based on user needs</li>
-    <li>Bring people together for the long term</li>
-    <li>Make decisions based on insight</li>
-    <li>Deliver together</li>
-    <li>Create inclusive and accessible services</li>
-    <li>Create integrated services</li>
-    <li>Share work with others</li>
-    <li>Be agile and adapt</li>
-    <li>Test and change</li>
-    <li>Learn and innovate</li>
+<p class="mt-3">And we now have a version of the principles ready for use. We have a long-form version that has an explanation of each principle and a short-form version for easy distribution.</p>
+<h3 class="text-xl font-bold mt-5 mb-5">Short-form principles</h3>
+<ol class="list-disc pl-10 mt-3">
+    <li class="mb-2">Design services based on user needs</li>
+    <li class="mb-2">Bring people together for the long term</li>
+    <li class="mb-2">Make decisions based on insight</li>
+    <li class="mb-2">Deliver together</li>
+    <li class="mb-2">Create inclusive and accessible services</li>
+    <li class="mb-2">Create integrated services</li>
+    <li class="mb-2">Share work with others</li>
+    <li class="mb-2">Be agile and adapt</li>
+    <li class="mb-2">Test and change</li>
+    <li class="mb-2">Learn and innovate</li>
 </ol>
-<h3>Long-form principles</h3>
-<p>You can view the principles with more explanation and links to further reading:</p>
+<h3 class="text-xl font-bold mt-5 mb-5">Long-form principles</h3>
+<p class="mt-3 mb-3">You can view the principles with more explanation and links to further reading:</p>
 <a
-    href="#"
-    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border
-        border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700
-        dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+    href="principles.html"
+    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg 
+    text-sm px-5 py-2.5 text-center mb-2 mt-6">
     Longer principles
 </a>
-<h3>How we decided on them</h3>
-<p>We began by looking at the original Principles and figuring out what worked well and what didn’t work so well:</p>
-<ul>
-    <li>We will adopt a service-design approach, putting the user at the heart of everything we deliver</li>
-    <li>We will design serrvices that offer real value to our users based on their needs</li>
-    <li>We will take an insight-driven approach to decision making</li>
-    <li>We will simplify architecture with a cloud-first approach</li>
-    <li>We will develop nad procure solutions that are modular by design and create integrated ecosystems</li>
-    <li>We will encourage a culture of person-centred design and encourage exploration and innovation</li>
-    <li>We will deliver together, sharing and communicating change as it happens</li>
-    <li>We will prioritise based on needs and value, not budgets or hierarchy</li>
-    <li>We will adopt the agile mindset, delivering value as we go</li>
-    <li>We will invest in capabilities and capacity to deliver</li>
+<h3 class="text-xl font-bold mt-5 mb-5">How we decided on them</h3>
+<p class="mt-3">We began by looking at the original Principles and figuring out what worked well and what didn’t work so well:</p>
+<ul class="list-disc pl-10 mt-3">
+    <li class="mb-2">We will adopt a service-design approach, putting the user at the heart of everything we deliver</li>
+    <li class="mb-2">We will design serrvices that offer real value to our users based on their needs</li>
+    <li class="mb-2">We will take an insight-driven approach to decision making</li>
+    <li class="mb-2">We will simplify architecture with a cloud-first approach</li>
+    <li class="mb-2">We will develop nad procure solutions that are modular by design and create integrated ecosystems</li>
+    <li class="mb-2">We will encourage a culture of person-centred design and encourage exploration and innovation</li>
+    <li class="mb-2">We will deliver together, sharing and communicating change as it happens</li>
+    <li class="mb-2">We will prioritise based on needs and value, not budgets or hierarchy</li>
+    <li class="mb-2">We will adopt the agile mindset, delivering value as we go</li>
+    <li class="mb-2">We will invest in capabilities and capacity to deliver</li>
 </ul>
-<p>We liked how much priority was placed on user needs but felt that it could alienate colleagues with its highly technical language.</p>
-<p>We then did research into how other organisations had tackled this problem, including the CDPS (Cente for Digital Public Services) and GDS (Government Digital Service).</p>
-<p>Then we dived in and began writing. We recorded each version we made, the feedback gathered on it, then how the next version had been changed based on the feedback (using Principle 9 – Test and Change). We used forms, shared documents and a board showing all the feedback gathered to track changes:</p>
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQEHv8GEN93pY5ceMCWS66P%2FIterations-and-feedback%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DTV5dhSxA8uHAtpgX-1" allowfullscreen></iframe>
-<p>All of the yellow post-it notes are pieces of feedback that were directly implemented in the next version.</p>
-<p>Feedback came from three core groups:</p>
-<ul>
-    <li>Group A: digitally-based colleagues, including the Digital and Service Design Team, Digital and Communications, and Technology Solutions</li>
-    <li>Group B: Representatives from across SPort Wales directorates, particularly focusing on Investment, Insight, and Institute</li>
-    <li>Group C: Experts from industry, including GDS, CDPS, Perago, Empyrean, Method4, and MadeTech</li>
+<p class="mt-3">We liked how much priority was placed on user needs but felt that it could alienate colleagues with its highly technical language.</p>
+<p class="mt-3">We then did research into how other organisations had tackled this problem, including the CDPS (Cente for Digital Public Services) and GDS (Government Digital Service).</p>
+<p class="mt-3">Then we dived in and began writing. We recorded each version we made, the feedback gathered on it, then how the next version had been changed based on the feedback (using Principle 9 – Test and Change). We used forms, shared documents and a board showing all the feedback gathered to track changes:</p>
+<div class="flex items-center justify-center h-screen">
+    <iframe class="mt-1 mb-1" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FQEHv8GEN93pY5ceMCWS66P%2FIterations-and-feedback%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DTV5dhSxA8uHAtpgX-1" allowfullscreen></iframe>
+</div>
+<p class="mt-3">All of the yellow post-it notes are pieces of feedback that were directly implemented in the next version.</p>
+<p class="mt-3">Feedback came from three core groups:</p>
+<ul class="list-disc pl-10 mt-3" pl-10 mt-3" pl-10 mt-3" pl-10 mt-3">
+    <li class="mb-2">Group A: digitally-based colleagues, including the Digital and Service Design Team, Digital and Communications, and Technology Solutions</li>
+    <li class="mb-2">Group B: Representatives from across SPort Wales directorates, particularly focusing on Investment, Insight, and Institute</li>
+    <li class="mb-2 ">Group C: Experts from industry, including GDS, CDPS, Perago, Empyrean, Method4, and MadeTech</li>
 </ul>
-<p>We want to thank all of those who lent us their time and expertise in helping us craft these principles.</p>
-<h3>What we learnt from the process</h3>
-<p>Developing a project through iteration is becoming more and more common at Sport Wales and the process of creating these Principles was a great lesson in the benefits of ‘sharing work with others’ (Principle 7). Each piece of feedback collected was available via an online link (you can still view this file now) and each colleague and expert could directly see that their feedback had shaped the Principles.</p>
-<p>I also learnt just how much excitement and appetite there is across the business for the new team. There’s a real excitement in the air around what can be achieved with this renewed focus on developing our digital capacity. </p>
-<h3>What next</h3>
-<p>You may start to see some visual reminders of the new principles, and they’re also available online. We encourage you to read them and we hope they spark some thinking about what it means to start, commit and deliver projects together.</p>
-<p>In the coming months, you’ll hear more from us about how to propose digital and service design projects and what we’re working on. Keep an eye out for news in Huddle, Kit and on our website!</p>
+<p class="mt-3">We want to thank all of those who lent us their time and expertise in helping us craft these principles.</p>
+<h3 class="text-xl font-bold mt-5 mb-5">What we learnt from the process</h3>
+<p class="mt-3">Developing a project through iteration is becoming more and more common at Sport Wales and the process of creating these Principles was a great lesson in the benefits of ‘sharing work with others’ (Principle 7). Each piece of feedback collected was available via an online link (you can still view this file now) and each colleague and expert could directly see that their feedback had shaped the Principles.</p>
+<p class="mt-3">I also learnt just how much excitement and appetite there is across the business for the new team. There’s a real excitement in the air around what can be achieved with this renewed focus on developing our digital capacity. </p>
+<h3 class="text-xl font-bold mt-5 mb-5">What next</h3>
+<p class="mt-3">You may start to see some visual reminders of the new principles, and they’re also available online. We encourage you to read them and we hope they spark some thinking about what it means to start, commit and deliver projects together.</p>
+<p class="mt-3">In the coming months, you’ll hear more from us about how to propose digital and service design projects and what we’re working on. Keep an eye out for news in Huddle, Kit and on our website!</p>
 {% endblock %}

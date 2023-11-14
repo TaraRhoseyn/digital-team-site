@@ -28,7 +28,7 @@ const blogs = [
         util.profile.paul_batcup_job, 'October 15, 2023', util.profile.paul_batcup_profile),
     new Blog(
         'blog2', 'How we created the new Digital and Service Design Principles', 'Tara Rhoseyn', 
-        util.profile.tara_rhoseyn_job, 'Oct 11', util.profile.tara_rhoseyn_profile),
+        util.profile.tara_rhoseyn_job, 'Oct 11, 2023', util.profile.tara_rhoseyn_profile),
     new Blog(
         'blog3', 'Why we need a Digital and Service Design Team', 'Phil Stephens', 
         util.profile.phil_stephens_job, 'October 1, 2023', util.profile.phil_stephens_profile),

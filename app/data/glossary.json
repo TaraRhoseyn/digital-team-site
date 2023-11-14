@@ -206,5 +206,9 @@
     {
         "term": "Hosted",
         "definition": "This is effectively the same as running the application(s) on-premise except the servers are held within a data centre.  This data centre could be shared or it could be a simple infrastructure located in the providers own facilities.  Access is normally via VPN or published Desktop application using Terminal Services."
+    },
+    {
+        "term": "GDS",
+        "definition": "The Government Digital Service (GDS) is a unit within the UK government that focuses on transforming public services to be more accessible, user-centric, and efficient through digital technology. Established in 2011, the GDS works to improve the delivery of government services by implementing digital solutions, user experience design, and open standards across various departments, aiming to simplify and enhance the citizen's interaction with government services online. The GDS plays a pivotal role in driving digital innovation and promoting a user-first approach to government service delivery."
     }
 ]
