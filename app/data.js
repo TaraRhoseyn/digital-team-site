@@ -5,6 +5,7 @@ blog data and glossary data
 */
 const fs = require('fs');
 const path = require('path');
+const util = require('./utils');
 
 const blogData = []
 
@@ -24,7 +25,16 @@ glossaryData = readGlossaryData();
 // sorts glossary alphabetically:
 glossaryData.sort((a, b) => a.term.localeCompare(b.term));
 
+const profile = util.profile;
+const job = util.job;
+
+const staffMembers = Object.keys(profile).map((key) => ({
+    profile: profile[key],
+    job: job[key],
+}));
+
 module.exports = {
     blogData,
     glossaryData,
+    staffMembers,
 };

@@ -5,7 +5,7 @@ to produce blog previews
 */
 const nunjucks = require('nunjucks');
 const fs = require('fs');
-const { blogData, glossaryData } = require('./data');
+const { blogData, glossaryData, staffMembers } = require('./data');
 nunjucks.configure('src', { autoescape: true });
 
 class Page {
@@ -24,7 +24,8 @@ class Page {
                 pageTitle: `${this.pageTitle} | Digital and Service Design Team`,
                 // sends blog data for previews:
                 blogs: blogData,
-                glossary: glossaryData
+                glossary: glossaryData,
+                staffMembers: staffMembers,
             })
         );
     }
