@@ -208,7 +208,19 @@
         "definition": "This is effectively the same as running the application(s) on-premise except the servers are held within a data centre.  This data centre could be shared or it could be a simple infrastructure located in the providers own facilities.  Access is normally via VPN or published Desktop application using Terminal Services."
     },
     {
-        "term": "GDS",
+        "term": "Government Digital Service (GDS)",
         "definition": "The Government Digital Service (GDS) is a unit within the UK government that focuses on transforming public services to be more accessible, user-centric, and efficient through digital technology. Established in 2011, the GDS works to improve the delivery of government services by implementing digital solutions, user experience design, and open standards across various departments, aiming to simplify and enhance the citizen's interaction with government services online. The GDS plays a pivotal role in driving digital innovation and promoting a user-first approach to government service delivery."
+    },
+    {
+        "term": "Single sign-on (SSO)",
+        "definition": "Single sign-on is an authentication process that allows a user to access multiple applications or systems with a single set of login credentials. SSO enhances user convenience by eliminating the need to log in separately for each service."
+    },
+    {
+        "term": "Multi-factor authentication (MFA)",
+        "definition": "Multi-factor authentication is a security process that requires users to provide two or more forms of identification before gaining access to a system or application. This typically involves a combination of something the user knows (password), something the user has (security token), or something the user is (biometric data)."
+    },
+    {
+        "term": "Two-factor authentication (2FA)",
+        "definition": "Two-factor authentication is a subset of multi-factor authentication that specifically involves the use of two types of authentication methods to verify a user's identity. Common combinations include a password (something the user knows) and a temporary code sent to a mobile device (something the user has)."
     }
 ]
