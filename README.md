@@ -33,7 +33,7 @@ There's no need to install Tailwind UI as a node package as it's accessed via CD
 
 ## Deployment
 
-The website is [live and deployed](https://sport-wales-digital-blog.netlify.app/).
+The website is <a href="https://sport-wales-digital-blog.netlify.app/" target="_blank">live and deployed</a>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/33a01ed6-4a80-4065-b713-1c6e99a2c91e/deploy-status)](https://app.netlify.com/sites/sport-wales-digital-blog/deploys)
 
