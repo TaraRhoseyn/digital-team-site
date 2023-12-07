@@ -19,6 +19,7 @@ const pages = [
     new Page('principles', 'Principles'),
     new Page('about', 'About'),
     new Page('glossary', 'Glossary'),
+    new Page('404', '404 Error Page'),
 ]
 
 
