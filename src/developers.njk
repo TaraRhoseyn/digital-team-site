@@ -2,20 +2,138 @@
 {% block content %}
 <div class="container mx-auto px-9 max-w-screen-xl">
     <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Developers</h1>
-    <p class="mb-3">This portion of the website is intended for developers. It offers best practice, guides, and resources.</p>
-    <h2 class="mb-5 mt-9 text-3xl font-bold">Documentation resources:</h2>
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="bg-gray-300 text-black p-6 w-1/4 mt-5">
+            <ul>
+                <li class="mb-2">
+                    <a href="#intro" class="sidebar-link">Introduction</a>
+                </li>
+                <li class="mb-2">
+                    <strong>Technologies</strong>
+                </li>
+                <li class="mb-2">
+                    <a href="#nunjucks" class="sidebar-link ml-3">Nunjucks</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#bootstrap" class="sidebar-link ml-3">Bootstrap</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#git" class="sidebar-link ml-3">Git</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#bootstrap" class="sidebar-link ml-3">GitHub</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#tailwind" class="sidebar-link ml-3">Tailwind CSS</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#nodejs" class="sidebar-link ml-3">Node.js</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#jquery" class="sidebar-link ml-3">jQuery</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#vscode" class="sidebar-link ml-3">VSCode</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#pip" class="sidebar-link ml-3">pip</a>
+                </li>
+                <li class="mb-2">
+                    <strong>Brand and Style</strong>
+                </li>
+                <li class="mb-2">
+                    <a href="#brand" class="sidebar-link ml-3">Brand Guidelines</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#figma" class="sidebar-link ml-3">Using Figma</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#coding-conventions" class="sidebar-link ml-3">Coding Conventions</a>
+                </li>
+                <li class="mb-2">
+                    <strong>Documentation</strong>
+                </li>
+                <li class="mb-2">
+                    <a href="#readme" class="sidebar-link ml-3">README.md template</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#license" class="sidebar-link ml-3">LICENSE template</a>
+                </li>
+            </ul>
+        </div>
 
-    <details class="my-4">
-    <summary class="py-2 px-4 cursor-pointer rounded">
-        README.md template
-    </summary>
-    <div class="bg-gray-200 text-black p-4 rounded mt-2">
-        <!-- Code blocks -->
-        <div class="code-container relative">
-            <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-            <pre>
-                <code class="language-html">
-                    <xpm>
+        <!-- Content Area -->
+        <div class="p-6 w-3/4">
+            <div id="intro" class="introduction-area">
+                <h2 class="text-3xl font-bold mb-4">How to use this page</h2>
+                <p class="mb-3">This portion of the website is intended for technicians. It offers best practice, guides, and resources.</p>
+                <p class="mb-3">Begin by selecting the menu item of any topic you wish to explore.</p>
+            </div>
+            <div id="nunjucks" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Nunjucks</h2>
+                <p class="mb-3">This is the Installation content.</p>
+            </div>
+
+            <div id="bootstrap" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Bootstrap</h2>
+                <p class="mb-3">This is the Usage content.</p>
+            </div>
+
+            <div id="coding-conventions" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Coding Conventions</h2>
+                <p class="mb-3">This is a general best practice guide to how we write and style our codebases for projects.</p>
+                <h3 class="text-2xl font-bold my-4">Language</h3>
+                <p class="mb-3">Use British English in your code, comments, and documentation.</p>
+                <h3 class="text-2xl font-bold my-4">Indentation</h3>
+                <p class="mb-3">Use 2 spaces for indentation.</p>
+                <p class="mb-3">Ensure consistent indentation style across the project.</p>
+                <h3 class="text-2xl font-bold my-4">Line endings</h3>
+                <p class="mb-3">Use LF (Line Feed) line endings.</p>
+                <h3 class="text-2xl font-bold my-4">Trailing whitespace</h3>
+                <p class="mb-3">Remove trailing whitespace from your code files.</p>
+                <p class="mb-3">Exception: In Markdown files, you can leave trailing whitespace for better control of line breaks.</p>
+                <h3 class="text-2xl font-bold my-4">Recommended Extensions</h3>
+                <p class="mb-3">The following VSCode extensions are recommended for most of our projects:</p>
+                <ul>
+                    <li><a href="">Prettier</a>: For code formatting</li>
+                    <li><a href="">ESLint:</a> For code linting and static analysis</li>
+                    <li><a href="">EditorConfig:</a> To maintain consistent coding styles across different editors</li>
+                    <li><a href="">Live Preview:</a> For quickly viewing rendered HTML files without needing to start up a server</li>
+                    <li><a href="">Nunjucks Template:</a> For additional Nunjucks syntax highlighting (note: you may need to adjust settings to achieve this)</li>
+                    <li><a href="">vscode-pdf:</a> Simple helper extension for viewing PDFs within your IDE</li>
+                </ul>
+                <h3 class="text-2xl font-bold my-4">Setting up your Development Environment</h3>
+                
+                <h3 class="text-2xl font-bold my-4">Version control</h3>
+
+                <h3 class="text-2xl font-bold my-4">Documentation</h3>
+
+                <h3 class="text-2xl font-bold my-4">Code Reviews</h3>
+
+                <h3 class="text-2xl font-bold my-4">Testing</h3>
+
+                <h3 class="text-2xl font-bold my-4">Security</h3>
+
+                <h3 class="text-2xl font-bold my-4">Licensing</h3>
+
+                <h3 class="text-2xl font-bold my-4">Support and contacts</h3>
+
+            </div>
+
+
+            <div id="readme" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">README.md</h2>
+                <p class="mb-3">A 'README.md' file is a document written in a Markdown format that serves as the introductory and instructional document for software projects.</p>
+                <p class="mb-3">It's good practice to place this at the root of the project's repository on GitHub.</p>
+                <p class="mb-3">We will include a README.md file in our projects so that future developers will know why a project was created, any installation information, and how the project was intended to be run.</p>
+                <h3 class="text-2xl font-bold my-4">Template</h3>
+                <p class="mb-3">You can copy and paste this markdown template into your project:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
 # Title of project
 
 Description of project
@@ -39,27 +157,29 @@ If the project is deployed, place the URL here
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-                    </xmp>
-                </code>
-            </pre>
-        </div>
-    </div>
-</details>
 
-<details class="my-4">
-    <summary class="py-2 px-4 cursor-pointer rounded">
-        LICENSE template
-    </summary>
-    <div class="bg-gray-200 text-black p-4 rounded mt-2">
-        <!-- Code blocks -->
-        <div class="code-container relative">
-            <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-            <pre>
-                <code class="language-html">
-                    <xpm>
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p>Alternatively, the template is available on <a href="https://github.com/Sport-Wales/template/tree/main">GitHub</a>.</p>
+            </div>
+
+            <div id="license" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">LICENSE</h2>
+                <p class="mb-3">A LICENSE file is a document at the root of your repository that communicates the terms under which others can use, modify, and distribute your code.</p>
+                <p class="mb-3">At Sport Wales, all of our projects use the MIT License which is a permissive open-source license that allows other users to do anything they like with the code, as long as they include the original copyright and license notice in any copy or portion of the software.</p>
+                <p class="mb-3">Following the example of the Government Digital Service, we use this license as it allows with our principles of openness and collaboration.</p>
+                <h3 class="text-2xl font-bold my-4">Template</h3>
+                    <p class="mb-3">You can copy and paste this markdown template into your project:</p>
+                    <div class="code-container relative bg-gray-900 text-white mt-5">
+                        <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                        <pre>
+                            <code class="language-html">
+                                <xpm>
 MIT License
 
-Copyright (c) 2023 Sport Wales
+Copyright (c) 2024 Sport Wales
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -78,32 +198,73 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-                    </xmp>
-                </code>
-            </pre>
-        </div>
-    </div>
-</details>
+                                </xpm>
+                            </code>
+                        </pre>
+                    </div>
+                    <p>Alternatively, the template is available on <a href="https://github.com/Sport-Wales/template/tree/main">GitHub</a>.</p>
+                </div>
+            </div> 
+        </div> <!-- end of content block -->
+    </div> <!-- end of flex -->
 
-</div>
+    
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelectorAll('.copy-code-btn').forEach(function (button) {
-            button.addEventListener('click', function () {
-                var codeBlock = this.closest('.code-container').querySelector('code');
-                var codeText = codeBlock.innerText;
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
 
-                navigator.clipboard.writeText(codeText)
-                    .then(function () {
-                        alert('Code copied to clipboard!');
-                    })
-                    .catch(function (err) {
-                        console.error('Unable to copy code', err);
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    const targetContentId = this.getAttribute('href').substring(1);
+
+                    document.querySelectorAll('.content-area').forEach(content => {
+                        content.style.display = 'none';
                     });
+                    document.querySelectorAll('.introduction-area').forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    document.getElementById(targetContentId).style.display = 'block';
+                });
+            });
+
+            document.querySelectorAll('.copy-code-btn').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    var codeBlock = this.closest('.code-container').querySelector('code');
+                    var codeText = codeBlock.innerText;
+
+                    navigator.clipboard.writeText(codeText)
+                        .then(function () {
+                            alert('Code copied to clipboard!');
+                        })
+                        .catch(function (err) {
+                            console.error('Unable to copy code', err);
+                        });
+                });
             });
         });
-    });
-</script>
+    </script>
+
+    <!-- Your custom styles -->
+    <style>
+        .content-area {
+            display: none;
+        }
+
+        pre {
+            overflow: auto;
+            white-space: pre-wrap;
+            padding: 10px;
+        }
+
+        .code-container {
+            border-radius: 10px;
+        }
+    </style>
+
 
 {% endblock %}
