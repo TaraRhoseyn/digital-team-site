@@ -1,0 +1,109 @@
+{% extends "base.njk" %}
+{% block content %}
+<div class="container mx-auto px-9 max-w-screen-xl">
+    <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Developers</h1>
+    <p class="mb-3">This portion of the website is intended for developers. It offers best practice, guides, and resources.</p>
+    <h2 class="mb-5 mt-9 text-3xl font-bold">Documentation resources:</h2>
+
+    <details class="my-4">
+    <summary class="py-2 px-4 cursor-pointer rounded">
+        README.md template
+    </summary>
+    <div class="bg-gray-200 text-black p-4 rounded mt-2">
+        <!-- Code blocks -->
+        <div class="code-container relative">
+            <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+            <pre>
+                <code class="language-html">
+                    <xpm>
+# Title of project
+
+Description of project
+
+## Technologies
+
+Brief description of the technology used, e.g. React/Nunjucks/etc 
+
+## Installation
+
+If this project needs to be installed, place documentation here
+
+## Dependencies
+
+- List any and all dependencies (e.g. packages, third-party software) that the project relies upon here
+
+## Deployment
+
+If the project is deployed, place the URL here
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+</details>
+
+<details class="my-4">
+    <summary class="py-2 px-4 cursor-pointer rounded">
+        LICENSE template
+    </summary>
+    <div class="bg-gray-200 text-black p-4 rounded mt-2">
+        <!-- Code blocks -->
+        <div class="code-container relative">
+            <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+            <pre>
+                <code class="language-html">
+                    <xpm>
+MIT License
+
+Copyright (c) 2023 Sport Wales
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+                    </xmp>
+                </code>
+            </pre>
+        </div>
+    </div>
+</details>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.copy-code-btn').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var codeBlock = this.closest('.code-container').querySelector('code');
+                var codeText = codeBlock.innerText;
+
+                navigator.clipboard.writeText(codeText)
+                    .then(function () {
+                        alert('Code copied to clipboard!');
+                    })
+                    .catch(function (err) {
+                        console.error('Unable to copy code', err);
+                    });
+            });
+        });
+    });
+</script>
+
+{% endblock %}
