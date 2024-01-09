@@ -156,12 +156,138 @@
             </div>
             <div id="nunjucks" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">Nunjucks</h2>
-                <p class="mb-3">This is the Installation content.</p>
+                <p class="mb-3">It's a JavaScript-based templating language that speeds up production of HTML pages. Using Nunjucks gives us the advantage of faster production and only changing repeated HTML elements once.</p>
+                <p class="mb-3">You can view <a class="text-blue-500 hover:underline" href="https://mozilla.github.io/nunjucks/" target="blank">the documentation for Nunjucks online</a> and <a class="text-blue-500 hover:underline" href="https://mozilla.github.io/nunjucks/templating.html" target="blank">templating guides.</a> The <a class="text-blue-500 hover:underline" href="https://jinja.palletsprojects.com/en/3.1.x/templates/#" target="blank">documentation for jinja2</a> (which Nunjucks is closely based on) is also helpful. Below has set up instructions:</p>
+                <h3 class="text-2xl font-bold my-4">Requirements</h3>
+                <p class="mb-3">1. <strong>Node package manager (npm) </strong>- Gitpod should already have npm. If you run into trouble, visit the <a class="text-blue-500 hover:underline" href="https://www.npmjs.com/" target="blank">npm documentation</a> for installation guidance.</p>
+                <p class="mb-3">2. <strong>Nunjucks node package</strong>- There are alternative ways of installing Nunjucks, but this is the easiest (see step 1 below).</p>
+                <h3 class="text-2xl font-bold my-4">Steps</h3>
+                <h4 class="text-1xl font-bold my-4">Install Nunjucks using Node (after making sure you have NodeJS installed</h4>
+                <p class="mb-3">In your IDE's terminal, run this command to install nunjucks:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
+$ npm install nunjucks
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">This will install the necessary packages which will create a create a new directory in your root, 'node_modules', it's best practice to add this directory to your .gitignore file for commits (but make sure you keep a copy for your own local development). Two .json files will also be created - keep these in your directory so developers can see what our dependencies are.</p>
+                <h4 class="text-1xl font-bold my-4">Create a templates directory at your root and a base.njk file inside</h4>
+                <p class="mb-3">This file (templates/base.njk) will function as our base template from which all other templates will 'extend'. Here is an example of a base.njk file:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xmp>
+<!-- ignore 'raw' tag here - purely so the code can render on this page correctly, remove it when you're using this code... -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add your common meta tags, stylesheets, and scripts here -->
+    <!-- pageTitle is a variable that you can use to set the title of pages -->
+    <title>{{ pageTitle }}</title>
+</head>
+<body>
+    <header>
+        <!-- Your header content here -->
+    </header>
+    <main>
+        
+        <!-- block 'content' is what we will 'fill' with our other templates -->
+        {% block content %}{% endblock %}
+        
+    </main>
+    <footer>
+        <!-- Your footer content here -->
+    </footer>
+</body>
+</html>
+
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h4 class="text-1xl font-bold my-4">Create child templates</h4>
+                <p class="mb-3">So for each page, e.g. funding, booking, etc, we'll create Nunjuck templates using the .njk file extension. These templates extend the base template. For example, this could be index.njk:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xmp>
+<!-- ignore 'raw' tag here - purely so the code can render on this page correctly, remove it when you're using this code... -->
+
+{% extends "base.njk" %}
+
+{% block content %}
+    <h1>Welcome to Sport Wales Portal</h1>
+    <p>This is the home page!</p>
+{% endblock %}
+
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h4 class="text-1xl font-bold my-4">Render the templates</h4>
+                <p class="mb-3">Create a JavaScript file, the example below is a simplified and expanded version of what is currently in ./js/nunjucks.js file:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-javascript">
+                            <xmp>
+const nunjucks = require('nunjucks');
+const fs = require('fs');
+
+// Configure Nunjucks to load templates from a directory (adjust this path)
+nunjucks.configure('./templates', { autoescape: true });
+
+// Define variables for your templates
+const context = {
+    pageTitle: 'Sport Wales Portal',
+    // Add any other variables needed for your templates
+};
+
+// Render the template (replace 'index.njk' with the desired page)
+const output = nunjucks.render('index.njk', context);
+
+// Write the rendered HTML to a file or insert it into your web page
+fs.writeFileSync('output.html', output);
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h4 class="text-1xl font-bold my-4">Run the JavaScript file</h4>
+                <p class="mb-3">Simply run the nunjucks.js file to run the file and write the HTML pages:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-javascript">
+                            <xmp>
+$ node js/nunjucks.js
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h4 class="text-1xl font-bold my-4">Top tips</h4>
+                <p class="mb-3">You'll find that in your IDE you may lose syntax highlighting in your .njk compared to your regular HTML files. There is a VSCode extension called 'Nunjucks Template' that fix this for you.</p>
             </div>
+
+
 
             <div id="bootstrap" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">Bootstrap</h2>
                 <p class="mb-3">This is the Usage content.</p>
+            </div>
+
+            <!-- FOR ANSELM -->
+            <div id="brand" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Branding Guidelines</h2>
+                <p class="mb-3">...</p>
             </div>
 
             <div id="coding-conventions" class="content-area">
@@ -170,15 +296,51 @@
                 <h3 class="text-2xl font-bold my-4">Language</h3>
                 <p class="mb-3">Use British English in your code, comments, and documentation.</p>
                 <h3 class="text-2xl font-bold my-4">Indentation</h3>
-
+                <p class="mb-3">Use 2 spaces for indentation.</p>
+                <p class="mb-3">Ensure consistent indentation style across the project.</p>
                 <h3 class="text-2xl font-bold my-4">Line endings</h3>
-
+                <p class="mb-3">Use LF (Line Feed) line endings.</p>
                 <h3 class="text-2xl font-bold my-4">Trailing whitespace</h3>
-
+                <p class="mb-3">Remove trailing whitespace from your code files.</p>
+                <p class="mb-3">Exception: In Markdown files, you can leave trailing whitespace for better control of line breaks.</p>
                 <h3 class="text-2xl font-bold my-4">Recommended Extensions</h3>
-
+                <p class="mb-3">The following VSCode extensions are recommended for most of our projects:</p>
+                <ul class="list-disc ml-8">
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="blank">Prettier</a>: For code formatting</li>
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint:</a> For code linting and static analysis</li>
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig:</a> To maintain consistent coding styles across different editors</li>
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview:</a> For quickly viewing rendered HTML files without needing to start up a server</li>
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=ginfuru.better-nunjucks">Better Nunjucks:</a> For additional Nunjucks syntax highlighting (note: you may need to adjust settings to achieve this)</li>
+                    <li class="mb-3"><a class="text-blue-500 hover:underline" href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf">vscode-pdf:</a> Simple helper extension for viewing PDFs within your IDE</li>
+                </ul>
                 <h3 class="text-2xl font-bold my-4">Setting up your Development Environment</h3>
-
+                <p class="mb-3">1. Clone the project repository from GitHub.</p>
+                <p class="mb-3">2. Install Node.js and npm if not already installed.</p>
+                <p class="mb-3">3. Install Visual Studio Code if not already installed.</p>
+                <p class="mb-3">4. Install the recommended extensions mentioned in the section above.</p>
+                <p class="mb-3">5. Open the project folder in Visual Studio Code.</p>
+                <p class="mb-3">6. Ensure that the .editorconfig file and workspace-specific settings in .vscode/settings.json are being respected by your editor.</p>
+                <h3 class="text-2xl font-bold my-4">Version control</h3>
+                <p class="mb-3">Use Git for version control.</p>
+                <p class="mb-3">Like rain on the one day you've forgotten an umbrella, <strong>merge conflicts will happen.</strong> Keep calm and let your colleagues know and we'll work together to sort it.</p>
+                <p class="mb-3">Commit your changes often, and regularly check the status of your git history.</p>
+                <p class="mb-3">Before working on a repository, check the git status to see whether you need to pull any changes or not.</p>
+                <p class="mb-3">Keep the .editorconfig, .vscode/settings.json, and other configuration files under version control to maintain consistency across the team.</p>
+                <h3 class="text-2xl font-bold my-4">Documentation</h3>
+                <p class="mb-3">Keep project documentation up to date in the docs/ directory of your project.</p>
+                <p class="mb-3">Use Markdown for documentation.</p>
+                <p class="mb-3">Document code changes, project structure, and usage instructions for developers and users.</p>
+                <h3 class="text-2xl font-bold my-4">Code Reviews</h3>
+                <p class="mb-3">Before merging code, ensure it adheres to the coding conventions and passes linting and formatting checks.</p>
+                <p class="mb-3">Conduct code reviews to maintain code quality and consistency.</p>
+                <h3 class="text-2xl font-bold my-4">Testing</h3>
+                <p class="mb-3">Write unit tests and integration tests for your code.</p>
+                <p class="mb-3">Ensure that tests are passing before merging code changes.</p>
+                <h3 class="text-2xl font-bold my-4">Security</h3>
+                <p class="mb-3">Follow security best practices to protect the project and its users.</p>
+                <p class="mb-3">Make sure to follow all downloading and installation procedure as set by Technology Solutions within Sport Wales.</p>
+                <h3 class="text-2xl font-bold my-4">Licensing</h3>
+                <p class="mb-3">Check the project's licensing terms and ensure compliance with open-source licenses.</p>
             </div>
 
 
