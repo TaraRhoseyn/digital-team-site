@@ -21,6 +21,7 @@ const pages = [
     new Page('glossary', 'Glossary'),
     new Page('404', '404 Error Page'),
     new Page('developers', 'Developers'),
+    new Page('privacy-policy', 'Privacy Policy'),
 ]
 
 
