@@ -20,6 +20,7 @@ const pages = [
     new Page('about', 'About'),
     new Page('glossary', 'Glossary'),
     new Page('404', '404 Error Page'),
+    new Page('developers', 'Developers'),
 ]
 
 
