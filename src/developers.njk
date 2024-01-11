@@ -70,6 +70,64 @@
         <!-- Content Area -->
         <div class="p-6 w-3/4">
 
+            <div id="tailwind" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Tailwind CSS</h2>
+                <p class="mb-3">Tailwind CSS is a utility-first CSS framework that makes it easy to design and build modern and responsive user interfaces. It's become particularly popular with making SaaS builds.</p>
+                <p class="mb-3">Tailwind is similar to Bootstrap in that it offers a frontend framework, but it differs from Bootstrap in that it doesn't really come with a component library - rather, it uses utility classes.</p>
+                <h3 class="text-2xl font-bold my-4">Installation</h3>
+                <p class="mb-3">You can install Tailwind as a node package, but so far we have only used it via CDN like Bootstrap. This could change in the future - look out for this change.</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
+<!-- insert this into the <head> of your HTML file: -->
+&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Basic Usage</h3>
+                <p class="mb-3">
+                    Once Tailwind CSS is installed, you can start using its utility classes in your HTML or other templating language. Include the generated CSS file in your project.
+                </p>
+                <h3 class="text-2xl font-bold my-4">Customization</h3>
+                <p class="mb-3">Tailwind CSS is highly customizable. You can configure the framework to include or exclude specific utility classes, define custom colors, fonts, and more in the configuration file (tailwind.config.js).</p>
+                <h3 class="text-2xl font-bold my-4">Responsive Design</h3>
+                <p class="mb-3">Tailwind CSS makes it easy to create responsive designs using its responsive utility classes. Adjust the layout and styling based on different screen sizes.</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-markup">
+                            <xpm>
+&lt;div class="lg:flex lg:justify-between"&gt
+    <!-- Content for large screens -->
+&lt;/div&gt
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Explore Components</h3>
+                <p class="mb-3">While Tailwind doesn't come with the kind of library like Bootstrap does, it does offer <a href="https://tailwindcomponents.com/" target="blank">some components</a> as standard (not all of these are free, you'll have to check).</p>
+                <p class="mb-3">There are other libraries out there like <a href="https://flowbite.com/" target="blank">Flowbite</a> that we use that offers more options for free components made with Tailwind.</p>
+                <h3 class="text-2xl font-bold my-4">Resources</h3>
+                <p class="mb-3">Explore additional resources and advanced features in the official Tailwind CSS documentation.</p>
+                <a
+                    href="https://v2.tailwindcss.com/docs"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View the documentation
+                </a>
+                <a
+                    href="https://flowbite.com/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View Flowbite
+                </a>
+            </div>
+
             <div id="github" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">GitHub</h2>
                 <p class="mb-3">
