@@ -48,6 +48,12 @@ const blogs = [
     new Blog(
         'blog7', 'Defining the User Journey Process', 'Steffan Berrow', 
         util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
+    new Blog(
+        'blog8', 'The Power of Understanding User Needs', 'Steffan Berrow', 
+        util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
+    new Blog(
+        'blog9', 'Project Selection Process: User Need Decision-Making', 'Steffan Berrow', 
+        util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
 ]
 
 function createPages(type) {

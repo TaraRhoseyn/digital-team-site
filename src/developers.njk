@@ -1,4 +1,17 @@
 {% extends "base.njk" %}
+{% block extracss %}
+<!-- highlight js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+{% endblock %}
+{% block extrajs %}
+<script src="https://use.fontawesome.com/39f4a89477.js"></script>
+<!-- highlight js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+    hljs.initHighlightingOnLoad();
+</script>
+{% endblock %}
 {% block content %}
   
 <div class="container mx-auto px-9 max-w-screen-xl">
@@ -77,40 +90,64 @@
                 <p class="mb-3">Before using pip, you need to have Python installed on your machine. You can download Python from the <a href="https://www.python.org/downloads/" target="blank">official Python website</a> (Technology Solutions will need to download this on your machine for you). During installation, make sure to check the option to include Python in the system PATH.</p>
                 <h4 class="text-1xl font-bold my-4">Verifying Installation</h4>
                 <p class="mb-3">To check if Python and pip are installed correctly, open a command prompt or terminal and run:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                
+                
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>  Copy</button>
+                    <code class="language-bash text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block  text-white rounded-lg p-4 pl-6">
+                        <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 python --version
 pip --version
+</code>
 </pre>
                             </div>
                     </code>
                 </div>
-
+                
                 <p class="mb-3">This should display the versions of Python and pip installed on your machine.</p>
                 <h3 class="text-2xl font-bold my-4">Installing a package</h3>
                 <p class="mb-3">To install a Python package using pip, open a command prompt or terminal and run:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 pip install 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
                 </div>
                 <p class="mb-3">Replace 'package-name' with the name of the package you want to install. For example:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 pip install requests
+</code>
 </pre>
                             </div>
                     </code>
@@ -118,13 +155,21 @@ pip install requests
                 <p class="mb-3">This installs the 'requests' package, a popular library for making HTTP requests.</                <h3 class="text-2xl font-bold my-4">Installing a package</h3>
                 <h3 class="text-2xl font-bold my-4">Listing Installed Packages</h3>
                 <p class="mb-3">To see a list of installed packages, run:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 pip list
+</code>
 </pre>
                             </div>
                     </code>
@@ -132,14 +177,22 @@ pip list
                 <p class="mb-3">This will display a list of installed packages along with their versions.</p>
                 <h3 class="text-2xl font-bold my-4">Uninstalling a Package</h3>
                 <p class="mb-3">To uninstall a package, run:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 pip uninstall 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -149,13 +202,21 @@ pip uninstall 'package-name'
                 <h3 class="text-2xl font-bold my-4">Requirements File</h3>
                 <p class="mb-3">You can create a requirements.txt file to specify project dependencies. To install all dependencies from a requirements file, run:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 pip install -r requirements.txt
+</code>
 </pre>
                             </div>
                     </code>
@@ -164,13 +225,21 @@ pip install -r requirements.txt
                 <h3 class="text-2xl font-bold my-4">Upgrading pip</h3>
                 <p class="mb-3">To upgrade pip to the latest version, run:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 pip install --upgrade pip
+</code>
 </pre>
                             </div>
                     </code>
@@ -180,14 +249,22 @@ pip install --upgrade pip
                 <p class="mb-3">It's good practice to use virtual environments to isolate project dependencies. To create a virtual environment, run:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 python --version
 pip --version
+</code>
 </pre>
                             </div>
                     </code>
@@ -268,29 +345,44 @@ pip --version
                 <h3 class="text-2xl font-bold my-4">Including jQuery in Your Project</h3>
                 <p class="mb-3">To use jQuery, you need to include it in your HTML file. You can download jQuery from the official website or use a Content Delivery Network (CDN). We use the CDN by including this code in our 'head' of our HTML files:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
-<!-- Include jQuery from CDN -->
+<code class="hljs language-javascript javascript">
 &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
+</code>
 </pre>
                             </div>
                     </code>
                 </div>
                 <h3 class="text-2xl font-bold my-4">Basic jQuery Syntax</h3>
                 <p class="mb-3">jQuery simplifies JavaScript code with a concise syntax. To select an HTML element using jQuery:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="language-javascript text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 $(document).ready(function() {
   // Your jQuery code here
 });
+</code>
 </pre>
                             </div>
                     </code>
@@ -298,34 +390,50 @@ $(document).ready(function() {
                 <p class="mb-3">This ensures your code executes only when the DOM is fully loaded.</p>
                 <h3 class="text-2xl font-bold my-4">Selecting Elements</h3>
                 <p class="mb-3">Use the $ symbol to select elements. For example, to select all paragraphs:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 $(document).ready(function() {
   // Select all paragraphs and hide them
   $("p").hide();
 });
+</code>
 </pre>
                             </div>
                     </code>
                 </div>
                 <h3 class="text-2xl font-bold my-4">Event Handling</h3>
                 <p class="mb-3">jQuery simplifies event handling. To execute code when a button is clicked:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 $(document).ready(function() {
   // Hide the paragraph when the button is clicked
   $("button").click(function() {
     $("p").hide();
   });
 });
+</code>
 </pre>
                             </div>
                     </code>
@@ -333,16 +441,24 @@ $(document).ready(function() {
                 <h3 class="text-2xl font-bold my-4">Animation</h3>
                 <p class="mb-3">jQuery makes it easy to add animations. For example, to fade out a div:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 $(document).ready(function() {
   // Fade out the div over 2 seconds
   $("div").fadeOut(2000);
 });
+</code>
 </pre>
                             </div>
                     </code>
@@ -351,16 +467,24 @@ $(document).ready(function() {
                 <h3 class="text-2xl font-bold my-4">AJAX with jQuery</h3>
                 <p class="mb-3">jQuery simplifies AJAX requests. To load content into a div:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 $(document).ready(function() {
   // Load content into the div
   $("#result").load("content.html");
 });
+</code>
 </pre>
                             </div>
                     </code>
@@ -383,14 +507,22 @@ $(document).ready(function() {
                 <p class="mb-3">Before using npm, you need to have Node.js <a href="https://nodejs.org/en" target="blank">installed</a> on your machine (this will need to be done by Technology Solutions).</p>
                 <p class="mb-3">Once installed, npm is included automatically. You can verify the installation by running:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 node -v
 npm -v
+</code>
 </pre>
                             </div>
                     </code>
@@ -399,13 +531,21 @@ npm -v
                 <h3 class="text-2xl font-bold my-4">Creating a package.json File</h3>
                 <p class="mb-3">A package.json file is a manifest for your project, and it includes metadata about your project, such as the project's name, version, and dependencies. You can create a package.json file using:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm init
+</code>
 </pre>
                             </div>
                     </code>
@@ -416,14 +556,22 @@ npm init
                 <p class="mb-3">npm allows you to easily install packages and manage dependencies for your project. To install a package, run:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 npm install 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -431,13 +579,21 @@ npm install 'package-name'
                 <p class="mb-3">For example:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm install nunjucks
+</code>
 </pre>
                             </div>
                     </code>
@@ -447,14 +603,22 @@ npm install nunjucks
                 <p class="mb-3">You can manage project dependencies by adding, updating, or removing packages. Here are some common commands:</p>
                 <h4 class="text-1xl font-bold my-4">Adding a Dependency:</h4>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 npm install 'package-name' --save
+</code>
 </pre>
                             </div>
                     </code>
@@ -462,14 +626,22 @@ npm install 'package-name' --save
                 
                 <h4 class="text-1xl font-bold my-4">Adding a Development Dependency:</h4>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 npm install 'package-name' --save-dev
+</code>
 </pre>
                             </div>
                     </code>
@@ -478,28 +650,44 @@ npm install 'package-name' --save-dev
                 <h4 class="text-1xl font-bold my-4">Updating Dependencies:</h4>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm update
 </pre>
+</code>
                             </div>
                     </code>
                 </div>
                 
                 <h4 class="text-1xl font-bold my-4">Removing a Dependency:</h4>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 npm uninstall 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -508,16 +696,24 @@ npm uninstall 'package-name'
                 <h3 class="text-2xl font-bold my-4">Scripts in 'package.json'</h3>
                 <p class="mb-3">You can define custom scripts in your 'package.json' file. For example, in the codebase for this project I have a script that allows me to run my main JavaScript file through a simple 'start' command:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 "scripts": {
     "test": "test",
     "start": "node --trace-warnings --experimental-modules app/app.js"
 }
+</code>
 </pre>
                             </div>
                     </code>
@@ -526,13 +722,21 @@ npm uninstall 'package-name'
                 <p class="mb-3">Then I use the script by using it in my terminal:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm start
+</code>
 </pre>
                             </div>
                     </code>
@@ -543,13 +747,21 @@ npm start
                 <h4 class="text-1xl font-bold my-4">Installing a Global Package:</h4>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm install -g 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -557,13 +769,21 @@ npm install -g 'package-name'
                 
                 <h4 class="text-1xl font-bold my-4">Installing a Local Package:</h4>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 npm install 'package-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -588,14 +808,22 @@ npm install 'package-name'
                 <p class="mb-3">You can install Tailwind as a node package, but so far we have only used it via CDN like Bootstrap. This could change in the future - look out for this change.</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="language-html text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
-<!-- insert this into the <head> of your HTML file: -->
+<code class="hljs language-javascript javascript">
+// insert this into the <head> of your HTML file
 &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+</code>
 </pre>
                             </div>
                     </code>
@@ -610,15 +838,23 @@ npm install 'package-name'
                 <h3 class="text-2xl font-bold my-4">Responsive Design</h3>
                 <p class="mb-3">Tailwind CSS makes it easy to create responsive designs using its responsive utility classes. Adjust the layout and styling based on different screen sizes.</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="language-html text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript javascript">
 &lt;div class="lg:flex lg:justify-between"&gt
-    <!-- Content for large screens -->
+    // Content for large screens
 &lt;/div&gt
+</code>
 </pre>
                             </div>
                     </code>
@@ -720,12 +956,19 @@ npm install 'package-name'
                 <p class="mb-3">These commands are run in the command line/terminal.</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 
 # Initialize a new Git repository
@@ -745,6 +988,7 @@ git commit -m "Your commit message"
 
 # Push changes to a remote repository
 git push origin 'branch-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -753,12 +997,19 @@ git push origin 'branch-name'
                 <p class="mb-3">
                     Understand how to create and manage branches to work on different features or fixes simultaneously.
                 </p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # (remove '')
 
 # Create a new branch
@@ -769,6 +1020,7 @@ git checkout 'branch-name'
 
 # Merge branches
 git merge 'branch-name'
+</code>
 </pre>
                             </div>
                     </code>
@@ -777,17 +1029,25 @@ git merge 'branch-name'
                 <h3 class="text-2xl font-bold my-4">Collaboration with Git</h3>
                 <p class="mb-3">Collaborate with others using Git. Learn about pull requests, fetching changes, and resolving conflicts.</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
 # Fetch changes from a remote repository
 git fetch
 
 # Create a pull request
 # (For platforms like GitHub, GitLab, or Bitbucket)
+</code>
 </pre>
                             </div>
                     </code>
@@ -821,9 +1081,15 @@ git fetch
                 <p class="mb-3">In your IDE's terminal, run this command to install nunjucks:</p>
                 
 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
@@ -838,15 +1104,20 @@ npm install nunjucks
                 <p class="mb-3">This file (templates/base.njk) will function as our base template from which all other templates will 'extend'. Here is an example of a base.njk file:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 <xmp>
-<!-- ignore 'raw' tag here - purely so the code can 
-render on this page correctly, remove it when you're using this code... -->
 {% raw %}
 <!DOCTYPE html>
 <html lang="en">
@@ -874,6 +1145,7 @@ render on this page correctly, remove it when you're using this code... -->
 </html>
 {% endraw %}
 </xmp>
+</code>
 </pre>
                             </div>
                     </code>
@@ -882,15 +1154,19 @@ render on this page correctly, remove it when you're using this code... -->
                 <h4 class="text-1xl font-bold my-4">Create child templates</h4>
                 <p class="mb-3">So for each page, e.g. funding, booking, etc, we'll create Nunjuck templates using the .njk file extension. These templates extend the base template. For example, this could be index.njk:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="language-javascript text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="language-javascript text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
-<xmp>
-<!-- ignore 'raw' tag here - purely so the code can 
-render on this page correctly, remove it when you're using this code... -->
+<code class="hljs language-javascript">
 {% raw %}
 {% extends "base.njk" %}
 
@@ -899,7 +1175,7 @@ render on this page correctly, remove it when you're using this code... -->
     <p>This is the home page!</p>
 {% endblock %}
 {% endraw %}
-</xmp>
+</code>
 </pre>
                             </div>
                     </code>
@@ -908,12 +1184,19 @@ render on this page correctly, remove it when you're using this code... -->
                 <h4 class="text-1xl font-bold my-4">Render the templates</h4>
                 <p class="mb-3">Create a JavaScript file, the example below is a simplified and expanded version of what is currently in ./js/nunjucks.js file:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 const nunjucks = require('nunjucks');
 const fs = require('fs');
 
@@ -931,6 +1214,7 @@ const output = nunjucks.render('index.njk', context);
 
 // Write the rendered HTML to a file or insert it into your web page
 fs.writeFileSync('output.html', output);
+</code>
 </pre>
                             </div>
                     </code>
@@ -940,13 +1224,21 @@ fs.writeFileSync('output.html', output);
                 <p class="mb-3">Simply run the nunjucks.js file to run the file and write the HTML pages:</p>
                 
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript javascript">
 node js/nunjucks.js
+</code>
 </pre>
                             </div>
                     </code>
@@ -974,29 +1266,44 @@ node js/nunjucks.js
                 <p class="mb-3">There are a couple of different ways to access Bootstrap, but the one we use is via CDN.</p>
                 <p class="mb-3">Include the CSS and JS CDNs in your HTML files to access Bootstrap:</p>
                 
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 <xmp>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         <!-- CSS CDN: -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+        crossorigin="anonymous">
     </head>
     <body>
         <h1>Hello, world!</h1>
         <!-- JavaScript CDN: -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+        crossorigin="anonymous"></script>
     </body>
 </html>
 </xmp>
+</code>
 </pre>
                             </div>
                     </code>
@@ -1287,12 +1594,19 @@ node js/nunjucks.js
                 <p class="mb-3">We will include a README.md file in our projects so that future developers will know why a project was created, any installation information, and how the project was intended to be run.</p>
                 <h3 class="text-2xl font-bold my-4">Template</h3>
                 <p class="mb-3">You can copy and paste this markdown template into your project:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
+<code class="hljs language-javascript">
 # Title of project
 
 Description of project
@@ -1316,6 +1630,7 @@ If the project is deployed, place the URL here
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+</code>
 </pre>
                             </div>
                     </code>
@@ -1331,9 +1646,15 @@ If the project is deployed, place the URL here
                 <p class="mb-3">Following the example of the Government Digital Service, we use this license as it allows with our principles of openness and collaboration.</p>
                 <h3 class="text-2xl font-bold my-4">Template</h3>
                 <p class="mb-3">You can copy and paste this markdown template into your project:</p>
-                <div class="code-container relative bg-gray-800 mt-5 mb-3">
-                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
-                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 bg-gray-800 text-white rounded-lg p-4 pl-6">
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>   Copy</button>
+
+
+                    <code class="text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block
+
+ text-white rounded-lg p-4 pl-6">
                         <span class="flex" style="margin-left: 0px; margin-right: 2px;">
                             <div class="shrink-0 text-white">
 <pre class="shrink-0 text-white p-0">
@@ -1404,7 +1725,7 @@ SOFTWARE.
                     navigator.clipboard.writeText(codeText)
                         .then(function () {
                             // Use the stored reference
-                            codeBtn.innerText = 'Copied!';
+                            codeBtn.innerHTML = '<i class="fa-solid fa-check"></i>  Copied!';
                         })
                         .catch(function (err) {
                             console.error('Unable to copy code', err);
@@ -1430,6 +1751,101 @@ SOFTWARE.
             border-radius: 10px;
         }
     </style>
+
+    <!-- highlight js css -->
+    <style>
+                /* Dracula Theme v1.2.5
+ *
+ * https://github.com/dracula/highlightjs
+ *
+ * Copyright 2016-present, All rights reserved
+ *
+ * Code licensed under the MIT license
+ *
+ * @author Denis Ciccale <dciccale@gmail.com>
+ * @author Zeno Rocha <hi@zenorocha.com>
+ */
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #282a36;
+}
+
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section,
+.hljs-link {
+  color: #8be9fd;
+}
+
+.hljs-keyword {
+  color: #ff79c6;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-meta-keyword {
+  font-style: italic;
+  color: #50fa7b;
+}
+
+.hljs-string,
+.hljs-meta,
+.hljs-name,
+.hljs-type,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #f1fa8c;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion {
+  color: #6272a4;
+}
+
+.code-block {
+    background: #282a36;!important;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-literal,
+.hljs-number {
+  color: #bd93f9;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs {
+    padding: 0px!important;
+
+
+
+</style>
 
 
 {% endblock %}
