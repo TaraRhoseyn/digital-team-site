@@ -103,7 +103,7 @@ $ npm install nunjucks
                         <code class="language-html">
                             <xmp>
 <!-- ignore 'raw' tag here - purely so the code can render on this page correctly, remove it when you're using this code... -->
-
+{% raw %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,6 +128,7 @@ $ npm install nunjucks
     </footer>
 </body>
 </html>
+{% endraw %}
 
                             </xmp>
                         </code>
@@ -141,13 +142,14 @@ $ npm install nunjucks
                         <code class="language-html">
                             <xmp>
 <!-- ignore 'raw' tag here - purely so the code can render on this page correctly, remove it when you're using this code... -->
-
+{% raw %}
 {% extends "base.njk" %}
 
 {% block content %}
     <h1>Welcome to Sport Wales Portal</h1>
     <p>This is the home page!</p>
 {% endblock %}
+{% endraw %}
 
                             </xmp>
                         </code>
@@ -188,20 +190,77 @@ fs.writeFileSync('output.html', output);
                     <pre>
                         <code class="language-javascript">
                             <xmp>
-$ node js/nunjucks.js
+node js/nunjucks.js
                             </xmp>
                         </code>
                     </pre>
                 </div>
-                <h4 class="text-1xl font-bold my-4">Top tips</h4>
+                <h3 class="text-1xl font-bold my-4">Top tips</h3>
                 <p class="mb-3">You'll find that in your IDE you may lose syntax highlighting in your .njk compared to your regular HTML files. There is a VSCode extension called 'Nunjucks Template' that fix this for you.</p>
+                <h3 class="text-2xl font-bold my-4">Documentation</h3>
+                <a
+                    href="https://mozilla.github.io/nunjucks/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    Read the documentation
+                </a>
+                <p class="mb-3">Read the <a href="" target="blank">documentation</a> for this project.</p>
             </div>
 
 
 
             <div id="bootstrap" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">Bootstrap</h2>
-                <p class="mb-3">This is the Usage content.</p>
+                <p class="mb-3">Bootstrap is a frontend toolkit that helps making builing websites easier. It offers a pre-built grid system and components library.</p>
+                <p class="mb-3">It's widely used by frontend developers and is easy to use out of the box.</p>
+                <h3 class="text-2xl font-bold my-4">Installation guide</h3>
+                <p class="mb-3">There are a couple of different ways to access Bootstrap, but the one we use is via CDN.</p>
+                <p class="mb-3">Include the CSS and JS CDNs in your HTML files to access Bootstrap:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-javascript">
+                            <xmp>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <!-- CSS CDN: -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Hello, world!</h1>
+        <!-- JavaScript CDN: -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+</html>
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Usage</h3>
+                <p class="mb-3">Once you include your CDNs in your HTML you will notice your pages are automatically styled.</p>
+                <p class="mb-3">Bootstrap works by using classes in HTML elements.</p>
+                <a
+                    href="https://getbootstrap.com/docs/5.3/examples/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View the components library
+                </a>
+                <p class="mb-3">Bootstrap's grid system is particularly helpful. It offers way to organise your page's content by columns and rows in a simple way to understand.</p>
+                <p class="mb-3">View the grid system and how to use it.</p>
+                <h3 class="text-2xl font-bold my-4">Documentation</h3>
+                <a
+                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    Read the documentation
+                </a>
             </div>
 
             <!-- FOR ANSELM -->
