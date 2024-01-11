@@ -70,6 +70,125 @@
         <!-- Content Area -->
         <div class="p-6 w-3/4">
 
+            <div id="pip" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Python Package Installer (pip)</h2>
+                <p class="mb-3">pip is the package installer for Python. It allows you to easily install and manage Python packages, which are reusable code libraries.</p>
+                <h3 class="text-2xl font-bold my-4">Installation</h3>
+                <p class="mb-3">Before using pip, you need to have Python installed on your machine. You can download Python from the <a href="https://www.python.org/downloads/" target="blank">official Python website</a> (Technology Solutions will need to download this on your machine for you). During installation, make sure to check the option to include Python in the system PATH.</p>
+                <h4 class="text-1xl font-bold my-4">Verifying Installation</h4>
+                <p class="mb-3">To check if Python and pip are installed correctly, open a command prompt or terminal and run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+python --version
+pip --version
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">This should display the versions of Python and pip installed on your machine.</p>
+                <h3 class="text-2xl font-bold my-4">Installing a package</h3>
+                <p class="mb-3">To install a Python package using pip, open a command prompt or terminal and run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+# (remove '')
+pip install 'package-name'
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">Replace 'package-name' with the name of the package you want to install. For example:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+pip install requests
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">This installs the 'requests' package, a popular library for making HTTP requests.</                <h3 class="text-2xl font-bold my-4">Installing a package</h3>
+                <h3 class="text-2xl font-bold my-4">Listing Installed Packages</h3>
+                <p class="mb-3">To see a list of installed packages, run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+pip list
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">This will display a list of installed packages along with their versions.</p>
+                <h3 class="text-2xl font-bold my-4">Uninstalling a Package</h3>
+                <p class="mb-3">To uninstall a package, run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+# (remove '')
+pip uninstall 'package-name'
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">Replace 'package-name' with the name of the package you want to uninstall.</p>
+                <h3 class="text-2xl font-bold my-4">Requirements File</h3>
+                <p class="mb-3">You can create a requirements.txt file to specify project dependencies. To install all dependencies from a requirements file, run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+pip install -r requirements.txt
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Upgrading pip</h3>
+                <p class="mb-3">To upgrade pip to the latest version, run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+pip install --upgrade pip
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Virtual Environments</h3>
+                <p class="mb-3">It's good practice to use virtual environments to isolate project dependencies. To create a virtual environment, run:</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-bash">
+                            <xpm>
+python --version
+pip --version
+                            </xpm>
+                        </code>
+                    </pre>
+                </div>
+                <p class="mb-3">Active the virtual environment in 'myenv\Scripts\activate</p>
+                <h3 class="text-2xl font-bold my-4">Resources</h3>
+                <a
+                    href="https://pip.pypa.io/en/stable/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View the documentation
+                </a>
+            </div>
+
             <div id="vscode" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">Visual Studio Code (VSCode)</h2>
                 <p class="mb-3">Visual Studio Code (VSCode) is a lightweight yet powerful source code editor developed by Microsoft. It's the default editor for us here at Sport Wales. It's highly customizable and supports various programming languages. </p>
