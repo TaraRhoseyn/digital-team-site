@@ -2,7 +2,7 @@
 {% block content %}
   
 <div class="container mx-auto px-9 max-w-screen-xl">
-    <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Developers</h1>
+    <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Developer Hub</h1>
     <div class="flex">
         <!-- Sidebar -->
         <div class="bg-gray-200 text-black p-6 w-1/4 mt-5 rounded-lg">
@@ -29,7 +29,7 @@
                     <a href="#tailwind" class="sidebar-link ml-3">Tailwind CSS</a>
                 </li>
                 <li class="mb-2 hover:underline hover:text-blue-500">
-                    <a href="#nodejs" class="sidebar-link ml-3">Node.js</a>
+                    <a href="#npm" class="sidebar-link ml-3">npm</a>
                 </li>
                 <li class="mb-2 hover:underline hover:text-blue-500">
                     <a href="#jquery" class="sidebar-link ml-3">jQuery</a>
@@ -131,6 +131,96 @@
                 <p class="mb-3">At some point, you will encounter the dreaded merge conflict. It happens to us all. A merge conflict is when there are two versions of the same document that have conflicting changes within them, it usually occurs when someone has committed a change on an older version of the project.</p>
                 <p class="mb-3">Remain calm, and resolve the conflict (it's usually easiest to do this within the Git tab on VSCode).</p>
                 <p class="mb-3">There are lots of <a href="https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts" target="blank">resources</a> out there to help, if you come across one let your colleagues know and we can resolve it together.</p>
+            </div>
+
+            <div id="git" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Git</h2>
+                <p class="mb-3">
+                    Git is the distributed version control system that enables efficient and collaborative software development that we use at Sport Wales. Here's a guide to help you get started with Git.                </p>
+                <h3 class="text-2xl font-bold my-4">Installing Git</h3>
+                <p class="mb-3">To use Git, you need to <a href="https://git-scm.com/downloads" target="blank">install</a> it on your machine (this will need to be done by Technology Solutions, raise a ticket with them.)</p>
+                <h3 class="text-2xl font-bold my-4">Basic Git Commands</h3>
+                <p class="mb-3">Learn essential Git commands to start managing your projects and collaborating with others.</p>
+                <p class="mb-3">It can be useful to be logged into your GitHub account on your VSCode so accessing repositories is easier.</p>
+                <p class="mb-3">These commands are run in the command line/terminal.</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
+# (remove '')
+
+# Initialize a new Git repository
+git init
+
+# Clone a repository from a URL
+git clone 'repository-url'
+
+# Check the status of your changes
+git status
+
+# Stage changes for commit
+git add .
+
+# Commit changes
+git commit -m "Your commit message"
+
+# Push changes to a remote repository
+git push origin 'branch-name'
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Branching in Git</h3>
+                <p class="mb-3">
+                    Understand how to create and manage branches to work on different features or fixes simultaneously.
+                </p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
+# (remove '')
+
+# Create a new branch
+git branch 'branch-name'
+
+# Switch to a branch
+git checkout 'branch-name'
+
+# Merge branches
+git merge 'branch-name'
+
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Collaboration with Git</h3>
+                <p class="mb-3">Collaborate with others using Git. Learn about pull requests, fetching changes, and resolving conflicts.</p>
+                <div class="code-container relative bg-gray-900 text-white mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded">Copy</button>
+                    <pre>
+                        <code class="language-html">
+                            <xpm>
+# Fetch changes from a remote repository
+git fetch
+
+# Create a pull request
+# (For platforms like GitHub, GitLab, or Bitbucket)
+
+                            </xmp>
+                        </code>
+                    </pre>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Resources</h3>
+                <p class="mb-3">There are loads more git commands out there, and it's worth taking the time to <a href="https://education.github.com/git-cheat-sheet-education.pdf" target="blank">research</a> what you can do with git. </p>
+                <a
+                    href="https://git-scm.com/doc"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    Read the documentation
+                </a>
             </div>
 
             <div id="intro" class="introduction-area">
