@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Objektiv+MK1:wght@400;700&display=swap');
+
 /* this would get rid of pointer styling: */
 details > summary {
 	list-style: none;
@@ -6,4 +9,14 @@ details > summary {
 details > summary::marker, /* Latest Chrome, Edge, Firefox */ 
 details > summary::-webkit-details-marker /* Safari */ {
 	display: none;
+}
+
+
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+    /* Additional styling for the Montserrat font, if needed */
+}
+.font-objektive-mk1 {
+    font-family: 'Objektiv MK1', sans-serif;
 }
