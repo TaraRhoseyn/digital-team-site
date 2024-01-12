@@ -1,0 +1,54 @@
+{% block extrajs %}
+<script src="https://use.fontawesome.com/39f4a89477.js"></script>
+{% endblock %}
+{% extends "base.njk" %}
+{% block content %}
+<div class="container mx-auto px-9 max-w-screen-xl">
+    <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Project Request Form</h1>
+    <p class="mt-3">
+        The Project Request Form is a request in accessing project support from us. 
+        It's designed to inform our Team with the necessary information about your project's needs, feasibility, and business case.
+    </p>
+    <p class="mt-3">
+        If you'd prefer to have an informal chat over coffee about your project before filling out this form, please get in touch with us
+        and a member of the team will be more than happy to meet up with you to discuss your needs.
+    </p>
+    <h2 class="text-3xl font-bold my-4">Completing the form</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="p-4">
+            <p class="mt-3">For smaller projects or where you can be complete the form in a single session, we recommend filling out the form online:</p>
+            <a
+                href="online-project-request-form.html"
+                class="mt-8 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                    from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                    dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                <i class="fa-solid fa-pen mr-2"></i>Complete form online
+            </a>
+        </div>
+        <div class="p-4">
+            <p class="mt-3">For larger projects or where you need to be able to save and go back to the form, we recommend downloading the form as a Word Document and emailing it to us:</p>
+            <a
+                href="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/docs/project-request-form.docx" download="project-request-form.docx"
+                class="mt-6 inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                    from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                    dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                <i class="fa-solid fa-download mr-2"></i>Download the form
+            </a>
+        </div>
+    </div>
+    <h2 class="text-3xl font-bold my-4">What happens next</h2>
+    <p class="mt-3">
+        The Programme Board (and the Steering Group, if necessary) will review your Request Form to decide if the project
+        is something we can offer support on.
+    </p>
+    <p class="mt-3">
+        If approved, support will be delivered to the requester/s on an agreed timeline. Support offered can be varied
+        in terms of time and expertise. Each project will have it's own individual requirements.
+    </p>
+    <p class="mt-3">
+        For project management, we recommend following an Agile approach. We've set out how we manage projects in this process diagram:
+    </p>
+    <!-- to include iframe going over project processes -->
+    {# <iframe class="mt-3 w-full" height="432" src="https://miro.com/app/live-embed/uXjVNcqTwvA=/?moveToViewport=-12161,-1814,4171,1822&embedId=971586948741" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe> #}
+</div>
+{% endblock %}
