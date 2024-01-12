@@ -22,6 +22,8 @@ const pages = [
     new Page('404', '404 Error Page'),
     new Page('developers', 'Developers'),
     new Page('privacy-policy', 'Privacy Policy'),
+    new Page('contact', 'Contact'),
+    new Page('agile-tools', 'Agile Tools'),
     new Page('blogs', 'Blogs'),
     new Page('blogs-by-steffan-berrow', 'Blogs by Steffan Berrow'),
     new Page('blogs-by-phil-stephens', 'Blogs by Phil Stephens'),
