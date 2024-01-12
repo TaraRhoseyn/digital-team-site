@@ -8,7 +8,6 @@
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h1 id="blog" class="text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                     Blog posts</h1>
-                {# <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" >From the blog</h2> #}
                 <p class="mt-2 text-lg leading-8 text-gray-600">How we're finding digital transformation at Sport Wales.</p>
             </div>
             <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0
@@ -37,7 +36,7 @@
                             <img src="{{ blog.profilePicture }}" alt="{{ blog.author }}'s Picture" class="h-10 w-10 rounded-full bg-gray-50 mt-1">
                                 <div class="text-sm leading-6">
                                     <p class="font-semibold text-gray-900">
-                                        <a href="#">
+                                        <a href="blogs-by-{{ blog.author | lower | replace(" ", "-") }}.html">
                                             <span class="absolute inset-0"></span>
                                             By {{ blog.author }}
                                         </a>

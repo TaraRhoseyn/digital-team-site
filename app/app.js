@@ -23,6 +23,10 @@ const pages = [
     new Page('developers', 'Developers'),
     new Page('privacy-policy', 'Privacy Policy'),
     new Page('blogs', 'Blogs'),
+    new Page('blogs-by-steffan-berrow', 'Blogs by Steffan Berrow'),
+    new Page('blogs-by-phil-stephens', 'Blogs by Phil Stephens'),
+    new Page('blogs-by-paul-batcup', 'Blogs by Paul Batcup'),
+    new Page('blogs-by-tara-rhoseyn', 'Blogs by Tara Rhoseyn'),
 ]
 
 
