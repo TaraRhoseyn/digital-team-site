@@ -4,7 +4,7 @@ Blog site for the Digital and Service Design Team at Sport Wales. We work out in
 
 ## Technologies
 
-The website is a static site built with Nunjucks and Tailwind UI, deployed on Netlify.
+The website is a static site built with Nunjucks and Tailwind, <a href="https://sport-wales-digital-blog.netlify.app/" target="_blank">deployed</a> on Netlify.
 
 ## Installation
 
@@ -28,7 +28,7 @@ There's no need to install Tailwind UI as a node package as it's accessed via CD
 ## Dependencies
 
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
-- [Tailwind UI](https://tailwindui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Flowbite](https://flowbite.com/)
 
 ## Deployment

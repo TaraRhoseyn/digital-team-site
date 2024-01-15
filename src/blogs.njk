@@ -36,7 +36,8 @@
                             <img src="{{ blog.profilePicture }}" alt="{{ blog.author }}'s Picture" class="h-10 w-10 rounded-full bg-gray-50 mt-1">
                                 <div class="text-sm leading-6">
                                     <p class="font-semibold text-gray-900">
-                                        <a href="blogs-by-{{ blog.author | lower | replace(" ", "-") }}.html">
+                                        <a href="blogs-by-{{ blog.author | lower | replace(" ", "-") }}.html"
+                                            class="text-gray-700 font-normal">
                                             <span class="absolute inset-0"></span>
                                             By {{ blog.author }}
                                         </a>
