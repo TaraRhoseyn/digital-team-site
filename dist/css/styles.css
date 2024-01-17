@@ -28,15 +28,9 @@ details > summary::-webkit-details-marker /* Safari */ {
 /* About Page carousel */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 80vw;
   width: 100%;
   position: relative;
   /* transform: translateY(-50%, -50%); */
@@ -59,16 +53,14 @@ details > summary::-webkit-details-marker /* Safari */ {
 .wrapper i:active{
   transform: translateY(-50%) scale(0.85);
 }
-/* .wrapper i:first-child{
-  left: -22px;
-} */
+
 .wrapper i:last-child{
   right: 0px;
 }
 .wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
+  grid-auto-columns: calc((100% / 4) - 12px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
@@ -98,20 +90,38 @@ details > summary::-webkit-details-marker /* Safari */ {
 .carousel .card {
   display: flex;
   scroll-snap-align: start;
-  height: 342px;
+  height: 382px;
   list-style: none;
   background: #f4f4f4;
   cursor: pointer;
-  padding-bottom: 15px;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 10px;
 }
+
+.carousel .card-bg {
+  box-sizing: border-box;
+  display: flex;
+  /* background: #f4f4f4;  */
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* padding-bottom: 15px; */
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; 
+}
+
 .carousel .card .img {
   background: #e13a3a;
   height: 148px;
   width: 148px;
   border-radius: 50%;
 }
+
 .card .img img {
   width: 140px;
   height: 140px;
@@ -124,10 +134,25 @@ details > summary::-webkit-details-marker /* Safari */ {
   font-size: 1.56rem;
   margin: 30px 0 5px;
 }
-.carousel .card span {
+.carousel .card span{
   color: #6A6D78;
-  font-size: 1.31rem;
+  font-size: 1.11rem;
+  font-weight: 600;
+  white-space: wrap;
+  margin-top: 10px; 
 }
+
+.carousel.scrolling {
+  animation: scrollAnimation 3.5s ease-in-out;
+}
+
+@keyframes scrollAnimation {
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
