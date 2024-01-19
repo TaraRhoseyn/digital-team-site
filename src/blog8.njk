@@ -2,27 +2,7 @@
 {% block extrajs %}
 <!-- javascript for copy-and-paste block -->
 <script src="https://use.fontawesome.com/39f4a89477.js"></script>
-<script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.copy-code-btn').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var codeBlock = this.closest('.code-container').querySelector('code');
-                    var codeText = codeBlock.innerText;
-
-                    var codeBtn = this;
-
-                    navigator.clipboard.writeText(codeText)
-                        .then(function () {
-                            // Use the stored reference
-                            codeBtn.innerHTML = '<i class="fa-solid fa-check"></i>  Copied!';
-                        })
-                        .catch(function (err) {
-                            console.error('Unable to copy code', err);
-                        });
-                });
-            });
-        });
-    </script>
+<script src="js/devdocs.js"></script>
 <!-- highlight js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>

@@ -2,9 +2,11 @@
 {% block extracss %}
 <!-- highlight js -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<link href="css/syntax-highlighting.css" rel="stylesheet"/>
 {% endblock %}
 {% block extrajs %}
 <script src="https://use.fontawesome.com/39f4a89477.js"></script>
+<script src="js/devdocs.js"></script>
 <!-- highlight js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>
@@ -1690,67 +1692,4 @@ SOFTWARE.
             </div> 
         </div> <!-- end of content block -->
     </div> <!-- end of flex -->
-
-    
-
-    <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sidebarLinks = document.querySelectorAll('.sidebar-link');
-
-            sidebarLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-
-                    const targetContentId = this.getAttribute('href').substring(1);
-
-                    document.querySelectorAll('.content-area').forEach(content => {
-                        content.style.display = 'none';
-                    });
-                    document.querySelectorAll('.introduction-area').forEach(content => {
-                        content.style.display = 'none';
-                    });
-
-                    document.getElementById(targetContentId).style.display = 'block';
-                });
-            });
-
-            document.querySelectorAll('.copy-code-btn').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var codeBlock = this.closest('.code-container').querySelector('code');
-                    var codeText = codeBlock.innerText;
-
-                    var codeBtn = this;
-
-                    navigator.clipboard.writeText(codeText)
-                        .then(function () {
-                            // Use the stored reference
-                            codeBtn.innerHTML = '<i class="fa-solid fa-check"></i>  Copied!';
-                        })
-                        .catch(function (err) {
-                            console.error('Unable to copy code', err);
-                        });
-                });
-            });
-        });
-    </script>
-
-    <!-- Your custom styles -->
-    <style>
-        .content-area {
-            display: none;
-        }
-
-        pre {
-            overflow: auto;
-            white-space: pre-wrap;
-            padding: 10px;
-        }
-
-        .code-container {
-            border-radius: 10px;
-        }
-    </style>
-<link href="css/syntax-highlighting.css" rel="stylesheet"/>
-
 {% endblock %}
