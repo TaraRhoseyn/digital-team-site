@@ -55,6 +55,12 @@
                 <li class="mb-2 hover:underline hover:text-blue-500">
                     <a href="#pip" class="sidebar-link ml-3">pip</a>
                 </li>
+                <li class="mb-2 hover:underline hover:text-blue-500">
+                    <a href="#netlify" class="sidebar-link ml-3">Netlify</a>
+                </li>
+                <li class="mb-2 hover:underline hover:text-blue-500">
+                    <a href="#gulp" class="sidebar-link ml-3">gulp</a>
+                </li>
                 <li class="mb-2">
                     <strong>Brand and Style</strong>
                 </li>
@@ -84,6 +90,131 @@
 
         <!-- Content Area -->
         <div class="p-6 w-3/4">
+
+            <div id="gulp" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">gulp</h2>
+                <p class="mb-3">
+                    Gulp is a JavaScript library that allows you to automate slow and repetitive workflows.
+                </p>
+                <p class="mb-3">Gulp is used in this project to automatically convert .png files to .webp and minify our CSS and JS files.</p>
+                <p class="mb-3">There are tonnes of plugins out there that use gulp to help automate your workflows, if you're interested
+                    in this technology it's worth spending some time exploring these.
+                </p>
+                <h3 class="text-2xl font-bold my-4">Installation</h3>
+                <p class="mb-3">You install gulp as a node package in your CLI (you must have Node pre-installed on your machine), please note that you'll need to install each gulp plugin as it's own dependency package.
+                </p>
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>  Copy</button>
+                    <code class="language-bash text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block  text-white rounded-lg p-4 pl-6">
+                        <span class="flex" style="margin-left: 0px; margin-right: 2px;">
+                            <div class="shrink-0 text-white">
+<pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
+npm install gulp --save-dev
+</code>
+</pre>
+                            </div>
+                    </code>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Example gulpfile.js</h3>
+                <p class="mb-3">Gulp functions are run through something called a gulpfile that you create in the root of your project. Here is an example of this repo's gulpfile.js (as of the time of writing, 19th Jan 2023):</p>
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>  Copy</button>
+                    <code class="language-bash text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block  text-white rounded-lg p-4 pl-6">
+                        <span class="flex" style="margin-left: 0px; margin-right: 2px;">
+                            <div class="shrink-0 text-white">
+<pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
+require = require('esm')(module);
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
+var rename = require('gulp-rename');
+
+// minifies javascript files
+gulp.task('minify-js', function () {
+    return gulp.src('src/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
+
+// minifies css files
+gulp.task('minify-css', function () {
+    return gulp.src('src/css/*.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('dist/css'));
+});
+
+// converts png to webp files
+gulp.task('convert-to-webp', function () {
+    return gulp.src('assets/img/**/*.png')
+      .pipe(rename({ extname: '.webp' }))
+      .pipe(gulp.dest('dist/img'));
+});
+
+// runs all tasks via 'gulp' command
+gulp.task('default', gulp.series(
+    'minify-js', 
+    'minify-css',
+    'convert-to-webp'
+));
+
+</code>
+</pre>
+                            </div>
+                    </code>
+                </div>
+                <h3 class="text-2xl font-bold my-4">Running your gulpfile.js</h3>
+                <p class="mb-3">Each individual 'task' can be run separately, but if you wish to run them all you simply run 'gulp' in your terminal.
+                    Please note that you should not use powershell to run this script on Sport Wales computers, use another terminal.
+                </p>
+                <div class="code-container relative code-block
+
+ mt-5 mb-3">
+                    <button class="copy-code-btn absolute top-2 right-2 px-2 py-1 bg-blue-500 text-white rounded"><i class="fa-regular fa-copy"></i>  Copy</button>
+                    <code class="language-bash text-sm sm:text-base inline-flex text-left items-center space-x-4 code-block  text-white rounded-lg p-4 pl-6">
+                        <span class="flex" style="margin-left: 0px; margin-right: 2px;">
+                            <div class="shrink-0 text-white">
+<pre class="shrink-0 text-white p-0">
+<code class="hljs language-bash">
+gulp
+</code>
+</pre>
+                            </div>
+                    </code>
+                </div>
+                <a
+                    href="https://gulpjs.com/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View the documentation
+                </a>
+            </div>
+
+            <div id="netlify" class="content-area">
+                <h2 class="text-3xl font-bold mb-4">Netlify</h2>
+                <p class="mb-3">
+                    Netlify is a deployment solution that we use to deploy all of our static websites, including this one!
+                </p>
+                <p class="mb-3">
+                    Netlify allows us to host static websites on a URL that's accessible to the internet.
+                </p>
+                <p class="mb-3">
+                    Our Netlify deployment instances are managed by Tara, please get in touch with her if you have a solution that you need help deploying.
+                </p>
+                <a
+                    href="https://www.netlify.com/"
+                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r
+                        from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300
+                        dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 mt-2 text-lg" target="blank">
+                    View the documentation
+                </a>
+            </div>
 
             <div id="pip" class="content-area">
                 <h2 class="text-3xl font-bold mb-4">Python Package Installer (pip)</h2>
