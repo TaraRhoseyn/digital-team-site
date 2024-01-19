@@ -1,0 +1,1 @@
+const searchInput=document.getElementById("searchInput"),glossaryContainer=document.getElementById("glossaryContainer");searchInput.addEventListener("input",function(){const t=searchInput.value.toLowerCase().trim();Array.from(glossaryContainer.children).forEach(e=>{e.querySelector(".term").textContent.toLowerCase().includes(t)?e.style.display="block":e.style.display="none"})});
