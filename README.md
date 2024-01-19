@@ -6,30 +6,36 @@ Blog site for the Digital and Service Design Team at Sport Wales. We work out in
 
 The website is a static site built with Nunjucks and Tailwind, <a href="https://sport-wales-digital-blog.netlify.app/" target="_blank">deployed</a> on Netlify.
 
-## Installation
+This code also uses [gulp](https://gulpjs.com/) for some workflows.
 
-You'll need to install Nunjucks as a node package. Here are the steps:
+## Quick start
 
-1. Make sure you have [Node JS](https://nodejs.org/en) installed on your machine.
-2. Install Nunjucks in your command line of your IDE, using npm:
+You'll need to install several dependencies as node packages.
+
+1. Make sure you have [Node JS](https://nodejs.org/en) installed on your machine. This will include the package manager npm by default.
+2. Install dependencies in your command line of your IDE, using npm:
 ```markdown
-$ npm install nunjucks
+npm install
 ```
 This will create a node_modules directory which will be automatically added to your .gitignore for commits.
 
 To run the file that renders HTML pages from Nunjucks templates, use this script:
 ```markdown
-$ npm start
+npm start
 ```
 This code runs the app/app.js file (as defined in package.json)
 
-There's no need to install Tailwind UI as a node package as it's accessed via CDN.
+To run the gulpfile that triggers workflows, use this script (make sure the terminal you're using for this command is the command prompt, not windows powershell):
+```markdown
+gulp
+```
+
+There's no need to install Tailwind as a node package as it's accessed via CDN.
 
 ## Dependencies
 
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Flowbite](https://flowbite.com/)
 
 ## Deployment
 
