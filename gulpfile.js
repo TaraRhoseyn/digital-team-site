@@ -2,7 +2,6 @@ require = require('esm')(module);
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
-var webp = require('webp-converter');
 var rename = require('gulp-rename');
 
 // minifies javascript files
