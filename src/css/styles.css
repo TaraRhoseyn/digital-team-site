@@ -11,21 +11,17 @@ details > summary::-webkit-details-marker /* Safari */ {
 	display: none;
 }
 
-
-
 .font-montserrat {
     font-family: 'Montserrat', sans-serif;
     /* Additional styling for the Montserrat font, if needed */
 }
+
 .font-objektive-mk1 {
     font-family: 'Objektiv MK1', sans-serif;
 }
 
 
-
-
-
-/* About Page carousel */
+/* About Page Carousel */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
@@ -33,30 +29,45 @@ details > summary::-webkit-details-marker /* Safari */ {
   max-width: 80vw;
   width: 100%;
   position: relative;
+  left: 80px;
+  padding: 50px;
   /* transform: translateY(-50%, -50%); */
 }
+
 .wrapper i {
   top: 50%;
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   cursor: pointer;
   font-size: 1.25rem;
   position: absolute;
   text-align: center;
   line-height: 50px;
-  background: #fff;
+  background: #6f6f6f39;
   border-radius: 50%;
   box-shadow: 0 3px 6px rgba(0,0,0,0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
 .wrapper i:active{
   transform: translateY(-50%) scale(0.85);
 }
 
+.wrapper i:first-child{
+    left: -80px;
+  }
+
 .wrapper i:last-child{
-  right: 0px;
+  right: -80px;
 }
+
+
+
 .wrapper .carousel{
   display: grid;
   grid-auto-flow: column;
@@ -90,9 +101,10 @@ details > summary::-webkit-details-marker /* Safari */ {
 .carousel .card {
   display: flex;
   scroll-snap-align: start;
-  height: 382px;
+  height: 500px;
+  min-width: 200px;
   list-style: none;
-  background: #f4f4f4;
+  background: #f4f3f3;
   cursor: pointer;
   flex-direction: column;
   border-radius: 10px;
@@ -116,33 +128,67 @@ details > summary::-webkit-details-marker /* Safari */ {
 }
 
 .carousel .card .img {
-  background: #e13a3a;
-  height: 148px;
-  width: 148px;
-  border-radius: 50%;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    /* box-shadow: 10px 0px 40px 40px rgba(255, 0, 0, 0.5) inset !important; Increase blur and spread radius */
+  
+    outline-color: rgba(255, 0, 0, 0.5); /* Blurred background color with transparency */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.59); /* Additional box shadow for the border */
+    background-clip: content-box;
+
 }
 
+.carousel .card:hover .img {
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+  
+    outline-color: rgba(255, 255, 255, 0.5); /* Blurred background color with transparency */
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.724); /* Additional box shadow for the border */
+    background-clip: content-box;
+
+}
+
+
 .card .img img {
-  width: 140px;
-  height: 140px;
+    /* display: none; */
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
+  z-index: 2;
 }
+
 .carousel .card h2 {
-  font-weight: 500;
+  font-weight: 800;
   font-size: 1.56rem;
   margin: 30px 0 5px;
 }
-.carousel .card span{
-  color: #6A6D78;
+
+.carousel .card:hover h2 {
+    color: rgb(255, 255, 255);
+}
+
+.carousel .card p{
+  color: #f45f5778;
   font-size: 1.11rem;
-  font-weight: 600;
+  font-weight: 800;
   white-space: wrap;
   margin-top: 10px; 
 }
 
-.carousel.scrolling {
+.carousel .card:hover p{
+    color: #ffffffed;
+}
+
+.carousel .card a {
+    margin-top: 40px;
+    outline-color: #ffffff80; /* Blurred background color with transparency */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.724); /* Additional box shadow for the border */
+}
+
+/* .carousel.scrolling {
   animation: scrollAnimation 3.5s ease-in-out;
 }
 
@@ -150,14 +196,14 @@ details > summary::-webkit-details-marker /* Safari */ {
   to {
       transform: translateX(-100%);
   }
-}
-
+} */
 
 @media screen and (max-width: 900px) {
   .wrapper .carousel {
     grid-auto-columns: calc((100% / 2) - 9px);
   }
 }
+
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
     grid-auto-columns: 100%;
