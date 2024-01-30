@@ -125,6 +125,19 @@
 </nav>
     
     <div class="container mx-auto px-9 max-w-screen-xl mb-5">
+        <!-- back btn -->
+        <div class="flex flex-row mx-auto ml-5">
+            <button onclick="goBack()" type="button" id="back-btn"
+                class="mt-5 text-xs bg-gray-200 text-black rounded-lg border-gray-100 py-2 hover:bg-red-700 hover:text-white px-3">
+                <div class="flex flex-row align-middle hover:text-white">
+                    <svg class="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="ml-1 back-btn-txt">Go Back</p>
+                </div>
+            </button>
+        </div>
+        <!-- end of back btn -->
         <div
             class="bg-white py-24 sm:py-32">
             <!-- BLOG PREVIEW SECTION -->
@@ -216,6 +229,8 @@
     </div>
 </footer>
     
+<script src="./js/go-back.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="js/main.js"></script>
   </body>
