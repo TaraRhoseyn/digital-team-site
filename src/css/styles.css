@@ -153,6 +153,11 @@ p {
 	color: rgb(0, 0, 0);
 }
 
+
+#back-btn:hover .back-btn-txt {
+	color: white !important;
+}
+
 .mobile-card {
 	width: 300px;
 	height: 400px;
