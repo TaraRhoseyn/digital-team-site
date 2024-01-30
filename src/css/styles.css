@@ -102,7 +102,7 @@ details > summary::-webkit-details-marker /* Safari */ {
   display: flex;
   scroll-snap-align: start;
   height: 500px;
-  min-width: 200px;
+  min-width: 300px;
   list-style: none;
   background: #f4f3f3;
   cursor: pointer;
@@ -176,6 +176,7 @@ details > summary::-webkit-details-marker /* Safari */ {
   font-weight: 800;
   white-space: wrap;
   margin-top: 10px; 
+  text-align: center;
 }
 
 .carousel .card:hover p{
