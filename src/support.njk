@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+{% block content %}
+    <div class="container mx-auto px-9 max-w-screen-xl mb-5 mb-5">
+        <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Accessing support</h1>
+        <p class="mt-3">
+            This page summarises how a Sport Wales project concept can reach the Digital & Service Design (D&SD) Team and from
+            there, how the team’s support and skills can be accessed to develop a solution to a problem which the project is planned
+            to solve.
+        </p>
+        <h2 class="text-3xl font-bold my-4">The process</h2>
+        <p>
+            If you have a project which you feel would resolve a
+            <a href="https://www.nngroup.com/articles/problem-statements/" target="blank" class="text-blue-500 hover:underline">‘problem’</a>
+            or improve a service, then it will be worth exploring this with the D&SD team.
+        </p>
+        <p class="mt-3">
+            Please fill the ‘Project Request Form’ (PRF),
+            <a href="project-request-form.html" target="blank" class="text-blue-500 hover:underline">available here</a>, with as much information as you can, to tell us
+                about what you have in mind! This will enable a good starting point for a conversation. From there we can use the
+                following steps to determine how the team could help with delivering the project.
+        </p>
+        {% include 'includes/process-cards.njk' %}
+    </div>
+{% endblock %}
