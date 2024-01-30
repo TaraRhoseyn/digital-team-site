@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font awesome -->
     <script src="https://use.fontawesome.com/39f4a89477.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -155,7 +157,24 @@
     <p class="mt-3">
         A CMS would give non-developers direct access to write and upload blog posts to the website without needing to go through the technical staff on the team.
     </p>
+    <h2 class="text-3xl font-bold my-4">GitHub Repostitory</h2>
+    <div id="repo1"></div>
 </div>
+
+
+<script src="./js/repo.js"></script>
+<script>
+    $(function() {
+        $('#repo1').repo({
+            user: 'Sport-Wales',
+            name: 'digital-team-site',
+            branch: 'main',
+        });
+    });
+</script>
+
+
+
 
     <footer class="bg-white rounded-lg shadow m-4 mt-5 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
@@ -182,6 +201,18 @@
     </div>
 </footer>
     
+<script src="./js/repo.js"></script>
+<script>
+    $(function() {
+        $('#repo1').repo({
+            user: 'Sport-Wales',
+            name: 'digital-team-site',
+            branch: 'main',
+        });
+    });
+</script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="js/main.js"></script>
   </body>
