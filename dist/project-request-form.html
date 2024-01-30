@@ -84,15 +84,19 @@
                     <div
                         id="dropdownNavbar"
                         class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
-                            dark:divide-gray-600">
-                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                             <li>
-                                <a href="project-request-form.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Project Request Form</a>
+                                <a href="support.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Access support</a>
                             </li>
                             <li>
-                                <a href="agile-tools.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                    Agile Resources</a>
+                                <a href="agile-tools.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Resources</a>
+                            </li>
+                            <li>
+                                <a href="project-request-form.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Submit Project Request Form</a>
                             </li>
                         </ul>
                     </div>
@@ -118,17 +122,20 @@
     </div>
 </nav>
     
-<div class="container mx-auto px-9 max-w-screen-xl">
+<div class="container mx-auto px-9 max-w-screen-xl mb-5">
     <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Project Request Form</h1>
     <p class="mt-3">
         The Project Request Form is a request in accessing project support from us. 
         It's designed to inform our Team with the necessary information about your project's needs, feasibility, and business case.
     </p>
     <p class="mt-3">
-        If you'd prefer to have an informal chat over coffee about your project before filling out this form, please get in touch with us
+        If you'd prefer to have an informal chat over coffee about your project before filling out this form, please <a href="contact.html" class="text-blue-500 hover:underline" target="blank">get in touch with us</a>
         and a member of the team will be more than happy to meet up with you to discuss your needs.
     </p>
-    <h2 class="text-3xl font-bold my-4">Completing the form</h2>
+    <p class="mt-3">
+        If you're unsure of what happens before or after submitting this form, please <a href="support.html" class="text-blue-500 hover:underline" target="blank">review the process.</a>
+    </p>
+    <h2 class="text-3xl font-bold my-4 mt-5">Completing the form</h2>
     <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="p-4">
             <p class="mt-3">For smaller projects or where you can be complete the form in a single session, we recommend filling out the form online:</p>
@@ -161,15 +168,106 @@
         in terms of time and expertise. Each project will have it's own individual requirements.
     </p>
     <p class="mt-3">
-        For project management, we recommend following an Agile approach. We've set out how we manage projects in this process diagram:
+        Here is a reminder of our process:
     </p>
-    <!-- to include iframe going over project processes -->
-    
+    <div class="flex flex-wrap justify-center mt-10">
+    <!-- card 1 -->
+    <div class="p-4 max-w-sm">
+        <div class="flex rounded-lg h-full dark:bg-gray-800 bg-gray-200 shadow-xl p-8 flex-col">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-red-600 bg-red-600 text-white
+                        flex-shrink-0">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <h2 class="text-black dark:text-white text-lg font-medium">Step 1. Coffee chat</h2>
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <p class="leading-relaxed text-base text-black dark:text-gray-300">
+                    An initial chat between someone with a potential project and any member of the D&SD team. This will enable an
+                    opportunity to talk through the process and introduce the PRF.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="hidden xl:flex w-5 h-5 mt-20 border-t-2 border-gray-500"></div>
+    <!-- card 2 -->
+    <div class="p-4 max-w-sm">
+        <div class="flex rounded-lg h-full dark:bg-gray-800 bg-gray-200 shadow-xl p-8 flex-col">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-red-600 bg-red-600 text-white
+                        flex-shrink-0">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                </div>
+                <h2 class="text-black dark:text-white text-lg font-medium">Step 2. Complete Project Request Form</h2>
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <p class="leading-relaxed text-base text-black dark:text-gray-300">
+                    The ‘problem’ should be outlined within the PRF. However, the conversation with colleagues will help to identify any
+                    additional details which could be added to improve the D&SD team’s understanding of the project and the form can be
+                    amended accordingly by the project contact point.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="hidden xl:flex w-5 h-5 mt-20 border-t-2 border-gray-500"></div>
+    <!-- card 3 -->
+    <div class="p-4 max-w-sm">
+        <div class="flex rounded-lg h-full dark:bg-gray-800 bg-gray-200 shadow-xl p-8 flex-col">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-red-600 bg-red-600 text-white
+                        flex-shrink-0">
+                    <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <h2 class="text-black dark:text-white text-lg font-medium">Step 3. Submit Project Request Form</h2>
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <p class="leading-relaxed text-base text-black dark:text-gray-300">
+                    This should be submitted to the D&SD team by following the instructions on either the manual or online form.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="p-4 max-w-sm">
+        <div class="flex rounded-lg h-full dark:bg-gray-800 bg-gray-200 shadow-xl p-8 flex-col">
+            <div class="flex items-center mb-3 hover:text-white">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-red-600 bg-red-600 text-white
+                        flex-shrink-0">
+                    <i class="fa-regular fa-comment"></i>
+                </div>
+                <h2 class="text-black dark:text-white text-lg font-medium">Step 4. Programme Board discusses Project Request Form</h2>
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <p class="leading-relaxed text-base text-black dark:text-gray-300">
+                    This involves the team needing to assess the project priority level, timescales, technical considerations, and resource
+                    availability to support the work.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="hidden xl:flex w-5 h-5 mt-20 border-t-2 border-gray-500"></div>
+    <div class="p-4 max-w-sm">
+        <div class="flex rounded-lg h-full dark:bg-gray-800 bg-gray-200 shadow-xl p-8 flex-col">
+            <div class="flex items-center mb-3">
+                <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full dark:bg-red-600 bg-red-600 text-white
+                        flex-shrink-0">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+                <h2 class="text-black dark:text-white text-lg font-medium">Step 5. Confirmation given to project</h2>
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <p class="leading-relaxed text-base text-black dark:text-gray-300">
+                    The lead contact / project sponsor will receive an update from the D&SD team as to whether the D&SD could support the
+                    delivery of the project in question. If agreed project timescales and approach will be discussed further.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
-    <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <footer class="bg-white rounded-lg shadow m-4 mt-5 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
             <a href="https://flowbite.com/" class="hover:underline">Sport Wales</a>
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
@@ -183,6 +281,9 @@
                 <a href="developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
             </li>
             <li>
+                <a href="website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
+            </li>
+            <li>
                 <a href="contact.html" class="hover:underline">Contact</a>
             </li>
         </ul>
@@ -192,6 +293,6 @@
 <script src="https://use.fontawesome.com/39f4a89477.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

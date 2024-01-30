@@ -2,27 +2,7 @@
 {% block extrajs %}
 <!-- javascript for copy-and-paste block -->
 <script src="https://use.fontawesome.com/39f4a89477.js"></script>
-<script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.copy-code-btn').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    var codeBlock = this.closest('.code-container').querySelector('code');
-                    var codeText = codeBlock.innerText;
-
-                    var codeBtn = this;
-
-                    navigator.clipboard.writeText(codeText)
-                        .then(function () {
-                            // Use the stored reference
-                            codeBtn.innerHTML = '<i class="fa-solid fa-check"></i>  Copied!';
-                        })
-                        .catch(function (err) {
-                            console.error('Unable to copy code', err);
-                        });
-                });
-            });
-        });
-    </script>
+<script src="js/devdocs.js"></script>
 <!-- highlight js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>
@@ -32,7 +12,7 @@
 {% endblock %}
 <!-- main content -->
 {% block content %}
-<div class="container mx-auto px-9 max-w-screen-xl">
+<div class="container mx-auto px-9 max-w-screen-xl mb-5">
     <h1 class="mt-20 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
        The Power of Understanding User Needs</h1>
     <p class="mt-2 mb-7 text-slate-500">{{ date }}</p>

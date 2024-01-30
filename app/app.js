@@ -25,6 +25,8 @@ const pages = [
     new Page('contact', 'Contact'),
     new Page('agile-tools', 'Agile Tools'),
     new Page('blogs', 'Blogs'),
+    new Page('support', 'Support'),
+    new Page('website-roadmap', 'Website Roadmap'),
     new Page('blogs-by-steffan-berrow', 'Blogs by Steffan Berrow'),
     new Page('blogs-by-phil-stephens', 'Blogs by Phil Stephens'),
     new Page('blogs-by-paul-batcup', 'Blogs by Paul Batcup'),
