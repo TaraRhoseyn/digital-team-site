@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var shell = require('gulp-shell');
 
 // minifies javascript files
 gulp.task('minify-js', function () {
@@ -10,6 +11,11 @@ gulp.task('minify-js', function () {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
+
+// runs nunjucks environment:
+gulp.task('run-script', shell.task([
+    'node --trace-warnings --experimental-modules app/app.js'
+]));
 
 // minifies css files
 gulp.task('minify-css', function () {
@@ -29,5 +35,6 @@ gulp.task('convert-to-webp', function () {
 gulp.task('default', gulp.series(
     'minify-js', 
     'minify-css',
-    'convert-to-webp'
+    'convert-to-webp',
+    'run-script'
 ));
