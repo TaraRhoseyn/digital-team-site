@@ -1,6 +1,6 @@
 {
   "name": "digital-team-site",
-  "description": "- [Tailwind UI](https://tailwindui.com/)\r - [Flowbite](https://flowbite.com/)\r - [Nunjucks](https://mozilla.github.io/nunjucks/)",
+  "description": "Website for the Sport Wales Digital and Service Design Team. The site houses resources, blog posts and access to project support.",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
