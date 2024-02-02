@@ -1,6 +1,6 @@
 {
   "name": "digital-team-site",
-  "description": "- [Tailwind UI](https://tailwindui.com/)\r - [Flowbite](https://flowbite.com/)\r - [Nunjucks](https://mozilla.github.io/nunjucks/)",
+  "description": "Website for the Sport Wales Digital and Service Design Team. The site houses resources, blog posts and access to project support.",
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
@@ -17,6 +17,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-imagemin": "^9.0.0",
     "gulp-rename": "^2.0.0",
+    "gulp-shell": "^0.8.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^5.0.0",
     "nunjucks": "^3.2.4",
