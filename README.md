@@ -23,10 +23,8 @@ To render the HTML pages from the Nunjucks templates and perform automated tasks
 ```markdown
 gulp
 ```
-This can be slow, however. To only run the file that renders HTML pages from Nunjucks templates, use this script:
-```markdown
-npm start
-```
+This can be slow, however. To only run the file that renders HTML pages from Nunjucks templates, you can use ```gulp nunjucks``` or ```npm start```.
+
 This code runs the app/app.js file (as defined in package.json)
 
 
