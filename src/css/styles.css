@@ -148,8 +148,7 @@ details > summary::-webkit-details-marker /* Safari */ {
 	z-index: 2;
 }
 
-.carousel .card h2,
-p {
+.carousel .card h2 {
 	color: rgb(0, 0, 0);
 }
 
@@ -192,6 +191,10 @@ p {
 .carousel .card a {
 	outline-color: #ffffff80; /* Blurred background color with transparency */
 	box-shadow: 0 0 20px rgba(255, 255, 255, 0.724); /* Additional box shadow for the border */
+}
+
+.principle-card:hover .principle-card > p {
+	color: white;
 }
 
 @media screen and (max-width: 900px) {
