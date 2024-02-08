@@ -13,7 +13,7 @@ gulp.task('minify-js', function () {
 });
 
 // runs nunjucks environment:
-gulp.task('run-script', shell.task([
+gulp.task('nunjucks', shell.task([
     'node --trace-warnings --experimental-modules app/app.js'
 ]));
 
@@ -36,5 +36,5 @@ gulp.task('default', gulp.series(
     'minify-js', 
     'minify-css',
     'convert-to-webp',
-    'run-script'
+    'nunjucks'
 ));

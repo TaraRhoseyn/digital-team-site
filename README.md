@@ -19,16 +19,14 @@ npm install
 ```
 This will create a node_modules directory which will be automatically added to your .gitignore for commits.
 
-To run the file that renders HTML pages from Nunjucks templates, use this script:
-```markdown
-npm start
-```
-This code runs the app/app.js file (as defined in package.json)
-
-To run the gulpfile that triggers workflows, use this script (make sure the terminal you're using for this command is the command prompt, not windows powershell):
+To render the HTML pages from the Nunjucks templates and perform automated tasks, you can run the 'gulp' command (note: make sure the terminal you're using for this command is the command prompt, not windows powershell)
 ```markdown
 gulp
 ```
+This can be slow, however. To only run the file that renders HTML pages from Nunjucks templates, you can use ```gulp nunjucks``` or ```npm start```.
+
+This code runs the app/app.js file (as defined in package.json)
+
 
 There's no need to install Tailwind as a node package as it's accessed via CDN.
 
@@ -36,6 +34,7 @@ There's no need to install Tailwind as a node package as it's accessed via CDN.
 
 - [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Gulp](https://gulpjs.com/)
 
 ## Deployment
 
