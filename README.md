@@ -23,15 +23,11 @@ To render the HTML pages from the Nunjucks templates and perform automated tasks
 ```markdown
 gulp
 ```
-
-
-To only run the file that renders HTML pages from Nunjucks templates, use this script:
+This can be slow, however. To only run the file that renders HTML pages from Nunjucks templates, use this script:
 ```markdown
 npm start
 ```
 This code runs the app/app.js file (as defined in package.json)
-
-To run the gulpfile that triggers workflows, use this script ():
 
 
 There's no need to install Tailwind as a node package as it's accessed via CDN.
