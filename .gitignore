@@ -1,3 +1,5 @@
 node_modules/
 notes.njk
 .vscode/
+src/test.njk
+dist/test.html
