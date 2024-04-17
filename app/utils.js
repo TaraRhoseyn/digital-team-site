@@ -21,7 +21,7 @@ const profile = {
 }
 
 const job = {
-    tara_rhoseyn_job: 'Digital and Service Design Programme Manager',
+    tara_rhoseyn_job: 'Software Developer',
     owen_sullivan_job: 'Deputy Digital Estate Lead',
     owen_burgess_job: 'Service Design and Development Lead',
     anselm_powell_job: 'Digital Apprentice',
