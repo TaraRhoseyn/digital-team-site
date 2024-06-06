@@ -24,7 +24,7 @@ const pages = [
     new Page('developers', 'Developers'),
     new Page('privacy-policy', 'Privacy Policy'),
     new Page('contact', 'Contact'),
-    new Page('agile-tools', 'Agile Tools'),
+    new Page('agile-tools', 'Project Templates'),
     new Page('blogs', 'Blogs'),
     new Page('support', 'Support'),
 	new Page('projects', 'Projects'),
