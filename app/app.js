@@ -17,6 +17,7 @@ const pages = [
     // Page(filename of njk and html, page title)
     new Page('index', 'Home'),
     new Page('principles', 'Principles'),
+	new Page('accessibility-statement', 'Accessibility Statement'),
     new Page('about', 'About'),
     new Page('glossary', 'Glossary'),
     new Page('404', '404 Error Page'),
