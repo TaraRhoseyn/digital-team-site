@@ -67,6 +67,9 @@ const blogs = [
     new Blog(
         'blog9', 'Project Selection Process: User Need Decision-Making', 'Steffan Berrow', 
         util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
+    new Blog(
+        'blog10', 'Oh DAM! The journey to effective Digital Asset Management', 'Mathew James',
+        util.job.mathew_james_job, 'July 1st, 2024', util.profile.mathew_james_profile),
 ]
 
 function createPages(type) {
