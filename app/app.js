@@ -71,6 +71,9 @@ const blogs = [
     new Blog(
         'blog10', 'Oh DAM! The journey to effective Digital Asset Management', 'Mathew James',
         util.job.mathew_james_job, 'July 1st, 2024', util.profile.mathew_james_profile),
+        new Blog(
+            'blog11', 'The Home Court Advantage: Sport Wales’s In-House Development', 'Anselm Powell',
+            util.job.anselm_powell_job, 'July 6st, 2024', util.profile.anselm_powell_profile),
 ]
 
 function createPages(type) {
