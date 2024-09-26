@@ -1,0 +1,122 @@
+ /* Shared styles for section containers */
+ .section_one,
+ .section_two,
+ .section_three {
+     position: relative;
+     overflow: visible;
+ }
+
+ .section_one.fixed,
+ .section_two.fixed,
+ .section_three.fixed {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     z-index: 100;
+ }
+
+ .section_one.hidden,
+ .section_two.hidden,
+ .section_three.hidden {
+     visibility: hidden;
+ }
+
+ /* Shared styles for presentation slides */
+ .presetation_slide_one,
+ .presetation_slide_two,
+ .presetation_slide_three {
+     position: absolute;
+     top: -10px;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     overflow: visible;
+ }
+
+ .presetation_slide_one path,
+ .presetation_slide_two path,
+ .presetation_slide_three path {
+     opacity: 0;
+     transition: opacity 0.3s ease-in-out;
+ }
+
+
+ @media (min-width: 2000px) {
+     /* Animation styles for title-preproject, title-feasibility, and title-development */
+     .title-preproject-animation,
+     .title-feasibilty-animation,
+     .title-development-animation {
+         opacity: 1 !important;
+         transform: translate(28%, -20%) scale(2);
+         transition: transform 2s ease;
+     }
+ }
+
+
+ .title-preproject-animation.final,
+ .title-feasibilty-animation.final,
+ .title-development-animation.final {
+     transform: translate(0%, 0%) scale(1);
+ }
+
+ .title-preproject-animation path,
+ .title-feasibilty-animation path,
+ .title-development-animation path {
+     opacity: 1 !important
+ }
+
+ .circle-animation {
+     position: absolute;
+     display: inline-block;
+     transition: transform 2s ease-in-out; 
+     transform-origin: 50% 50%;
+     transform-box: fill-box;
+ }
+
+ .circle-info-animation {
+     transform: translate(0%, 0%);
+     transition: transform 1.5s ease-in-out; 
+ }
+
+ .circle-info-animation.final {
+     transform: translate(-12%, 0%)
+ }
+
+ .circle-animation.rotate {
+     animation: rotate360 8s ease-in-out; 
+ }
+
+ @keyframes rotate360 {
+     from {
+         transform: rotate(0deg);
+     }
+     to {
+         transform: rotate(360deg);
+     }
+ }
+
+ .remove_animation {
+     display: none;
+     position: relative;
+     padding: 10px 20px;
+     text-align: center;
+     cursor: pointer;
+     color: black;
+     
+
+ }
+
+ .remove_animation:hover {
+     transform: scale(1.05);
+     font-weight: 600;
+     color: #E32434;
+ }
+
+ .remove_animation.fixed {
+     display: block;
+     position: fixed;
+     top: 5%;
+     left: 65%;
+     z-index: 200;
+ }
