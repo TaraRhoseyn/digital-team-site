@@ -32,6 +32,7 @@
 
         // This is a botton when clicked will remove the animation and replace it with a powerpoint embedding  
         const removeAnimation = document.querySelector('.remove_animation');
+        isAnimationRemoved = false
 
 
 
@@ -167,6 +168,7 @@
             
             // Show div-two
             powerpoint.style.display = 'block';
+            isAnimationRemoved = true;
         });
 
 
@@ -178,9 +180,11 @@
             if (scrollPosition >= sectionHeight && scrollPosition < sectionScrollOutStartPoint) {
                  
                     
-                   
+                   if(isAnimationRemoved == false){
                     // This is a button, when fixed is added to the class the button will appear and be fixed to the screen 
                     removeAnimation.classList.add('fixed')
+
+                   }
 
                     // Add the 'fixed' class to keep section at the top of the viewport
                     section.classList.add('fixed');
