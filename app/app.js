@@ -17,13 +17,14 @@ const pages = [
     // Page(filename of njk and html, page title)
     new Page('index', 'Home'),
     new Page('principles', 'Principles'),
+	new Page('accessibility-statement', 'Accessibility Statement'),
     new Page('about', 'About'),
     new Page('glossary', 'Glossary'),
     new Page('404', '404 Error Page'),
     new Page('developers', 'Developers'),
     new Page('privacy-policy', 'Privacy Policy'),
     new Page('contact', 'Contact'),
-    new Page('agile-tools', 'Agile Tools'),
+    new Page('agile-tools', 'Project Templates'),
     new Page('blogs', 'Blogs'),
     new Page('support', 'Support'),
 	new Page('projects', 'Projects'),
@@ -32,6 +33,7 @@ const pages = [
     new Page('blogs-by-phil-stephens', 'Blogs by Phil Stephens'),
     new Page('blogs-by-paul-batcup', 'Blogs by Paul Batcup'),
     new Page('blogs-by-tara-rhoseyn', 'Blogs by Tara Rhoseyn'),
+    new Page('blogs-by-mathew-james', 'Blogs by Mathew James'),
     new Page('project-request-form', 'Project Request Form'),
     new Page('online-project-request-form', 'Online Project Request Form'),
 ]
@@ -66,6 +68,12 @@ const blogs = [
     new Blog(
         'blog9', 'Project Selection Process: User Need Decision-Making', 'Steffan Berrow', 
         util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
+    new Blog(
+        'blog10', 'Oh DAM! The journey to effective Digital Asset Management', 'Mathew James',
+        util.job.mathew_james_job, 'July 1st, 2024', util.profile.mathew_james_profile),
+        new Blog(
+            'blog11', 'The Home Court Advantage: Sport Wales’s In-House Development', 'Anselm Powell',
+            util.job.anselm_powell_job, 'July 6st, 2024', util.profile.anselm_powell_profile),
 ]
 
 function createPages(type) {

@@ -31,7 +31,7 @@ const job = {
     matt_kinnear_job: 'Digital Estate Lead',
     mathew_james_job: 'Technology Programme Manager',
     calvin_ley_job: 'Digital Service Desk Manager',
-    steffan_berrow_job: 'User Research Lead',
+    steffan_berrow_job: 'Service Design and Development Lead',
     tom_morgan_job: 'Digital Services Desk Technician',
     rhian_evans_job: 'Assistant Director for Communications and Strategic Digitalisation',
     yusra_hussain_job: 'Digital Apprentice',
