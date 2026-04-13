@@ -1,0 +1,241 @@
+{% extends "design-library-base.njk" %}
+{% set activePage = 'typography' %}
+{% set activeGroup = 'styleguide' %}
+
+{% block componentContent %}
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Typography</h1>
+    
+    <p class="text-gray-700 leading-relaxed mb-8">
+        Typography is fundamental to creating clear, accessible, and engaging digital experiences. 
+        Our typographic system ensures consistent hierarchy and readability across all Sport Wales platforms.
+    </p>
+
+    <!-- Font Families -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Font Families</h2>
+        
+        <div class="space-y-8">
+            <!-- Primary Font -->
+            <div class="border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900" style="font-family: 'Objektiv MK1', sans-serif;">Objektiv MK1</h3>
+                    <span class="text-sm text-gray-500 bg-blue-100 px-3 py-1 rounded-full">Primary</span>
+                </div>
+                <p class="text-gray-700 mb-4" style="font-family: 'Objektiv MK1', sans-serif;">
+                    Used for headings, hero text, and emphasis elements. Objektiv MK1 provides strong brand personality and excellent readability at larger sizes.
+                </p>
+                <div class="text-sm font-mono text-gray-600">
+                    font-family: 'Objektiv MK1', 'Montserrat', Arial, sans-serif;
+                </div>
+            </div>
+            
+            <!-- Secondary Font -->
+            <div class="border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900" style="font-family: 'Montserrat', sans-serif;">Montserrat</h3>
+                    <span class="text-sm text-gray-500 bg-green-100 px-3 py-1 rounded-full">Secondary</span>
+                </div>
+                <p class="text-gray-700 mb-4" style="font-family: 'Montserrat', sans-serif;">
+                    Used for body text, interface elements, and when Objektiv MK1 is unavailable. Montserrat offers excellent legibility and web performance.
+                </p>
+                <div class="text-sm font-mono text-gray-600">
+                    font-family: 'Montserrat', Arial, sans-serif;
+                </div>
+            </div>
+            
+            <!-- System Fallback -->
+            <div class="border border-gray-200 rounded-lg p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-900" style="font-family: Arial, sans-serif;">Arial</h3>
+                    <span class="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Fallback</span>
+                </div>
+                <p class="text-gray-700 mb-4" style="font-family: Arial, sans-serif;">
+                    System fallback font ensures content remains readable even when web fonts fail to load. Provides reliable cross-platform consistency.
+                </p>
+                <div class="text-sm font-mono text-gray-600">
+                    font-family: Arial, sans-serif;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Type Scale -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Type Scale</h2>
+        <p class="text-gray-700 leading-relaxed mb-8">
+            Our modular scale creates consistent visual hierarchy while maintaining readability across all device sizes.
+        </p>
+        
+        <div class="space-y-6">
+            <!-- Display Text -->
+            <div class="border-b border-gray-200 pb-6">
+                <h1 class="text-6xl font-black text-gray-900 mb-2" style="font-family: 'Objektiv MK1', sans-serif;">Display Large</h1>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">64px / 4rem</span> • <span>Font Weight: 800</span> • <span>Line Height: 1.1</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2"> Use for hero headings and major page titles</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <h1 class="text-5xl font-black text-gray-900 mb-2" style="font-family: 'Objektiv MK1', sans-serif;">Display Medium</h1>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">48px / 3rem</span> • <span>Font Weight: 800</span> • <span>Line Height: 1.2</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2"> Use for section headings and feature titles</p>
+            </div>
+
+            <!-- Headings -->
+            <div class="border-b border-gray-200 pb-6">
+                <h1 class="text-4xl font-bold text-gray-900 mb-2" style="font-family: 'Objektiv MK1', sans-serif;">Heading 1</h1>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">36px / 2.25rem</span> • <span>Font Weight: 700</span> • <span>Line Height: 1.3</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Main page headings</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2" style="font-family: 'Objektiv MK1', sans-serif;">Heading 2</h2>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">30px / 1.875rem</span> • <span>Font Weight: 700</span> • <span>Line Height: 1.3</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Section headings</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2" style="font-family: 'Objektiv MK1', sans-serif;">Heading 3</h3>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">24px / 1.5rem</span> • <span>Font Weight: 700</span> • <span>Line Height: 1.4</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Subsection headings</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <h4 class="text-xl font-semibold text-gray-900 mb-2" style="font-family: 'Montserrat', sans-serif;">Heading 4</h4>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">20px / 1.25rem</span> • <span>Font Weight: 600</span> • <span>Line Height: 1.4</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Component headings</p>
+            </div>
+
+            <!-- Body Text -->
+            <div class="border-b border-gray-200 pb-6">
+                <p class="text-lg text-gray-900 mb-2" style="font-family: 'Montserrat', sans-serif;">Body Large</p>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">18px / 1.125rem</span> • <span>Font Weight: 400</span> • <span>Line Height: 1.6</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Lead paragraphs, emphasized content</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <p class="text-base text-gray-900 mb-2" style="font-family: 'Montserrat', sans-serif;">Body Regular</p>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">16px / 1rem</span> • <span>Font Weight: 400</span> • <span>Line Height: 1.6</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Default body text, form labels</p>
+            </div>
+            
+            <div class="border-b border-gray-200 pb-6">
+                <p class="text-sm text-gray-900 mb-2" style="font-family: 'Montserrat', sans-serif;">Body Small</p>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">14px / 0.875rem</span> • <span>Font Weight: 400</span> • <span>Line Height: 1.5</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Secondary text, captions</p>
+            </div>
+            
+            <div class="pb-6">
+                <p class="text-xs text-gray-700 mb-2" style="font-family: 'Montserrat', sans-serif;">Caption</p>
+                <div class="text-sm text-gray-600">
+                    <span class="font-mono">12px / 0.75rem</span> • <span>Font Weight: 400</span> • <span>Line Height: 1.4</span>
+                </div>
+                <p class="text-sm text-gray-500 mt-2">Fine print, helper text</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Weights -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Font Weights</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Objektiv MK1</h3>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-normal mb-2" style="font-family: 'Objektiv MK1', sans-serif; font-weight: 400;">Regular (400)</p>
+                    <p class="text-sm text-gray-600">For body text</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-bold mb-2" style="font-family: 'Objektiv MK1', sans-serif; font-weight: 700;">Bold (700)</p>
+                    <p class="text-sm text-gray-600">Bold for subheadings</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-black mb-2" style="font-family: 'Objektiv MK1', sans-serif; font-weight: 800;">Extra Bold (800)</p>
+                    <p class="text-sm text-gray-600">Extra Bold for primary headlines</p>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Montserrat</h3>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-normal mb-2" style="font-family: 'Montserrat', sans-serif; font-weight: 400;">Regular (400)</p>
+                    <p class="text-sm text-gray-600">Default for body text</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-semibold mb-2" style="font-family: 'Montserrat', sans-serif; font-weight: 600;">Semibold (600)</p>
+                    <p class="text-sm text-gray-600">For emphasized text and labels</p>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <p class="text-lg font-bold mb-2" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Bold (700)</p>
+                    <p class="text-sm text-gray-600">For strong emphasis and buttons</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Typography Guidelines -->
+    <section class="mb-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Typography Guidelines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-blue-800">
+            <div>
+                <h3 class="font-bold mb-3">Hierarchy</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>• Use consistent heading levels (H1→H2→H3)</li>
+                    <li>• Maintain clear visual distinction between levels</li>
+                    <li>• Don't skip heading levels</li>
+                    <li>• Use only one H1 per page</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Readability</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>• Keep line lengths between 45-75 characters</li>
+                    <li>• Use sufficient line spacing (1.4-1.6)</li>
+                    <li>• Ensure adequate color contrast (4.5:1 minimum)</li>
+                    <li>• Avoid all caps for long text</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Performance</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>• Preload critical fonts</li>
+                    <li>• Use font-display: swap</li>
+                    <li>• Provide fallback fonts</li>
+                    <li>• Minimize font variations loaded</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">Accessibility</h3>
+                <ul class="space-y-1 text-sm">
+                    <li>• Use semantic HTML headings</li>
+                    <li>• Ensure text is scalable to 200%</li>
+                    <li>• Provide sufficient color contrast</li>
+                    <li>• Don't rely solely on color for meaning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

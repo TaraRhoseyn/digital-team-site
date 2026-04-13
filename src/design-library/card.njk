@@ -1,0 +1,194 @@
+{% extends "design-library-base.njk" %}
+{% set activePage = 'card' %}
+{% set activeGroup = 'cards' %}
+
+{% block componentContent %}
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Card</h1>
+    
+    <p class="text-gray-700 leading-relaxed mb-8">
+        Cards are used to group related content and actions into a single container. They help organize information into digestible blocks for users.
+    </p> 
+
+    <!-- Component 1: Basic Card -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Basic Card</h2>
+        <p class="text-gray-700 mb-6">The standard card used for general content blocks. It uses a white background, subtle shadow, and 8px border radius.</p>
+        <div class="border border-gray-300 rounded-lg mb-8 overflow-hidden">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <!-- Live Component -->
+                <div class="sw-card max-w-sm bg-white p-8 shadow-md rounded-[8px] border border-gray-100">
+                    <h3 class="sw-heading-secondary text-[#164B64] font-bold text-xl mb-4">Card Title</h3>
+                    <p class="mb-6 text-gray-700 leading-relaxed">
+                        This is a standard Sport Wales card component. It uses the .sw-card class for consistent padding and rounded corners.
+                    </p>
+                    <a href="#" class="sw-button sw-button-secondary inline-flex items-center justify-center h-12 px-6 font-bold rounded-lg border-2 border-[#164B64] text-[#164B64] hover:bg-[#164B64] hover:text-white transition-all">Read more</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-200">
+                <div id="component1-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 2: Card with Image -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Card with Image</h2>
+        <p class="text-gray-700 mb-6">Used when visual context is required. The image is cropped to fit the top of the card while maintaining the 8px radius.</p>
+        <div class="border border-gray-300 rounded-lg mb-8 overflow-hidden">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <!-- Live Component -->
+                <div class="sw-card max-w-sm bg-white shadow-md rounded-[8px] border border-gray-100 overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="../img/home-hero.webp" alt="Card Header">
+                    <div class="p-6">
+                        <h3 class="sw-heading-secondary text-[#164B64] font-bold text-xl mb-4">News Highlight</h3>
+                        <p class="mb-6 text-gray-700 leading-relaxed">
+                            Cards can include images at the top to provide visual context for articles or projects.
+                        </p>
+                        <a href="#" class="sw-button sw-button-secondary inline-flex items-center justify-center h-12 px-6 font-bold rounded-lg border-2 border-[#164B64] text-[#164B64] hover:bg-[#164B64] hover:text-white transition-all">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200">
+                <div id="component2-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Component 3: Solid Green Featured Card -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Solid Green Featured Card</h2>
+        <p class="text-gray-700 mb-6">A high-impact variant designed for single-column layouts. Unlike standard cards, this uses <strong>sharp corners</strong> and the brand teal background.</p>
+        <div class="border border-gray-300 rounded-lg mb-8 overflow-hidden">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <!-- Live Component -->
+                <div class="sw-bg-green w-full max-w-2xl min-h-[300px] p-12 flex flex-col justify-center relative shadow-lg rounded-none">
+                    <h2 class="text-4xl font-extrabold text-white mb-6 uppercase tracking-tight" style="font-family: 'Objektiv MK1', sans-serif;">
+                        Support for clubs
+                    </h2>
+                    <p class="text-white text-lg font-medium mb-8 max-w-md" style="font-family: 'Montserrat', sans-serif;">
+                        Find out how we can help your community club grow with our specialized resources and guidance.
+                    </p>
+                    <button class="sw-button sw-button-start self-start h-12 px-8 uppercase tracking-widest text-sm font-bold bg-[#E32434] text-white e border-none hover:bg-[#C9202E]">
+                        Get support
+                    </button>
+                </div>
+            </div>
+            <div class="border-t border-gray-200">
+                <div id="component3-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Sections -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">When to use cards</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Cards are the primary way to group content. Use them when:
+        </p>
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 leading-relaxed">
+            <li>Presenting a collection of items in a grid (e.g., blog posts, staff profiles).</li>
+            <li>Providing a clear entry point to further information.</li>
+            <li>Highlighting a single, high-importance call to action using the Featured variant.</li>
+        </ul>
+    </section>
+
+    <!-- Sport Wales Specific Guidelines -->
+    <section class="mb-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Sport Wales Guidelines</h2>
+        <ul class="list-disc ml-6 space-y-2 text-blue-800 leading-relaxed">
+            <li><strong>Radius:</strong> Standard cards use 8px rounded corners. Featured cards (Green) use sharp 0px corners.</li>
+            <li><strong>Typography:</strong> Headlines in standard cards use sentence case; Featured cards use Uppercase.</li>
+            <li><strong>Elevation:</strong> Use subtle shadows (`shadow-md`) on white backgrounds to ensure the card stands out from the page.</li>
+            <li><strong>Buttons:</strong> Ensure buttons within cards follow the Sport Wales height (46px) and color standards.</li>
+        </ul>
+    </section>
+
+</div>
+
+{% block componentScripts %}
+<script type="text/babel">
+{% raw %}
+// Card Component Data
+function ComponentInstructions() {
+    return {
+        codeExamples: {
+            component1: {
+                html: `
+                <div class="sw-card bg-white p-8 shadow-md rounded-[8px] border border-gray-100"><h3 class="text-[#164B64] font-bold text-xl mb-4">Card Title</h3>
+                    <p class="mb-6 text-gray-700">Content goes here...</p>
+                    <a href="#" class="sw-button-secondary">Read more</a>
+                </div>`,
+                css: `.sw-card { border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }`,
+                react: `function BasicCard() {
+    return (
+        <div className="bg-white p-8 rounded-[8px] shadow-md border border-gray-100">
+            <h3 className="text-[#164B64] font-bold text-xl mb-4">Card Title</h3>
+            <button className="border-2 border-[#164B64] text-[#164B64] px-6 py-2 rounded-lg font-bold">Read more</button>
+        </div>
+    );
+}`,
+                tailwind: `<div class="bg-white p-8 rounded-[8px] shadow-md border border-gray-100">...</div>`
+            },
+            component2: {
+                html: `<div class="bg-white shadow-md rounded-[8px] border border-gray-100 overflow-hidden">
+    <img class="w-full h-48 object-cover" src="/img/path.jpg" alt="Header">
+    <div class="p-6">
+        <h3 class="text-[#164B64] font-bold text-xl mb-4">Title</h3>
+        <p class="text-gray-700 mb-6">Description...</p>
+    </div>
+</div>`,
+                css: `/* Ensure overflow-hidden is used to clip the image to the card's 8px radius */`,
+                react: `function ImageCard() {
+    return (
+        <div className="overflow-hidden rounded-[8px] shadow-md border border-gray-100">
+            <img src="..." className="w-full h-48 object-cover" />
+            <div className="p-6">...</div>
+        </div>
+    );
+}`,
+                tailwind: `<div class="overflow-hidden rounded-[8px] shadow-md border border-gray-100">...</div>`
+            },
+            component3: {
+                html: `<div class="sw-bg-green w-full p-12 rounded-none shadow-lg">
+    <h2 class="text-4xl font-extrabold text-white uppercase mb-6">Support for clubs</h2>
+    <p class="text-white mb-8">Content...</p>
+    <button class="bg-[#E32434] text-white h-12 px-8 uppercase font-bold">Get support</button>
+</div>`,
+                css: `.sw-bg-green { background-color: #299D91; }`,
+                react: `function FeaturedGreenCard() {
+    return (
+        <div className="bg-[#299D91] p-12 rounded-none">
+            <h2 className="text-4xl font-black text-white uppercase">Headline</h2>
+            <button className="bg-[#E32434] text-white px-8 py-3">Action</button>
+        </div>
+    );
+}`,
+                tailwind: `<div class="bg-[#299D91] p-12 rounded-none shadow-lg">
+    <h2 class="text-4xl font-black text-white uppercase leading-tight mb-6">Support for clubs</h2>
+</div>`
+            }
+        }
+    };
+}
+
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component2} tabId="component2" />,
+    document.getElementById('component2-code-tabs')
+);
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component3} tabId="component3" />,
+    document.getElementById('component3-code-tabs')
+);
+{% endraw %}
+</script>
+{% endblock %}
+{% endblock %}

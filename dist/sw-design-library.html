@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/39f4a89477.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/icons/sw_favicon.ico"
+      type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
+    <!-- own global stylesheet -->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/pres-animation.css" rel="stylesheet"/>
+    <title>SW Design Library | Digital and Service Design Team</title>
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center">
+            <img
+                src="https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/sport-wales-logo.webp?raw=true"
+                class="h-8 mr-3"
+                alt="Sport Wales Logo"/>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Digital and Service Design Team</span>
+        </a>
+        <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100
+                focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8
+                    md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a
+                        href="index.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a
+                        href="principles.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Principles</a>
+                </li>
+                <li>
+                    <a
+                        href="blogs.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Blogs</a>
+                </li>
+                <li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbar"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Support
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="support.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Access support</a>
+                            </li>
+                            <li>
+                                <a href="project-request-form.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Submit Project Request Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarResources"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Resources
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarResources"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="agile-tools.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Project templates</a>
+                            </li>
+                            <li>
+                                <a href="glossary.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Glossary of terms</a>
+                            </li>
+                            <li>
+                                <a href="sw-design-library.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    SW Design Library</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarAbout"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            About
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarAbout"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="about.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Meet the team</a>
+                            </li>
+                            <li>
+                                <a href="projects.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Our projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<!-- Main Layout with White Background -->
+<div class="min-h-screen bg-white">
+    <div id="react-root"></div>
+</div>
+
+<!-- React CDN -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+const { useState } = React;
+
+function SWDesignSystem() {
+    const [selectedComponent, setSelectedComponent] = useState('button');
+    const [showCode, setShowCode] = useState(false);
+
+    // Component Categories Structure
+    const componentCategories = [
+        {
+            name: 'Foundation',
+            items: ['typography', 'colors', 'spacing', 'elevation', 'borders', 'icons']
+        },
+        {
+            name: 'Layout',
+            items: ['header', 'footer']
+        },
+        {
+            name: 'Buttons & actions',
+            items: ['button', 'confirmation-buttons', 'report-button', 'language-toggle']
+        },
+        {
+            name: 'Navigation',
+            items: ['navbar', 'service-nav', 'tabs', 'pagination', 'steppers', 'search']
+        },
+        {
+            name: 'Pages',
+            items: ['question-pages', 'confirmation-pages', '404-pages', 'unavailable-pages']
+        },
+        {
+            name: 'Displays',
+            items: ['details', 'table', 'accordion', 'panel', 'filter-cards', 'summary-list', 'calendar', 'faq', 'notification-block', 'tag']
+        },
+        {
+            name: 'Cards',
+            items: ['card-designs']
+        },
+        {
+            name: 'Feedback/status/Messages',
+            items: ['notification-banner', 'notification-badges', 'notification-block-card', 'phase-banner', 'cookie-banner', 'service-problem-pages', 'tooltip']
+        },
+        {
+            name: 'Form elements',
+            items: ['text-input', 'textarea', 'password-input', 'search-bar', 'select', 'dropdown']
+        },
+        {
+            name: 'Icons',
+            items: ['icon-library']
+        }
+    ];
+
+    // Component Data
+    const components = {
+        button: {
+            name: 'Button',
+            category: 'Buttons & actions',
+            description: 'Use buttons to help users carry out an action like starting an application or saving their information.',
+            howToUse: [
+                'Advised to have button height of 46 px according to the brand guidelines.',
+                'Agreed to have buttons with rounded edges.',
+                'Write button text in sentence case, describing the action it performs.',
+                'Align the primary action button to the left edge of your form.'
+            ],
+            interactiveFeatures: [
+                'Button - changes on hover'
+            ],
+            codeExamples: {
+                html: `<!-- Primary Button (Blue) -->
+<button class="btn-s btn-s1 hover-bright">Save and continue</button>
+
+<!-- Secondary Button (Light Blue) -->
+<button class="btn-s btn-s2 hover-bright">Find address</button>
+
+<!-- Primary Button (Red) -->
+<button class="btn-s btn-s3 hover-bright">Start now</button>
+
+<!-- Secondary Button (Light Red) -->
+<button class="btn-s btn-s4 hover-bright">Delete account</button>`,
+                css: `.btn-s {
+    height: 46px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat';
+}
+
+.btn-s1 {
+    width: 254px;
+    background-color: var(--blue-primary-blue);
+    color: white;
+}
+
+.btn-s1:hover {
+    opacity: 0.8;
+}
+
+.btn-s2 {
+    margin-top: 21px;
+    width: 254px;
+    background-color: var(--blue-light-blue-tint-500-blue);
+    color: var(--blue-primary-blue);
+}
+
+.btn-s2:hover {
+    opacity: 0.8;
+}
+
+.btn-s3 {
+    margin-top: 87px;
+    width: 254px;
+    background-color: var(--red-primary-red);
+    color: white;
+}
+
+.btn-s3:hover {
+    opacity: 0.8;
+}
+
+.btn-s4 {
+    margin-top: 21px;
+    width: 254px;
+    background-color: var(--red-light-red-tint-600-red);
+    color: var(--red-primary-red);
+}
+
+.btn-s4:hover {
+    opacity: 0.8;
+}`
+            }
+        }
+    };
+
+    const copyToClipboard = (code) => {
+        navigator.clipboard.writeText(code).then(() => {
+            // Could add toast notification here
+        });
+    };
+
+    const currentComponent = components[selectedComponent];
+
+    return (
+        <div className="flex min-h-screen bg-white">
+            {/* Sidebar Navigation */}
+            <nav className="w-80 bg-white overflow-y-auto border-r border-gray-100">
+                <div className="p-6">
+                    {/* SW Design System Title */}
+                    <div className="mb-8">
+                        <h1 className="text-2xl font-bold text-red-700 mb-2">SW Design System</h1>
+                        <p className="text-sm text-gray-600">Sport Wales component library</p>
+                    </div>
+
+                    {/* Component Categories */}
+                    {componentCategories.map(category => (
+                        <div key={category.name} className="mb-6">
+                            <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide mb-3">{category.name}</h3>
+                            <ul className="space-y-1">
+                                {category.items.map(item => {
+                                    const isActive = selectedComponent === item;
+                                    const componentExists = components[item];
+                                    
+                                    return (
+                                        <li key={item}>
+                                            <button 
+                                                className={`block w-full text-left px-3 py-2 text-sm rounded capitalize ${
+                                                    isActive 
+                                                        ? 'font-medium text-red-700 bg-red-50' 
+                                                        : componentExists
+                                                            ? 'text-gray-700 hover:bg-gray-100'
+                                                            : 'text-gray-400 cursor-not-allowed'
+                                                }`}
+                                                onClick={() => {
+                                                    if (componentExists) {
+                                                        setSelectedComponent(item);
+                                                        setShowCode(false); // Reset to instructions view
+                                                    }
+                                                }}
+                                                disabled={!componentExists}
+                                            >
+                                                {item.replace('-', ' ')}
+                                                {!componentExists && <span className="text-xs ml-1">(coming soon)</span>}
+                                            </button>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </nav>
+
+            {/* Main Content */}
+            <main className="flex-1 bg-white p-8">
+                {currentComponent && (
+                    <div className="flex gap-8 max-w-7xl">
+                        {/* Left Column - Component Examples */}
+                        <div className="flex-1">
+                            <div className="col-left">
+                                {/* Back Link */}
+                                <div className="back-link-a back-link1 mb-8">
+                                    <svg className="back-link-graphic1 w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd"></path>
+                                    </svg>
+                                    <p className="back-link-text1">Back to content list</p>
+                                </div>
+                                
+                                {/* Button Examples */}
+                                <div className="component-examples">
+                                    <button className="btn-s btn-s1 hover-bright mb-5">Button</button>
+                                    <button className="btn-s btn-s2 hover-bright mb-20">Button</button>
+                                    <button className="btn-s btn-s3 hover-bright mb-5">Button</button>
+                                    <button className="btn-s btn-s4 hover-bright">Button</button>
+                                </div>
+                                
+                                {/* On Hover Indicators */}
+                                <div className="column-a col absolute">
+                                    <p className="column-text-on-hover column-text-on-hover1">On hover</p>
+                                    <p className="column-text-on-hover column-text-on-hover2">On hover</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Divider Line */}
+                        <div className="line-a line1"></div>
+
+                        {/* Right Column - Instructions/Code */}
+                        <div className="column-b col-right flex-1">
+                            {/* Header with Toggle */}
+                            <div className="flex justify-between items-center mb-6">
+                                <h1 className="column-title1 title-blue-dark-blue-tint-800-blue text-3xl font-bold text-blue-900">
+                                    {showCode ? 'CODE' : 'INSTRUCTIONS'}
+                                </h1>
+                                
+                                {/* Toggle Button */}
+                                <div className="flex bg-gray-100 rounded-lg p-1">
+                                    <button
+                                        onClick={() => setShowCode(false)}
+                                        className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                                            !showCode 
+                                                ? 'bg-white text-blue-900 shadow-sm' 
+                                                : 'text-gray-600 hover:text-gray-900'
+                                        }`}
+                                    >
+                                        Instructions
+                                    </button>
+                                    <button
+                                        onClick={() => setShowCode(true)}
+                                        className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                                            showCode 
+                                                ? 'bg-white text-blue-900 shadow-sm' 
+                                                : 'text-gray-600 hover:text-gray-900'
+                                        }`}
+                                    >
+                                        Code
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            {!showCode ? (
+                                // Instructions View
+                                <div className="column-text1">
+                                    <div className="mb-6">
+                                        <h3 className="font-bold text-lg mb-3">How to use:</h3>
+                                        {currentComponent.howToUse.map((item, index) => (
+                                            <p key={index} className="mb-2 text-gray-700">{item}</p>
+                                        ))}
+                                    </div>
+                                    
+                                    <div>
+                                        <h3 className="font-bold text-lg mb-3">Interactive Features:</h3>
+                                        {currentComponent.interactiveFeatures.map((item, index) => (
+                                            <p key={index} className="mb-2 text-gray-700">
+                                                <span className="font-semibold">{item}</span>
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                            ) : (
+                                // Code View
+                                <div className="space-y-6">
+                                    {/* HTML Code */}
+                                    <div>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <h3 className="font-bold text-lg">HTML:</h3>
+                                            <button 
+                                                onClick={() => copyToClipboard(currentComponent.codeExamples.html)}
+                                                className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                                            >
+                                                Copy HTML
+                                            </button>
+                                        </div>
+                                        <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto text-sm">
+                                            <code>{currentComponent.codeExamples.html}</code>
+                                        </pre>
+                                    </div>
+
+                                    {/* CSS Code */}
+                                    <div>
+                                        <div className="flex justify-between items-center mb-2">
+                                            <h3 className="font-bold text-lg">CSS:</h3>
+                                            <button 
+                                                onClick={() => copyToClipboard(currentComponent.codeExamples.css)}
+                                                className="px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                                            >
+                                                Copy CSS
+                                            </button>
+                                        </div>
+                                        <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-x-auto text-sm">
+                                            <code>{currentComponent.codeExamples.css}</code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                )}
+            </main>
+        </div>
+    );
+}
+
+ReactDOM.render(<SWDesignSystem />, document.getElementById('react-root'));
+
+</script>
+
+<style>
+/* Component Layout Styles - Following your exact pattern */
+body {
+    gap: 34px;
+    padding: 0 13px;
+}
+
+.col-left {
+    margin-left: -21px; 
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 21px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 1.556;
+}
+
+.back-link1 {
+    align-self: start;
+    display: flex;
+    align-items: center;
+    color: #164B64;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.back-link1:hover {
+    color: #E32434;
+}
+
+.btn-s {
+    height: 46px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat';
+}
+
+.btn-s1 {
+    width: 254px;
+    background-color: #164B64;
+    color: white;
+}
+
+.btn-s1:hover {
+    background-color: #0f3a4f;
+}
+
+.btn-s2 {
+    width: 254px;
+    background-color: #6CD0FF;
+    color: #164B64;
+}
+
+.btn-s2:hover {
+    background-color: #5bc2f0;
+}
+
+.btn-s3 {
+    width: 254px;
+    background-color: #E32434;
+    color: white;
+}
+
+.btn-s3:hover {
+    background-color: #c41e2c;
+}
+
+.btn-s4 {
+    width: 254px;
+    background-color: #F7BDC2;
+    color: #8E0A0A;
+}
+
+.btn-s4:hover {
+    background-color: #f5a8af;
+}
+
+.col {
+    margin-top: 126px;
+    width: 85px;
+    gap: 221px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-text-on-hover {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+.column-text-on-hover1 {
+    margin-top: -4px;
+}
+
+.column-text-on-hover2 {
+    margin-bottom: -5px;
+}
+
+.line1 {
+    width: 2px;
+    height: 400px;
+    background-color: #e5e5e5;
+    margin-left: 46px;
+    margin-top: 50px;
+}
+
+.col-right {
+    margin-left: 40px; 
+    margin-top: 34px;
+    width: 447px;
+    gap: 61px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title1 {
+    margin-left: -17px; 
+    margin-top: -8px;
+    color: #164B64;
+    font-size: 36px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+}
+
+.column-text1 {
+    margin-right: -7px; 
+    margin-bottom: -1px;
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+    .col-left {
+        margin-inline: 0;
+    }
+    .col-right {
+        margin-inline: 0;
+    }
+    .column-title1 {
+        margin-inline: 0;
+    }
+}
+</style>
+
+    <footer class="bg-white rounded-lg shadow m-4 mt-5 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+            <a href="https://sport.wales" target="blank" class="hover:underline">Sport Wales</a>
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="accessibility-statement.html" class="mr-4 hover:underline md:mr-6 ">Accessibility Statement</a>
+            </li>
+            <li>
+                <a href="privacy-policy.html" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
+            </li>
+            <li>
+                <a href="website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
+            </li>
+            <li>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>

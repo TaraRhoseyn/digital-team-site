@@ -5,19 +5,19 @@
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
-                <a href="accessibility-statement.html" class="mr-4 hover:underline md:mr-6 ">Accessibility Statement</a>
+                <a href="{% if isSubdirectory %}../{% endif %}accessibility-statement.html" class="mr-4 hover:underline md:mr-6 ">Accessibility Statement</a>
             </li>
             <li>
-                <a href="privacy-policy.html" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                <a href="{% if isSubdirectory %}../{% endif %}privacy-policy.html" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
             </li>
             <li>
-                <a href="developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
+                <a href="{% if isSubdirectory %}../{% endif %}developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
             </li>
             <li>
-                <a href="website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
+                <a href="{% if isSubdirectory %}../{% endif %}website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
             </li>
             <li>
-                <a href="contact.html" class="hover:underline">Contact</a>
+                <a href="{% if isSubdirectory %}../{% endif %}contact.html" class="hover:underline">Contact</a>
             </li>
         </ul>
     </div>

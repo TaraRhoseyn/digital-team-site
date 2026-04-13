@@ -29,13 +29,31 @@ const pages = [
     new Page('support', 'Support'),
 	new Page('projects', 'Projects'),
     new Page('website-roadmap', 'Website Roadmap'),
+    new Page('online-project-request-form', 'Online Project Request Form'),
+
     new Page('blogs-by-steffan-berrow', 'Blogs by Steffan Berrow'),
     new Page('blogs-by-phil-stephens', 'Blogs by Phil Stephens'),
     new Page('blogs-by-paul-batcup', 'Blogs by Paul Batcup'),
     new Page('blogs-by-tara-rhoseyn', 'Blogs by Tara Rhoseyn'),
     new Page('blogs-by-mathew-james', 'Blogs by Mathew James'),
     new Page('project-request-form', 'Project Request Form'),
-    new Page('online-project-request-form', 'Online Project Request Form'),
+    new Page('blogs-by-anselm-powell', 'Blogs by Anselm Powell'),
+
+    // Introduction Section - Design Library
+    new Page('design-library/introduction', 'Style Guide - SW Design Library'),
+    new Page('design-library/color', 'Colour - SW Design Library'),
+    new Page('design-library/logo', 'Logo - SW Design Library'), 
+    new Page('design-library/typography', 'Typography - SW Design Library'),
+    new Page('design-library/icons', 'Icons - SW Design Library'),
+    
+    // Components - Design Library
+    new Page('design-library/button', 'Button - SW Design Library'),
+    new Page('design-library/card', 'Card - SW Design Library'),
+    new Page('design-library/card-no-btn', 'Card No Button - SW Design Library'),
+    new Page('design-library/card-with-btn', 'Card With Button - SW Design Library'),
+    new Page('design-library/navbar', 'Navigation Bar - SW Design Library'),
+    new Page('design-library/footer', 'Footer - SW Design Library'),
+    
 ]
 
 
@@ -70,10 +88,19 @@ const blogs = [
         util.job.steffan_berrow_job, '9th December, 2023', util.profile.steffan_berrow_profile),
     new Blog(
         'blog10', 'Oh DAM! The journey to effective Digital Asset Management', 'Mathew James',
-        util.job.mathew_james_job, 'July 1st, 2024', util.profile.mathew_james_profile),
-        new Blog(
+        util.job.mathew_james_job, '1st July, 2024', util.profile.mathew_james_profile),
+    new Blog(
             'blog11', 'The Home Court Advantage: Sport Wales’s In-House Development', 'Anselm Powell',
-            util.job.anselm_powell_job, 'July 6st, 2024', util.profile.anselm_powell_profile),
+            util.job.anselm_powell_job, '6th July, 2024', util.profile.anselm_powell_profile),
+    new Blog(
+            'blog12', 'Rethinking Recruitment: Exploring the future of our HR Systems', 'Paul Batcup',
+            util.job.paul_batcup_job, '4th July, 2025', util.profile.paul_batcup_profile),
+    new Blog(
+            'blog13', 'On your marks, get set, go online!', 'Mathew James',
+            util.job.mathew_james_job, '8th September, 2025', util.profile.mathew_james_profile),
+	new Blog(
+		'blog14', 'Launching the Sport Wales Governance dashboard – how we worked and what made it a success!', 'Owain Morris',
+		util.job.owain_morris_job, '8th September, 2025', util.profile.owain_morris_profile),
 ]
 
 function createPages(type) {

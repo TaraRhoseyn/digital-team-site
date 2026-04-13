@@ -1,0 +1,71 @@
+{% set targetAuthor = 'Anselm Powell' %}
+{% extends "base.njk" %}
+{% block content %}
+    <div class="container mx-auto px-9 max-w-screen-xl mb-5">
+        <!-- back btn -->
+        <div class="flex flex-row mx-auto ml-5">
+            <button onclick="goBack()" type="button" id="back-btn"
+                class="mt-5 text-xs bg-gray-200 text-black rounded-lg border-gray-100 py-2 hover:bg-red-700 hover:text-white px-3">
+                <div class="flex flex-row align-middle hover:text-white">
+                    <svg class="w-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                    <p class="ml-1 back-btn-txt">Go Back</p>
+                </div>
+            </button>
+        </div>
+        <!-- end of back btn -->
+        <div
+            class="bg-white py-24 sm:py-32">
+            <!-- BLOG PREVIEW SECTION -->
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h1
+                        id="blog"
+                        class="text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                        Blog posts by Anselm Powell</h1>
+                        <div class="relative mt-8 flex items-left gap-x-4">
+                            <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/profiles/anselm-powell.webp?raw=true" alt="Anselm Powell's Picture" class="h-10 w-10 rounded-full bg-gray-50 mt-1">
+                            <div class="text-sm leading-6">
+                                <p class="font-semibold text-gray-900">
+                                    <a href="#">
+                                        <span class="absolute inset-0"></span>
+                                        Anselm Powell
+                                    </a>
+                                </p>
+                                <p class="text-gray-600">Junior Software Developer</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0
+                                lg:max-w-none lg:grid-cols-3">
+                            {% for blog in blogs %}
+                                {% if blog.author == targetAuthor %}
+                                    <article class="flex max-w-xl flex-col items-start justify-between">
+                                        <div class="flex items-center gap-x-4 text-xs">
+                                            <time datetime="2020-03-16" class="text-gray-500">{{ blog.date }}</time>
+                                            {# <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
+                                                                                                                                        Marketing</a> #}
+                                        </div>
+                                        <div class="group relative">
+                                            <h3
+                                                class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                                                <!-- to do: sort out href, append to end of url? -->
+                                                <a href="{{ blog.filename }}.html">
+                                                    <span class="absolute inset-0"></span>
+                                                    {{ blog.pageTitle }}
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </article>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% block extrajs %}
+<script src="./js/go-back.js"></script>
+{% endblock %}

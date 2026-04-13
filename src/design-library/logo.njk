@@ -1,0 +1,300 @@
+{% extends "design-library-base.njk" %}
+{% set activePage = 'logo' %}
+{% set activeGroup = 'styleguide' %}
+
+{% block componentContent %}
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Logo</h1>
+    
+    <p class="text-gray-700 leading-relaxed mb-8">
+        The Sport Wales logo is the cornerstone of our brand identity. Consistent usage ensures 
+        brand recognition and maintains professional appearance across all digital touchpoints.
+    </p>
+
+    <!-- Primary Logo -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Primary logo</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Our logo, shown in red on white and in white on red.
+        </p>
+        
+        <!-- Logo Display -->
+        <div class="border border-gray-300 rounded-lg mb-8 gap-4 ">
+            <div class="flex">
+                <!-- Red Logo on White -->
+                <div class="flex-1 p-12 bg-white flex justify-center items-center border border-gray-300">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Red.svg?raw=true" 
+                         alt="Sport Wales Red Logo" class="h-20 w-auto" />
+                </div>
+                <!-- White Logo on Red -->
+                <div class="flex-1 p-12 flex justify-center items-center" style="background-color: #E32434;">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                         alt="Sport Wales White Logo" class="h-20 w-auto" />
+                </div>
+            </div>
+            <div class="border-t border-gray-200 bg-red-600 text-white text-center py-3">
+                <button class="text-white font-semibold">Download logos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Black and White Logo -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Black and white logo</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Our logo, shown in black on white and in white on black.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed mb-6">
+            If you need to use the logo on different coloured backgrounds or photographs, then you should ensure there is high contrast 
+            so that the logo pops and people can see it clearly.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed mb-8">
+            On lighter coloured backgrounds, you should use the black logo, and on darker coloured backgrounds you should use the 
+            white logo.
+        </p>
+        
+        <!-- Black and White Logo Display -->
+        <div class="border border-gray-300 rounded-lg mb-12 gap-4 ">
+            <div class="flex">
+                <!-- Black Logo on White -->
+                <div class="flex-1 p-12 bg-white flex justify-center items-center border border-gray-300">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Black.svg?raw=true" 
+                         alt="Sport Wales Black Logo" class="h-20 w-auto" />
+                </div>
+                <!-- White Logo on Black -->
+                <div class="flex-1 p-12 bg-black flex justify-center items-center">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                         alt="Sport Wales White Logo" class="h-20 w-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Using the Logo on Brand Colours -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Using the logo on our brand colours</h2>
+        <p class="text-gray-700 leading-relaxed mb-8">
+            You may want to overlay the logo on our brand colours (you can find these in the 'Colour' chapter). These are the approved 
+            combinations that ensure the contrast is high enough so that people can still see the logo clearly.
+        </p>
+        
+        <!-- Brand Colour Logo Grid -->
+        <div class="grid grid-cols-2 gap-0 border border-gray-300 rounded-lg overflow-hidden mb-8 gap-4">
+            <!-- Red Background -->
+            <div class="p-12 flex justify-center items-center" style="background-color: #E32434;">
+                <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                     alt="Sport Wales White Logo on Red" class="h-24 w-auto" />
+            </div>
+            <!-- Blue Background -->
+            <div class="p-12 flex justify-center items-center" style="background-color: #164B64;">
+                <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                     alt="Sport Wales White Logo on Blue" class="h-24 w-auto" />
+            </div>
+            <!-- Yellow Background -->
+            <div class="p-12 flex justify-center items-center" style="background-color: #F6B207;">
+                <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Black.svg?raw=true" 
+                     alt="Sport Wales Black Logo on Yellow" class="h-24 w-auto" />
+            </div>
+            <!-- Green Background -->
+            <div class="p-12 flex justify-center items-center" style="background-color: #299D91;">
+                <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                     alt="Sport Wales White Logo on Green" class="h-24 w-auto" />
+            </div>
+        </div>
+
+        <!-- Special Note -->
+        <div class="bg-blue-50 p-3 rounded-r-lg">
+            <p class=" font-medium text-sm">
+                <strong>Please Note:</strong> The blue Sport Wales logo shown above is only to be used as part of the Energy Saving Grant supporting brand. It should not be used 
+                anywhere else.
+            </p>
+        </div>
+    </section>
+
+    <!-- Logo Usage Guidelines -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Logo usage guidelines</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Do's -->
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-green-900 mb-4">✓ Do</h3>
+                <ul class="space-y-2 text-green-800 text-sm">
+                    <li>• Use the provided logo files</li>
+                    <li>• Maintain proportional scaling</li>
+                    <li>• Ensure adequate contrast with background</li>
+                    <li>• Use white version on dark backgrounds</li>
+                    <li>• Use black version on light backgrounds</li>
+                    <li>• Keep minimum clear space around logo</li>
+                </ul>
+            </div>
+            
+            <!-- Don'ts -->
+            <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                <h3 class="text-lg font-bold text-red-900 mb-4">✗ Don't</h3>
+                <ul class="space-y-2 text-red-800 text-sm">
+                    <li>• Stretch or distort the logo</li>
+                    <li>• Change the logo colors (except approved versions)</li>
+                    <li>• Add effects, shadows, or outlines</li>
+                    <li>• Use the logo smaller than minimum size</li>
+                    <li>• Place logo on busy backgrounds without contrast</li>
+                    <li>• Separate logo elements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Downloads -->
+    <section class="mb-12 bg-gray-50 border border-gray-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Logo downloads</h2>
+        <p class="text-gray-700 mb-6">
+            Download the official Sport Wales logo files for use in your projects. All files are provided in SVG format for optimal quality and scalability.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Red.svg?raw=true" 
+               class="bg-white border border-gray-300 rounded-lg p-4 text-center hover:shadow-md transition-shadow" download>
+                <div class="mb-3">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Red.svg?raw=true" 
+                         alt="Red Logo" class="h-12 w-auto mx-auto" />
+                </div>
+                <div class="text-sm font-medium text-gray-900">Red Logo</div>
+                <div class="text-xs text-gray-600">SVG Format</div>
+            </a>
+            
+            <a href="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+               class="bg-gray-800 border border-gray-600 rounded-lg p-4 text-center hover:shadow-md transition-shadow" download>
+                <div class="mb-3">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_White.svg?raw=true" 
+                         alt="White Logo" class="h-12 w-auto mx-auto" />
+                </div>
+                <div class="text-sm font-medium text-white">White Logo</div>
+                <div class="text-xs text-gray-300">SVG Format</div>
+            </a>
+            
+            <a href="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Black.svg?raw=true" 
+               class="bg-white border border-gray-300 rounded-lg p-4 text-center hover:shadow-md transition-shadow" download>
+                <div class="mb-3">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Black.svg?raw=true" 
+                         alt="Black Logo" class="h-12 w-auto mx-auto" />
+                </div>
+                <div class="text-sm font-medium text-gray-900">Black Logo</div>
+                <div class="text-xs text-gray-600">SVG Format</div>
+            </a>
+            
+            <a href="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Blue.svg?raw=true" 
+               class="bg-blue-600 border border-blue-700 rounded-lg p-4 text-center hover:shadow-md transition-shadow" download>
+                <div class="mb-3">
+                    <img src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/Sport%20Wales%20Logo_Blue.svg?raw=true" 
+                         alt="Blue Logo" class="h-12 w-auto mx-auto" />
+                </div>
+                <div class="text-sm font-medium text-white">Blue Logo</div>
+                <div class="text-xs text-blue-100">SVG Format</div>
+            </a>
+        </div>
+    </section>
+
+</div>
+
+{% block componentScripts %}
+<script type="text/babel">
+{% raw %}
+// Logo Component Data
+function ComponentInstructions() {
+    return {
+        codeExamples: {
+            component1: {
+                html: `<!-- Primary Logo Usage -->
+<img src="./img/Sport Wales Logo_Red.svg" alt="Sport Wales" class="h-12 w-auto" />
+
+<!-- White Logo on Dark Background -->
+<div class="bg-[#164B64] p-4">
+    <img src="./img/Sport Wales Logo_White.svg" alt="Sport Wales" class="h-12 w-auto" />
+</div>
+
+<!-- Black Logo on Light Background -->
+<div class="bg-white p-4">
+    <img src="./img/Sport Wales Logo_Black.svg" alt="Sport Wales" class="h-12 w-auto" />
+</div>
+
+<!-- Responsive Logo -->
+<img src="./img/Sport Wales Logo_Red.svg" 
+     alt="Sport Wales" 
+     class="h-8 md:h-12 w-auto" />`,
+                css: `/* Logo container styling */
+.logo-container {
+    display: inline-block;
+    padding: 1rem; /* Minimum clear space */
+}
+
+/* Responsive logo sizing */
+.logo-large { height: 64px; }
+.logo-medium { height: 48px; }
+.logo-small { height: 32px; }
+
+/* Logo on dark backgrounds */
+.logo-on-dark {
+    /* Use white logo variant */
+}
+
+/* Logo on light backgrounds */
+.logo-on-light {
+    /* Use black or red logo variant */
+}`,
+                react: `function Logo({ variant = 'red', size = 'medium', className = '' }) {
+    const sizeClasses = {
+        small: 'h-8',
+        medium: 'h-12', 
+        large: 'h-16'
+    };
+    
+    const logoSrc = \`./img/Sport Wales Logo_\${variant === 'red' ? 'Red' : variant === 'white' ? 'White' : variant === 'black' ? 'Black' : 'Blue'}.svg\`;
+    
+    return (
+        <img 
+            src={logoSrc}
+            alt="Sport Wales"
+            className={\`\${sizeClasses[size]} w-auto \${className}\`}
+        />
+    );
+}
+
+// Usage examples:
+// <Logo variant="red" size="large" />
+// <Logo variant="white" />
+// <Logo variant="black" size="small" />`,
+                tailwind: `<!-- Standard sizes -->
+<img class="h-8 w-auto" src="./img/Sport Wales Logo_Red.svg" alt="Sport Wales" />   <!-- Small -->
+<img class="h-12 w-auto" src="./img/Sport Wales Logo_Red.svg" alt="Sport Wales" />  <!-- Medium -->
+<img class="h-16 w-auto" src="./img/Sport Wales Logo_Red.svg" alt="Sport Wales" />  <!-- Large -->
+
+<!-- Logo on brand colors -->
+<div class="bg-[#E32434] p-8">
+    <img class="h-12 w-auto" src="./img/Sport Wales Logo_White.svg" alt="Sport Wales" />
+</div>
+
+<div class="bg-[#164B64] p-8">
+    <img class="h-12 w-auto" src="./img/Sport Wales Logo_White.svg" alt="Sport Wales" />
+</div>
+
+<!-- Responsive sizing -->
+<img class="h-8 md:h-12 lg:h-16 w-auto" src="./img/Sport Wales Logo_Red.svg" alt="Sport Wales" />`
+            }
+        }
+    };
+}
+
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+{% endraw %}
+</script>
+{% endblock %}
+{% endblock %}

@@ -18,8 +18,17 @@ class Page {
     create() {
         // renders html in dist dir from njk:
         const outputLocation = 'dist/';
+        const outputPath = `${outputLocation}${this.filename}.html`;
+        
+        // Create directory structure if it doesn't exist
+        const path = require('path');
+        const outputDir = path.dirname(outputPath);
+        if (!fs.existsSync(outputDir)) {
+            fs.mkdirSync(outputDir, { recursive: true });
+        }
+        
         fs.writeFileSync(
-            `${outputLocation}${this.filename}.html`,
+            outputPath,
             nunjucks.render(`${this.filename}.njk`, {
                 pageTitle: `${this.pageTitle} | Digital and Service Design Team`,
                 // sends blog data for previews:

@@ -10,6 +10,36 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
+    
+    <!-- Critical CSS to prevent navigation flicker -->
+    <style>
+        /* Prevent FOUC for design library navigation */
+        .sw-nav-group-header {
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            color: #6b7280 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+        .sw-nav-item {
+            font-size: 11px !important;
+            color: #4b5563 !important;
+        }
+        .sw-nav-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 3px !important;
+            color: #164B64 !important;
+            font-weight: 500 !important;
+        }
+        .sw-nav-group-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 2px !important;
+            background-color: #f8fafc !important;
+        }
+    </style>
+    
+    <!-- Preload Tailwind for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
@@ -125,6 +155,10 @@
                                 <a href="glossary.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                     Glossary of terms</a>
                             </li>
+                            <li>
+                                <a href="design-library/button.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    SW Design Library</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -205,7 +239,7 @@
                                 
                                     <article class="flex max-w-xl flex-col items-start justify-between">
                                         <div class="flex items-center gap-x-4 text-xs">
-                                            <time datetime="2020-03-16" class="text-gray-500">11th October, 2023</time>
+                                            <time datetime="2020-03-16" class="text-gray-500">2023-10-10</time>
                                             
                                         </div>
                                         <div class="group relative">
@@ -219,6 +253,12 @@
                                             </h3>
                                         </div>
                                     </article>
+                                
+                            
+                                
+                            
+                                
+                            
                                 
                             
                                 
@@ -273,7 +313,5 @@
 <script src="./js/go-back.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/pres-animation.js"></script>
   </body>
 </html>

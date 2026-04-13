@@ -16,7 +16,6 @@ const profile = {
     steffan_berrow_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/steffan-berrow.webp?raw=true',
     tom_morgan_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/tom-morgan.webp?raw=true',
     rhian_evans_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/rhian-evans.webp?raw=true',
-    yusra_hussain_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/yusra-hussain.webp?raw=true',
     generic_user_profile: 'https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/generic-user.webp?raw=true',
 }
 
@@ -24,8 +23,8 @@ const job = {
     tara_rhoseyn_job: 'Software Developer',
     owen_sullivan_job: 'Deputy Digital Estate Lead',
     owen_burgess_job: 'Service Design and Development Lead',
-    anselm_powell_job: 'Digital Apprentice',
-    owain_morris_job: 'Service Design Officer',
+    anselm_powell_job: 'Junior Software Developer',
+    owain_morris_job: 'Senior Service Designer',
     phil_stephens_job: 'Information Security Lead',
     paul_batcup_job: 'Digital Programme Lead',
     matt_kinnear_job: 'Digital Estate Lead',
@@ -34,7 +33,6 @@ const job = {
     steffan_berrow_job: 'Service Design and Development Lead',
     tom_morgan_job: 'Digital Services Desk Technician',
     rhian_evans_job: 'Assistant Director for Communications and Strategic Digitalisation',
-    yusra_hussain_job: 'Digital Apprentice',
 }
 
 module.exports = {

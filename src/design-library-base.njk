@@ -1,0 +1,371 @@
+{% extends "base.njk" %}
+{% set isSubdirectory = true %}
+
+{# 
+  MACRO: Navigation Item
+  - text: The link text
+  - url: Where the link goes
+  - id: A unique ID to match against 'activePage'
+#}
+{% macro navItem(text, url, id) %}
+    <li>
+        <a href="{{ url }}" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           {% if activePage == id %}
+               sw-nav-active font-medium border-[#164B64]
+           {% else %}
+               border-transparent hover:underline hover:border-gray-200
+           {% endif %}">
+            {{ text }}
+        </a>
+    </li>
+{% endmacro %}
+
+{# 
+  MACRO: Navigation Group (Dropdown)
+  - title: The group header text (e.g. "Buttons")
+  - isActiveGroup: Boolean. If true, the dropdown will be open by default.
+  - groupId: Unique ID for the group to match against activeGroup variable
+#}
+{% macro navGroup(title, isActiveGroup=false, groupId="") %}
+<details class="group mb-2" {% if isActiveGroup %}open{% endif %}>
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   {% if activeGroup == groupId %}
+                       border-[#164B64] bg-slate-50
+                   {% else %}
+                       border-transparent hover:border-gray-200
+                   {% endif %}">
+        <h3 class="select-none">{{ title }}</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        {{ caller() }}
+    </ul>
+</details>
+{% endmacro %}
+
+
+{% block content %}
+<div class="container mx-auto px-9 pt-9 max-w-screen-xl mb-5">
+    <div class="flex">
+        
+        <!-- SIDEBAR NAVIGATION -->
+        <nav class="w-60 h-screen sticky top-0 bg-white overflow-y-scroll scrollbar-hide">
+            <div class="py-6 px-6">
+                
+                <!-- SW Design System Title -->
+                <div class="mb-4">
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">SW Component Library</p>
+                </div>
+
+                <!-- NEW: Style Guide Section -->
+                {% call navGroup('Style Guide', false, 'styleguide') %}
+                    {{ navItem('Introduction', 'introduction.html', 'introduction') }}
+                    {{ navItem('Color', 'color.html', 'color') }}
+                    {{ navItem('Logo', 'logo.html', 'logo') }}
+                    {{ navItem('Typography', 'typography.html', 'typography') }}
+                    {{ navItem('Icons', 'icons.html', 'icons') }}
+                {% endcall %}
+
+                <!-- 1. Global Components -->
+                {% call navGroup('Global Components', false, 'global') %}
+                    {{ navItem('Cookie Banner', ' cookie-banner.html', 'cookie-banner') }}
+                    {{ navItem('Navigation Bar', 'navbar.html', 'navbar') }}
+                    {{ navItem('Navbar - Booking', ' navbar-booking.html', 'navbar-booking') }}
+                    {{ navItem('Footer', ' footer.html', 'footer') }}
+                    {{ navItem('Footer - Booking', ' footer-booking.html', 'footer-booking') }}
+                {% endcall %}
+
+                <!-- 2. Buttons (Open by default since it contains our main Button component) -->
+                {% call navGroup('Buttons', true, 'buttons') %}
+                    {{ navItem('Buttons', 'button.html', 'button') }} 
+                    {{ navItem('Booking Buttons', ' buttons-booking.html', 'buttons-booking') }}
+                    {{ navItem('Login Buttons', ' buttons-login.html', 'buttons-login') }}
+                    {{ navItem('Pagination Buttons', ' buttons-pagination.html', 'buttons-pagination') }}
+                    {{ navItem('Other Button Designs', ' buttons-other.html', 'buttons-other') }}
+                {% endcall %} 
+
+                <!-- 3. Input & Form Components -->
+                {% call navGroup('Input & Form Components', false, 'forms') %}
+                    {{ navItem('Character Count', ' character-count.html', 'character-count') }}
+                    {{ navItem('Checkboxes', ' checkboxes.html', 'checkboxes') }}
+                    {{ navItem('Date Input', ' date-input.html', 'date-input') }}
+                    {{ navItem('File Upload', ' file-upload.html', 'file-upload') }}
+                    {{ navItem('Language Toggle', ' language-toggle.html', 'language-toggle') }}
+                    {{ navItem('Multiple choice select', ' multi-select.html', 'multi-select') }}
+                    {{ navItem('Password Input', ' password-input.html', 'password-input') }}
+                    {{ navItem('Radio', ' radio.html', 'radio') }}
+                    {{ navItem('Report bug / issue', ' report-issue.html', 'report-issue') }}
+                    {{ navItem('Search bar', ' search-bar.html', 'search-bar') }}
+                    {{ navItem('Select/dropdown', ' select.html', 'select') }}
+                    {{ navItem('Select/dropdown Interactive', ' select-interactive.html', 'select-interactive') }}
+                    {{ navItem('Textarea', ' textarea.html', 'textarea') }}
+                    {{ navItem('Text Input', 'text-input.html', 'text-input') }}
+                    {{ navItem('Toggle Switch', ' toggle-switch.html', 'toggle-switch') }}
+                {% endcall %}
+
+                <!-- 4. Navigation Components -->
+                {% call navGroup('Navigation Components', false, 'navigation') %}
+                    {{ navItem('Back Link', ' back-link.html', 'back-link') }}
+                    {{ navItem('Breadcrumbs', ' breadcrumbs.html', 'breadcrumbs') }}
+                    {{ navItem('Exit this page', ' exit-page.html', 'exit-page') }}
+                    {{ navItem('Guidance Steppers', ' steppers.html', 'steppers') }}
+                    {{ navItem('Service Navigation', ' service-nav.html', 'service-nav') }}
+                    {{ navItem('Skip Link', ' skip-link.html', 'skip-link') }}
+                    {{ navItem('Step Counter', ' step-counter.html', 'step-counter') }}
+                    {{ navItem('Tabs', ' tabs.html', 'tabs') }}
+                {% endcall %}
+
+                <!-- 5. Layout & Structure -->
+                {% call navGroup('Layout & Structure', false, 'layout') %}
+                    {{ navItem('Accordion', ' accordion.html', 'accordion') }}
+                    {{ navItem('Details/show more', ' details.html', 'details') }}
+                    {{ navItem('Fieldset', ' fieldset.html', 'fieldset') }}
+                    {{ navItem('Panel/confirmation', ' panel.html', 'panel') }}
+                    {{ navItem('Table', ' table.html', 'table') }}
+                {% endcall %}
+
+                <!-- 6. Card Designs -->
+                {% call navGroup('Card', false, 'cards') %}
+                    {{ navItem('Card', 'card.html', 'card') }}
+                    {{ navItem('Card - No Button', 'card-no-btn.html', 'card-no-btn') }}
+                    {{ navItem('Card - With Button', 'card-with-btn.html', 'card-with-btn') }}
+                {% endcall %}
+
+                <!-- 7. Feedback & Messaging -->
+                {% call navGroup('Feedback & Messaging', false, 'feedback') %}
+                    {{ navItem('Confirmation Dialog', ' confirmation-dialog.html', 'confirmation-dialog') }}
+                    {{ navItem('Error Message', ' error-message.html', 'error-message') }}
+                    {{ navItem('Error Summary', ' error-summary.html', 'error-summary') }}
+                    {{ navItem('Inset Text', ' inset-text.html', 'inset-text') }}
+                    {{ navItem('Notice Box', ' notice-box.html', 'notice-box') }}
+                    {{ navItem('Notification Badges', ' notification-badges.html', 'notification-badges') }}
+                    {{ navItem('Success Box', ' success-box.html', 'success-box') }}
+                    {{ navItem('Tool Tip', ' tooltip.html', 'tooltip') }}
+                {% endcall %}
+
+                <!-- 8. Full Components -->
+                {% call navGroup('Full Components', false, 'fullcomponents') %}
+                    {{ navItem('Calendar & Date Picker', ' calendar.html', 'calendar') }}
+                    {{ navItem('Copy Code', ' copy-code.html', 'copy-code') }}
+                    {{ navItem('FAQ', ' faq.html', 'faq') }}
+                    {{ navItem('Notification Block', ' notification-block.html', 'notification-block') }}
+                    {{ navItem('Time Scrollbar', ' time-scrollbar.html', 'time-scrollbar') }}
+                {% endcall %}
+
+                <!-- 9. SW Components -->
+                {% call navGroup('SW Components', false, 'swcomponents') %}
+                    {{ navItem('SW Branded Blocks', ' sw-blocks.html', 'sw-blocks') }}
+                {% endcall %}
+
+                <!-- 10. Mobile -->
+                {% call navGroup('Mobile', false, 'mobile') %}
+                    {{ navItem('Navigation bar - Mobile', ' navbar-mobile.html', 'navbar-mobile') }}
+                    {{ navItem('Footer - Mobile', ' footer-mobile.html', 'footer-mobile') }}
+                {% endcall %}
+
+                <!-- 11. Patterns -->
+                {% call navGroup('Patterns', false, 'patterns') %}
+                    {{ navItem('Sign Up Pattern', ' pattern-signup.html', 'pattern-signup') }}
+                    {{ navItem('Login Pattern', ' pattern-login.html', 'pattern-login') }}
+                    {{ navItem('Payment Details', ' pattern-payment.html', 'pattern-payment') }}
+                {% endcall %}
+
+                <!-- 12. Interactive -->
+                {% call navGroup('Interactive', false, 'interactive') %}
+                    {{ navItem('Image Carousel', ' carousel.html', 'carousel') }}
+                {% endcall %}
+
+                 <!-- 13. Pages -->
+                 {% call navGroup('Pages', false, 'pages') %}
+                    {{ navItem('Page Not Found', ' 404.html', '404') }}
+                    {{ navItem('Service Unavailable', ' unavailable.html', 'unavailable') }}
+                {% endcall %}
+
+            </div>
+        </nav>
+        
+        <!-- Component Content Area -->
+        <main class="flex-1 bg-white min-w-0 px-6">
+            {% block componentContent %}{% endblock %}
+        </main>
+    </div>
+</div>
+
+<!-- CSS for Scrollbar Hiding and Sport Wales Navigation -->
+<style>
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/* Sport Wales Navigation Styling */
+.sw-nav-group-header {
+    color: #6b7280;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.sw-nav-group-header:hover {
+    color: #164B64;
+}
+
+.sw-nav-item {
+    font-size: 11px;
+    color: #4b5563;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sw-nav-item:hover {
+    color: #164B64;
+}
+
+/* Sport Wales Navigation Active State - STANDARDIZED 4px border */
+.sw-nav-active {
+    border-left-color: #164B64 !important;
+    border-left-width: 4px !important;
+    color: #164B64 !important;
+    font-weight: 500;
+    background-color: transparent !important;
+}
+
+/* Ensure active group header also uses 4px border */
+.sw-nav-group-header[style*="border-[#164B64]"],
+.sw-nav-group-header:has(+ ul) {
+    border-left-width: 4px !important;
+}
+</style>
+
+<!-- Centralized Design Library Dependencies -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/css.min.js"></script>
+
+<!-- React CDN -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+{% raw %}
+const { useState, useEffect } = React;
+
+// Centralized CodeTabsComponent - FIXED COPY BUTTON
+function CodeTabsComponent({ codeExamples, tabId }) {
+    const [codeType, setCodeType] = useState('html');
+    const [copyStatus, setCopyStatus] = useState('Copy code');
+
+    // Language mapping for highlight.js
+    const getLanguageClass = (type) => {
+        const languageMap = {
+            html: 'language-html',
+            css: 'language-css', 
+            react: 'language-jsx',
+            tailwind: 'language-html'
+        };
+        return languageMap[type] || 'language-html';
+    };
+
+    // Re-highlight code when codeType changes
+    useEffect(() => {
+        const highlightCode = () => {
+            if (window.hljs) {
+                setTimeout(() => {
+                    const codeBlock = document.querySelector(`#${tabId}-code-block`);
+                    if (codeBlock) {
+                        codeBlock.removeAttribute('data-highlighted');
+                        codeBlock.className = getLanguageClass(codeType);
+                        window.hljs.highlightElement(codeBlock);
+                    }
+                }, 50);
+            } else {
+                setTimeout(highlightCode, 100);
+            }
+        };
+        highlightCode();
+    }, [codeType, tabId]);
+
+    // FIXED COPY BUTTON - Uses React state instead of DOM manipulation
+    const handleCopyClick = async () => {
+        try {
+            await navigator.clipboard.writeText(codeExamples[codeType]);
+            setCopyStatus('Copied!');
+            setTimeout(() => {
+                setCopyStatus('Copy code');
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            setCopyStatus('Failed to copy');
+            setTimeout(() => {
+                setCopyStatus('Copy code');
+            }, 2000);
+        }
+    };
+
+    return (
+        <div>
+            {/* Code Type Selector */}
+            <div className="flex" role="tablist">
+                {Object.keys(codeExamples).map((type, index) => (
+                    <button
+                        key={type}
+                        onClick={() => setCodeType(type)}
+                        className={`px-4 py-3 text-sm font-semibold border-b-3 transition-all ${
+                            codeType === type
+                                ? 'border-blue-600 bg-white text-blue-600'
+                                : 'border-transparent bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                    >
+                        {type.toUpperCase()}
+                    </button>
+                ))}
+            </div>
+
+            {/* Code Display */}
+            <div className="bg-white">
+                <div className="relative">
+                    <button
+                        onClick={handleCopyClick}
+                        className="absolute top-2 right-2 px-3 py-1 text-xs bg-gray-700 text-gray-200 hover:bg-gray-600 rounded transition-colors duration-300 border border-gray-600"
+                    >
+                        {copyStatus}
+                    </button>
+                    <pre className="p-1 bg-gray-900 text-gray-100 rounded text-sm font-mono overflow-x-auto">
+                        <code 
+                            id={`${tabId}-code-block`}
+                            className={getLanguageClass(codeType)}
+                        >
+                            {codeExamples[codeType]}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// Initialize highlight.js
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.hljs) {
+        window.hljs.configure({
+            languages: ['html', 'css', 'javascript', 'jsx']
+        });
+        window.hljs.highlightAll();
+    }
+});
+{% endraw %}
+</script>
+
+{% block componentScripts %}{% endblock %}
+
+{% endblock %}

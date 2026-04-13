@@ -14,6 +14,36 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 <link href="css/syntax-highlighting.css" rel="stylesheet"/>
 
+    
+    <!-- Critical CSS to prevent navigation flicker -->
+    <style>
+        /* Prevent FOUC for design library navigation */
+        .sw-nav-group-header {
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            color: #6b7280 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+        .sw-nav-item {
+            font-size: 11px !important;
+            color: #4b5563 !important;
+        }
+        .sw-nav-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 3px !important;
+            color: #164B64 !important;
+            font-weight: 500 !important;
+        }
+        .sw-nav-group-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 2px !important;
+            background-color: #f8fafc !important;
+        }
+    </style>
+    
+    <!-- Preload Tailwind for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
@@ -128,6 +158,10 @@
                             <li>
                                 <a href="glossary.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                     Glossary of terms</a>
+                            </li>
+                            <li>
+                                <a href="design-library/button.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    SW Design Library</a>
                             </li>
                         </ul>
                     </div>
@@ -2009,7 +2043,5 @@ SOFTWARE.
 </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/pres-animation.js"></script>
   </body>
 </html>

@@ -10,6 +10,36 @@
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     {% block extracss %}{% endblock %}
+    
+    <!-- Critical CSS to prevent navigation flicker -->
+    <style>
+        /* Prevent FOUC for design library navigation */
+        .sw-nav-group-header {
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            color: #6b7280 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+        .sw-nav-item {
+            font-size: 11px !important;
+            color: #4b5563 !important;
+        }
+        .sw-nav-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 3px !important;
+            color: #164B64 !important;
+            font-weight: 500 !important;
+        }
+        .sw-nav-group-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 2px !important;
+            background-color: #f8fafc !important;
+        }
+    </style>
+    
+    <!-- Preload Tailwind for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- favicon -->
@@ -19,8 +49,8 @@
       type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
     <!-- own global stylesheet -->
-    <link href="css/styles.css" rel="stylesheet"/>
-    <link href="css/pres-animation.css" rel="stylesheet"/>
+    <link href="{% if isSubdirectory %}../{% endif %}css/styles.css" rel="stylesheet"/>
+    <link href="{% if isSubdirectory %}../{% endif %}css/pres-animation.css" rel="stylesheet"/>
     <title>{{ pageTitle }}</title>
   </head>
   <body>
@@ -29,7 +59,5 @@
     {% include 'includes/footer.njk' %}
     {% block extrajs %}{% endblock %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/pres-animation.js"></script>
   </body>
 </html>

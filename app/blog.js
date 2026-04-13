@@ -17,7 +17,7 @@ class Blog {
 		this.pageTitle = pageTitle;
 		this.author = author;
 		this.authorJob = authorJob;
-		this.date = date;
+		this.date = new Date(date.replace(/(\d+)(st|nd|rd|th)/, '$1')).toISOString().split('T')[0]; // e.g. "2023-12-09"
 		this.profilePicture = profilePicture;
 	}
 	create() {

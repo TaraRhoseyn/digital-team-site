@@ -1,4 +1,115 @@
 {% extends "base.njk" %}
+
+{% block extracss %}
+<style>
+/* Team Carousel Styles */
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wrapper i {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    z-index: 2;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -50px;
+}
+
+.wrapper i:last-child {
+    right: -50px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.carousel .card {
+    flex: 0 0 auto;
+    list-style: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 16px;
+    width: 250px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.carousel .card .img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.carousel .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.carousel .card h2 {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.carousel .card p {
+    margin: 8px 0;
+    text-align: center;
+}
+
+.carousel .card a {
+    margin-top: auto;
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 900px) {
+    .wrapper i {
+        display: none;
+    }
+}
+</style>
+{% endblock %}
+
 {% block content %}
     <!-- about section to include (in alphabetical order):
     
@@ -11,9 +122,7 @@
     Paul Batcup 
     Phil Stephens 
     Steffan Berrow
-    Tara Rhoseyn 
-    Tom Morgan 
-    Yusra Hussain -->
+    Tara Rhoseyn  -->
     <div class="container mx-auto px-9 max-w-screen-xl mb-5">
         <h1 class="my-20 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
         Meet the Team</h1>
@@ -53,7 +162,13 @@
                             alt="">
                     </div>
                     <h2 class="text-2xl font-bold my-4 mobile-card-name">Anselm Powell</h2>
-                    <p class="card-job-title p-3 text-center mobile-card-job-title">Digital Apprentice</p>
+                    <p class="card-job-title p-3 text-center mobile-card-job-title">Junior Software Developer</p>
+                    <a
+                            href="blogs-by-anselm-powell.html"
+                            class="mb-8 mt-2 card-blog-btn px-3 py-2 text-xs font-medium text-center 
+                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            Read blogs by Anselm
+                        </a>
                 </div>
             </div>
             <!-- card 2 -->
@@ -79,6 +194,12 @@
                         </div>
                         <h2 class="text-2xl font-bold my-4 mobile-card-name">Mathew James</h2>
                         <p class="card-job-title p-3 text-center mobile-card-job-title">Technology Programme Manager</p>
+                        <a
+                            href="blogs-by-mathew-james.html"
+                            class="mb-8 mt-2 card-blog-btn px-3 py-2 text-xs font-medium text-center 
+                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            Read blogs by Mathew
+                        </a>
                 </div>
             </div>
             <div class="p-4 max-w-sm mobile-card">
@@ -102,7 +223,7 @@
                                 alt="">
                         </div>
                         <h2 class="text-2xl font-bold my-4 mobile-card-name">Owain Morris</h2>
-                        <p class="card-job-title p-3 text-center mobile-card-job-title">Service Design Officer</p>
+                        <p class="card-job-title p-3 text-center mobile-card-job-title">Senior Service Designer</p>
                 </div>
             </div>
             <div class="p-4 max-w-sm mobile-card">
@@ -130,7 +251,7 @@
                         <a
                             href="blogs-by-paul-batcup.html"
                             class="mb-8 mt-2 card-blog-btn px-3 py-2 text-xs font-medium text-center 
-                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-sm me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
                             Read blogs by Paul
                         </a>
                 </div>
@@ -189,39 +310,18 @@
                         </a>
                 </div>
             </div>
-            <div class="p-4 max-w-sm mobile-card">
-                <div class="flex items-center justify-center rounded-lg h-full bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br shadow-xl p-8 flex-col">
-                        <div class="img">
-                            <img
-                                class="h-20 w-20 rounded-full"
-                                src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/profiles/tom-morgan.webp?raw=true"
-                                alt="">
-                        </div>
-                        <h2 class="text-2xl font-bold my-4 mobile-card-name">Tom Morgan</h2>
-                        <p class="card-job-title p-3 text-center mobile-card-job-title">Digital Services Desk Technician</p>
-                </div>
-            </div>
-            <div class="p-4 max-w-sm mobile-card">
-                <div class="flex items-center justify-center rounded-lg h-full bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br shadow-xl p-8 flex-col">
-                        <div class="img">
-                            <img
-                                class="h-20 w-20 rounded-full"
-                                src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/profiles/yusra-hussain.webp?raw=true"
-                                alt="">
-                        </div>
-                        <h2 class="text-2xl font-bold my-4 mobile-card-name">Yusra Hussain</h2>
-                        <p class="card-job-title p-3 text-center mobile-card-job-title">Digital Apprentice</p>
-                </div>
-            </div>
         </div>
     </div>
+    <!-- Background elements for scroll effects -->
+    <div id="bottom-image" style="display: block;"></div>
+    
     <!-- for large screens -->
     <div class="hidden lg:block">
         <div
             class="team-info"
             id="team-info"
-            style="z-index: 5; width: 96vw; position: relative; background-color: white;">
-            <div class="wrapper ">
+            style="z-index: 5; width: 96vw; position: relative; background-color: white; padding: 40px 0;">
+            <div class="wrapper">
                 <i id="left-scroll" class="fa-solid fa-angle-left"></i>
                 <ul class="carousel">
                     <li class="
@@ -231,7 +331,13 @@
                                 alt="">
                         </div>
                         <h2 class="text-2xl font-bold my-4 card-name">Anselm Powell</h2>
-                        <p class="card-job-title p-3 text-center">Digital Apprentice</p>
+                        <p class="card-job-title p-3 text-center">Junior Software Developer</p>
+                        <a
+                            href="blogs-by-anselm-powell.html"
+                            class="mb-8 mt-2 card-blog-btn px-3 py-2 text-xs font-medium text-center 
+                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            Read blogs by Anselm
+                        </a>
                     </li>
                     <li class="card bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br">
                         <div class="img"><img
@@ -251,6 +357,12 @@
                         </div>
                         <h2 class="text-2xl font-bold my-4 card-name">Mathew James</h2>
                         <p class="card-job-title p-3 text-center">Technology Programme Manager</p>
+                        <a
+                            href="blogs-by-mathew-james.html"
+                            class="mb-8 mt-2 card-blog-btn px-3 py-2 text-xs font-medium text-center 
+                            text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+                            Read blogs by Mathew
+                        </a>
                     </li>
                     <li class="card bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br">
                         <div class="img"><img
@@ -271,7 +383,7 @@
                         <h2 class="text-2xl font-bold my-4 card-name">Owain Morris
                         </h2>
                         <p class="card-job-title p-3 text-center">
-                            Service Design Officer
+                            Senior Service Designer
                         </p>
                     </li>
                     <li class="card bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br">
@@ -348,26 +460,6 @@
                             text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded-full me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
                             Read blogs by Tara
                         </a>
-                    </li>
-                    <li class="card bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br">
-                        <div class="img">
-                            <img
-                                class="h-20 w-20 rounded-full"
-                                src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/profiles/tom-morgan.webp?raw=true"
-                                alt="">
-                        </div>
-                        <h2 class="text-2xl font-bold my-4 card-name">Tom Morgan</h2>
-                        <p class="card-job-title p-3 text-center">Digital Services Desk Technician</p>
-                    </li>
-                    <li class="card bg-gray-300 shadow-xl from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br">
-                        <div class="img">
-                            <img
-                                class="h-20 w-20 rounded-full"
-                                src="https://github.com/Sport-Wales/digital-team-site/blob/main/dist/img/profiles/yusra-hussain.webp?raw=true"
-                                alt="">
-                        </div>
-                        <h2 class="text-2xl font-bold my-4 card-name">Yusra Hussain</h2>
-                        <p class="card-job-title p-3 text-center">Digital Apprentice</p>
                     </li>
                 </ul>
                 <i id="right-scroll" class="fa-solid fa-angle-right"></i>

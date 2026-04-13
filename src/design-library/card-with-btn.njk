@@ -1,0 +1,236 @@
+{% extends "design-library-base.njk" %}
+{% set activePage = 'card-with-btn' %}
+{% set activeGroup = 'cards' %}
+
+{% block componentContent %}
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Card - With Button</h1>
+
+    <!-- Description -->
+    <p class="text-gray-700 leading-relaxed mb-8">
+        This featured card uses a layered approach where a slanted image overlays a solid color card. 
+        <strong>Note:</strong> This design uses sharp corners (no border-radius) and the image element is positioned on top of the card base.
+    </p>
+
+    <!-- Primary Example Block -->
+    <div class="border border-gray-300 rounded-lg mb-8 overflow-hidden">
+        <!-- Live Example -->
+        <div class="p-20 bg-gray-100 flex justify-center items-center">
+            
+            <!-- Component Container -->
+            <div class="relative w-full max-w-2xl py-10">
+                
+                <!-- 1. The Card Base (The Teal Box) -->
+                <div class="sw-bg-green w-[500px] min-h-[420px] p-12 flex flex-col justify-center relative z-0 shadow-lg">
+                    <div class="max-w-[280px]">
+                        <h2 class="text-5xl font-extrabold text-white mb-8 leading-tight tracking-tight uppercase" style="font-family: 'Objektiv MK1', sans-serif;">
+                            Grants & <br/>funding
+                        </h2>
+                        <p class="text-white text-lg font-medium leading-relaxed mb-8" style="font-family: 'Montserrat', sans-serif;">
+                            We distribute funding to community clubs, volunteers, and athletes. Our grants team can support you with information.
+                        </p>
+                        
+                        <!-- Button CTA -->
+                        <button class="sw-button sw-button-start h-12 px-8 uppercase tracking-widest text-sm font-bold border-none">
+                            Find out more
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. The Slanted Image Overlay (Sits ON TOP of the card) -->
+                <div class="absolute top-0 -right-4 w-auto h-full z-10 sw-image-overlay-slant shadow-2xl">
+                    <div class="relative w-full h-full">
+                        <img src="../img/card-layout-no-button-graphic.svg" alt="Rugby Players" class="object-cover w-full h-full">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- React Code Tabs -->
+        <div class="border-t border-gray-200">
+            <div id="component1-code-tabs"></div>
+        </div>
+    </div>
+
+    <!-- When to use this component -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">When to use this component</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Use this featured card variant for high-impact sections on landing pages, such as the homepage or main service hubs. It is designed to draw the user's attention to a primary piece of content or a specific grant/funding opportunity.
+        </p>
+    </section>
+
+    <!-- How it works -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">How it works</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            This component uses a layered composition where an image with a signature brand slant is positioned on top of a solid background card. Follow these structural rules:
+        </p>
+        
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 leading-relaxed mb-6">
+            <li><strong>Sharp Corners:</strong> Unlike standard cards, this featured variant uses 0px border-radius (no rounded corners).</li>
+            <li><strong>Z-Index Layering:</strong> The background card is <code>z-0</code> and the slanted image overlay is <code>z-10</code>.</li>
+            <li><strong>Text Protection:</strong> Text must be contained within the left 50-60% of the card to prevent it from being obscured by the overlapping image.</li>
+            <li><strong>Brand Slant:</strong> The image overlay uses a specific CSS <code>clip-path</code> to create the sharp, angled edge.</li>
+            <li><strong>Typography:</strong> Use Objektiv MK1 Bold for headings in uppercase to maintain a high-impact editorial feel.</li>
+        </ul>
+    </section>
+
+    <!-- Sport Wales Guidelines Box -->
+    <section class="mb-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Sport Wales Guidelines</h2>
+        <ul class="list-disc ml-6 space-y-2 text-blue-800 leading-relaxed">
+            <li>Use the Sport Wales Teal (#299D91) for the background of featured cards.</li>
+            <li>Primary CTA buttons within these cards should use Sport Wales Red (#E32434).</li>
+            <li>Ensure image content is relevant and follows the "Active People" photography style.</li>
+            <li>Headings should be short (max 3-4 words) to fit the specific text container size.</li>
+        </ul>
+    </section>
+
+</div>
+
+<style>
+    .sw-image-overlay-slant {
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    }
+</style>
+
+<!-- Dependencies -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+{% raw %}
+const { useState, useEffect } = React;
+
+function CodeTabsComponent({ codeExamples, tabId }) {
+    const [codeType, setCodeType] = useState('html');
+
+    const getLanguageClass = (type) => {
+        const languageMap = {
+            html: 'language-html',
+            css: 'language-css', 
+            react: 'language-jsx',
+            tailwind: 'language-html'
+        };
+        return languageMap[type] || 'language-html';
+    };
+
+    useEffect(() => {
+        const highlightCode = () => {
+            if (window.hljs) {
+                setTimeout(() => {
+                    const codeBlock = document.querySelector(`#${tabId}-code-block`);
+                    if (codeBlock) {
+                        codeBlock.removeAttribute('data-highlighted');
+                        codeBlock.className = getLanguageClass(codeType);
+                        window.hljs.highlightElement(codeBlock);
+                    }
+                }, 50);
+            } else {
+                setTimeout(highlightCode, 100);
+            }
+        };
+        highlightCode();
+    }, [codeType, tabId]);
+
+    return (
+        <div>
+            <div className="flex" role="tablist">
+                {Object.keys(codeExamples).map((type) => (
+                    <button
+                        key={type}
+                        onClick={() => setCodeType(type)}
+                        className={`px-4 py-3 text-sm font-semibold border-b-3 transition-all ${
+                            codeType === type
+                                ? 'border-blue-600 bg-white text-blue-600'
+                                : 'border-transparent bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                    >
+                        {type.toUpperCase()}
+                    </button>
+                ))}
+            </div>
+            <div className="bg-white">
+                <div className="relative">
+                    <button
+                        onClick={() => {
+                            navigator.clipboard.writeText(codeExamples[codeType]);
+                            const button = event.currentTarget;
+                            const originalText = button.textContent;
+                            button.textContent = 'Copied!';
+                            setTimeout(() => { button.textContent = originalText; }, 2000);
+                        }}
+                        className="absolute top-2 right-2 px-3 py-1 text-xs bg-gray-700 text-gray-200 hover:bg-gray-600 rounded transition-colors duration-300 border border-gray-600"
+                    >
+                        Copy code
+                    </button>
+                    <pre className="p-1 bg-gray-900 text-gray-100 rounded text-sm font-mono overflow-x-auto">
+                        <code id={`${tabId}-code-block`} className={getLanguageClass(codeType)}>
+                            {codeExamples[codeType]}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ComponentInstructions() {
+    return {
+        codeExamples: {
+            component1: {
+                html: `<div class="relative w-full max-w-2xl py-10">
+    <div class="sw-bg-green w-[500px] min-h-[420px] p-12 relative z-0">
+        <h2 class="text-5xl font-extrabold text-white mb-8 uppercase">Grants & funding</h2>
+        <p class="text-white text-lg mb-8">We distribute funding...</p>
+        <button class="sw-button sw-button-start h-12 px-8 uppercase tracking-widest text-sm font-bold border-none">Find out more</button>
+    </div>
+    <div class="absolute top-0 -right-4 w-auto h-full z-10 sw-image-overlay-slant shadow-2xl">
+        <img src="..." class="object-cover w-full h-full">
+    </div>
+</div>`,
+                css: `.sw-bg-green { background-color: #299D91; }
+.sw-image-overlay-slant {
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}`,
+                react: `const FeaturedCard = () => (
+    <div className="relative w-full max-w-2xl py-10">
+        <div className="bg-[#299D91] w-[500px] min-h-[420px] p-12 relative z-0">
+            <h2 className="text-5xl font-black text-white uppercase mb-8">Grants & Funding</h2>
+            <button className="bg-[#E32434] text-white h-12 px-8 font-bold uppercase text-sm tracking-widest">Find out more</button>
+        </div>
+        <div className="absolute top-0 -right-4 w-auto h-full z-10 [clip-path:polygon(25%_0%,100%_0%,75%_100%,0%_100%)]">
+            <img src="..." className="object-cover h-full" />
+        </div>
+    </div>
+);`,
+                tailwind: `<div class="relative w-full max-w-2xl">
+    <div class="bg-[#299D91] w-[500px] min-h-[420px] p-12 z-0 rounded-none">
+        <h2 class="text-5xl font-black text-white uppercase leading-tight">GRANTS & FUNDING</h2>
+        <button class="mt-8 bg-[#E32434] text-white h-12 px-8 font-bold uppercase text-sm">Find out more</button>
+    </div>
+    <div class="absolute top-0 -right-4 w-auto h-full z-10 [clip-path:polygon(25%_0%,100%_0%,75%_100%,0%_100%)]">
+        <img src="..." class="object-cover h-full" />
+    </div>
+</div>`
+            }
+        }
+    };
+}
+
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+{% endraw %}
+</script>
+{% endblock %}

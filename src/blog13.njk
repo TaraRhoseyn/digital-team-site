@@ -1,0 +1,77 @@
+{% extends "base.njk" %}
+{% block content %}
+<div class="container mx-auto px-9 max-w-screen-xl mb-5">
+    <h1 class="mt-20 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        On your marks, get set, go <i> online!</i></h1>
+    <p class="mt-2 mb-7 text-slate-500">{{ date }}</p>
+    <div class="flex justify-left items-left mb-7">
+        <img
+            src="{{ profilePicture }}"
+            alt="{{ author }}'s Picture"
+            class="h-10 w-10 rounded-full bg-gray-50 mr-3">
+        <h2 class="mt-2 text-slate-500">By {{author}}</h2>
+    </div>
+
+    <div class="image-container mx-auto my-5">
+        <img class="custom-image h-80 w-55 float-right ml-3" src="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/img/booking-welsh-blog.png" alt="Booking system in Welsh">
+    </div>
+
+    <p class="mt-3">
+    This month, Sport Wales launched a new bilingual online platform for managing access to our National Centre facilities, a marathon of a milestone worth celebrating!
+    </p>
+    
+    <p class="mt-3"> Thanks to a huge collective effort across the Project Team, Technology Solutions and Customer Services, users can now create memberships, make bookings, and manage their accounts online, from racquet sports and fitness classes to everything in between. </p>
+
+    <p class="mt-3">This marks a major step forward in how Sport Wales deliver services to the public. While existing booking methods remain available, the new online option adds flexibility and convenience for all users. 
+    </p>
+
+
+    <p class="mt-3"><b> What the New System Offers</b></p>
+
+        <div class="image-container mx-auto my-5">
+        <img class="custom-image w-100 h-60 float-right m-2 mr-2 ml-3" src="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/img/booking-court-blog.png" alt="Badminton court booking">
+
+    <ul class="mt-3 ml-5 list-disc">
+       <li>A fully online booking journey, from joining to scheduling activities </li> 
+       <li>A bilingual user experience in Welsh and English </li>
+       <li>A modern interface with self-service functionality </li> 
+       <li>Integration with our existing Gladstone system for seamless operation</li>
+    </ul>
+
+
+    <p class="mt-3"><b> Why it Matters</b></p>
+
+    <p class="mt-3">
+      This new capability reflects the values we strive for:
+    </p>
+        <ul class="mt-3 ml-5 list-disc">
+       <li> Accessibility: Putting users in control to remove barriers to participation </li> 
+       <li> Insight-driven services: Delivering better data to inform decision-making </li>
+       <li> Modernisation: Signalling clear progress in our digital journey </li> 
+    </ul>
+
+    <p class="mt-3"><b> A True Team Effort </b></p>
+
+    <p class="mt-3"> 
+        It’s easy to forget how far we've come, but this digital transformation has required careful planning, collaboration, with deep technical and operational expertise.
+    </p>
+
+
+    <div class="image-container m-8 mx-auto my-5">
+        <img class="custom-image flex flex-wrap w-80 float-left m-2 mr-3" src="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/img/booking-homepage-blog.png" alt="Booking system homepage">
+    </div>
+    
+    <p class="mt-3">
+        From early user research and planning, through procurement, configuration, and testing, this has been a cross-team success story. Technology Solutions provided the foundations and integrations to make it all work smoothly, while Customer Services offered frontline insight, tested real-life scenarios, and helped shape the user experience. The Digital & Service Design Team supported the process along the way. Following the DSD Principles closely, this is collaboration in action, powered by patience, problem-solving, and persistence.
+    </p>
+
+    <div class="container mx-auto flex flex-col">
+  
+
+    <p class="mt-3 flex-col"><b> Looking Ahead </b></p>
+    
+    <p class="mt-3">
+        The launch is just the beginning. We'll continue to learn, improve, and evolve the platform based on user feedback.  For now, though, let's take a moment to celebrate this milestone and what we've achieved together. With online functionality, Sport Wales is better equipped to meet the needs of the Centre, a digital win for Sport Wales, game, set and match!
+    </p>
+    </div>
+{% endblock %}

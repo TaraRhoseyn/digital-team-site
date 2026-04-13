@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/39f4a89477.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    
+    <!-- Critical CSS to prevent navigation flicker -->
+    <style>
+        /* Prevent FOUC for design library navigation */
+        .sw-nav-group-header {
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            color: #6b7280 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+        .sw-nav-item {
+            font-size: 11px !important;
+            color: #4b5563 !important;
+        }
+        .sw-nav-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 3px !important;
+            color: #164B64 !important;
+            font-weight: 500 !important;
+        }
+        .sw-nav-group-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 2px !important;
+            background-color: #f8fafc !important;
+        }
+    </style>
+    
+    <!-- Preload Tailwind for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/icons/sw_favicon.ico"
+      type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
+    <!-- own global stylesheet -->
+    <link href="../css/styles.css" rel="stylesheet"/>
+    <link href="../css/pres-animation.css" rel="stylesheet"/>
+    <title>Icons - SW Design Library | Digital and Service Design Team</title>
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="../index.html" class="flex items-center">
+            <img
+                src="https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/sport-wales-logo.webp?raw=true"
+                class="h-8 mr-3"
+                alt="Sport Wales Logo"/>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Digital and Service Design Team</span>
+        </a>
+        <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100
+                focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8
+                    md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a
+                        href="../index.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a
+                        href="../principles.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Principles</a>
+                </li>
+                <li>
+                    <a
+                        href="../blogs.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Blogs</a>
+                </li>
+                <li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbar"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Support
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="../support.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Access support</a>
+                            </li>
+                            <li>
+                                <a href="../project-request-form.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Submit Project Request Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarResources"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Resources
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarResources"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="../agile-tools.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Project templates</a>
+                            </li>
+                            <li>
+                                <a href="../glossary.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Glossary of terms</a>
+                            </li>
+                            <li>
+                                <a href="design-library/button.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    SW Design Library</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarAbout"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            About
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarAbout"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="../about.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Meet the team</a>
+                            </li>
+                            <li>
+                                <a href="../projects.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Our projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<div class="container mx-auto px-9 pt-9 max-w-screen-xl mb-5">
+    <div class="flex">
+        
+        <!-- SIDEBAR NAVIGATION -->
+        <nav class="w-60 h-screen sticky top-0 bg-white overflow-y-scroll scrollbar-hide">
+            <div class="py-6 px-6">
+                
+                <!-- SW Design System Title -->
+                <div class="mb-4">
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-wider">SW Component Library</p>
+                </div>
+
+                <!-- NEW: Style Guide Section -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-[#164B64] bg-slate-50
+                   ">
+        <h3 class="select-none">Style Guide</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href="introduction.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Introduction
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="color.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Color
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="logo.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Logo
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="typography.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Typography
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="icons.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               sw-nav-active font-medium border-[#164B64]
+           ">
+            Icons
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 1. Global Components -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Global Components</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" cookie-banner.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Cookie Banner
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="navbar.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Navigation Bar
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" navbar-booking.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Navbar - Booking
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" footer.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Footer
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" footer-booking.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Footer - Booking
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 2. Buttons (Open by default since it contains our main Button component) -->
+                
+<details class="group mb-2" open>
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Buttons</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href="button.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Buttons
+        </a>
+    </li>
+ 
+                    
+    <li>
+        <a href=" buttons-booking.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Booking Buttons
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" buttons-login.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Login Buttons
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" buttons-pagination.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Pagination Buttons
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" buttons-other.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Other Button Designs
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+ 
+
+                <!-- 3. Input & Form Components -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Input &amp; Form Components</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" character-count.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Character Count
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" checkboxes.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Checkboxes
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" date-input.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Date Input
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" file-upload.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            File Upload
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" language-toggle.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Language Toggle
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" multi-select.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Multiple choice select
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" password-input.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Password Input
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" radio.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Radio
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" report-issue.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Report bug / issue
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" search-bar.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Search bar
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" select.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Select/dropdown
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" select-interactive.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Select/dropdown Interactive
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" textarea.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Textarea
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="text-input.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Text Input
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" toggle-switch.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Toggle Switch
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 4. Navigation Components -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Navigation Components</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" back-link.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Back Link
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" breadcrumbs.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Breadcrumbs
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" exit-page.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Exit this page
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" steppers.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Guidance Steppers
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" service-nav.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Service Navigation
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" skip-link.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Skip Link
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" step-counter.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Step Counter
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" tabs.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Tabs
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 5. Layout & Structure -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Layout &amp; Structure</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" accordion.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Accordion
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" details.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Details/show more
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" fieldset.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Fieldset
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" panel.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Panel/confirmation
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" table.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Table
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 6. Card Designs -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Card</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href="card.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Card
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="card-no-btn.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Card - No Button
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href="card-with-btn.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Card - With Button
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 7. Feedback & Messaging -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Feedback &amp; Messaging</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" confirmation-dialog.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Confirmation Dialog
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" error-message.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Error Message
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" error-summary.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Error Summary
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" inset-text.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Inset Text
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" notice-box.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Notice Box
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" notification-badges.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Notification Badges
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" success-box.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Success Box
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" tooltip.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Tool Tip
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 8. Full Components -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Full Components</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" calendar.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Calendar &amp; Date Picker
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" copy-code.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Copy Code
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" faq.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            FAQ
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" notification-block.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Notification Block
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" time-scrollbar.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Time Scrollbar
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 9. SW Components -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">SW Components</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" sw-blocks.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            SW Branded Blocks
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 10. Mobile -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Mobile</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" navbar-mobile.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Navigation bar - Mobile
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" footer-mobile.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Footer - Mobile
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 11. Patterns -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Patterns</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" pattern-signup.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Sign Up Pattern
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" pattern-login.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Login Pattern
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" pattern-payment.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Payment Details
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                <!-- 12. Interactive -->
+                
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Interactive</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" carousel.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Image Carousel
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+                 <!-- 13. Pages -->
+                 
+<details class="group mb-2" >
+    <!-- The Clickable Header - ONLY this gets the border -->
+    <summary class="flex items-center justify-between px-3 py-2 cursor-pointer list-none sw-nav-group-header border-l-4 transition-all text-xl
+                   
+                       border-transparent hover:border-gray-200
+                   ">
+        <h3 class="select-none">Pages</h3>
+    </summary>
+    
+    <!-- The Dropdown Content - NO border styling here -->
+    <ul class="space-y-0 pl-1 mt-1">
+        
+                    
+    <li>
+        <a href=" 404.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Page Not Found
+        </a>
+    </li>
+
+                    
+    <li>
+        <a href=" unavailable.html" 
+           class="block w-full text-left py-1.5 -ml-1 px-4 transition-all duration-300 border-l-4 font-normal sw-nav-item
+           
+               border-transparent hover:underline hover:border-gray-200
+           ">
+            Service Unavailable
+        </a>
+    </li>
+
+                
+    </ul>
+</details>
+
+
+            </div>
+        </nav>
+        
+        <!-- Component Content Area -->
+        <main class="flex-1 bg-white min-w-0 px-6">
+            
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Icons</h1>
+    
+    <p class="text-gray-700 leading-relaxed mb-8">
+        Icons provide visual cues that enhance user understanding and create intuitive interfaces. 
+        Our icon system ensures consistency, accessibility, and clarity across all Sport Wales digital platforms.
+    </p>
+
+    <!-- Icon Library -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Icon Library</h2>
+        <p class="text-gray-700 leading-relaxed mb-8">
+            We use FontAwesome as our primary icon library, supplemented by custom Sport Wales icons where needed.
+        </p>
+        
+        <!-- Common Icons Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-8">
+            <!-- Navigation Icons -->
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-home text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Home</p>
+                <p class="text-xs text-gray-500">fa-home</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-search text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Search</p>
+                <p class="text-xs text-gray-500">fa-search</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-user text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">User</p>
+                <p class="text-xs text-gray-500">fa-user</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-bars text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Menu</p>
+                <p class="text-xs text-gray-500">fa-bars</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-times text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Close</p>
+                <p class="text-xs text-gray-500">fa-times</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-arrow-right text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Arrow</p>
+                <p class="text-xs text-gray-500">fa-arrow-right</p>
+            </div>
+
+            <!-- Action Icons -->
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-download text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Download</p>
+                <p class="text-xs text-gray-500">fa-download</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-upload text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Upload</p>
+                <p class="text-xs text-gray-500">fa-upload</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-edit text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Edit</p>
+                <p class="text-xs text-gray-500">fa-edit</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-trash text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Delete</p>
+                <p class="text-xs text-gray-500">fa-trash</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-copy text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Copy</p>
+                <p class="text-xs text-gray-500">fa-copy</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-share text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Share</p>
+                <p class="text-xs text-gray-500">fa-share</p>
+            </div>
+
+            <!-- Sport Icons -->
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-futbol text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Football</p>
+                <p class="text-xs text-gray-500">fa-futbol</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-running text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Running</p>
+                <p class="text-xs text-gray-500">fa-running</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-swimmer text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Swimming</p>
+                <p class="text-xs text-gray-500">fa-swimmer</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-dumbbell text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Fitness</p>
+                <p class="text-xs text-gray-500">fa-dumbbell</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-medal text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Medal</p>
+                <p class="text-xs text-gray-500">fa-medal</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-trophy text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Trophy</p>
+                <p class="text-xs text-gray-500">fa-trophy</p>
+            </div>
+
+            <!-- Utility Icons -->
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-calendar text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Calendar</p>
+                <p class="text-xs text-gray-500">fa-calendar</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-envelope text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Email</p>
+                <p class="text-xs text-gray-500">fa-envelope</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-phone text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Phone</p>
+                <p class="text-xs text-gray-500">fa-phone</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-map-marker-alt text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Location</p>
+                <p class="text-xs text-gray-500">fa-map-marker-alt</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-info-circle text-2xl text-gray-700 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Info</p>
+                <p class="text-xs text-gray-500">fa-info-circle</p>
+            </div>
+            <div class="text-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50">
+                <i class="fas fa-check-circle text-2xl text-green-600 mb-2"></i>
+                <p class="text-xs font-semibold text-gray-900">Success</p>
+                <p class="text-xs text-gray-500">fa-check-circle</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icon Sizes -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Icon Sizes</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Consistent icon sizing maintains visual hierarchy and ensures icons remain legible across different contexts.
+        </p>
+        
+        <div class="border border-gray-300 rounded-lg mb-8">
+            <div class="p-8 bg-gray-50">
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-xs text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">12px (text-xs)</span>
+                        <span class="text-sm text-gray-700">Small icons for inline text</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-sm text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">14px (text-sm)</span>
+                        <span class="text-sm text-gray-700">Standard inline icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-base text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">16px (text-base)</span>
+                        <span class="text-sm text-gray-700">Button and form icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-lg text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">18px (text-lg)</span>
+                        <span class="text-sm text-gray-700">Emphasized icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-xl text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">20px (text-xl)</span>
+                        <span class="text-sm text-gray-700">Section icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-2xl text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">24px (text-2xl)</span>
+                        <span class="text-sm text-gray-700">Feature icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-3xl text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">30px (text-3xl)</span>
+                        <span class="text-sm text-gray-700">Large decorative icons</span>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <i class="fas fa-heart text-4xl text-gray-700"></i>
+                        <span class="text-sm font-mono text-gray-600">36px (text-4xl)</span>
+                        <span class="text-sm text-gray-700">Hero section icons</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200">
+                <div id="component1-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icon Colors -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Icon Colors</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Use consistent colors that align with our brand palette and provide adequate contrast.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center p-6 border border-gray-200 rounded-lg">
+                <i class="fas fa-star text-3xl text-gray-700 mb-3"></i>
+                <h3 class="font-semibold text-gray-900 text-sm mb-1">Default</h3>
+                <p class="text-xs text-gray-600">text-gray-700</p>
+            </div>
+            <div class="text-center p-6 border border-gray-200 rounded-lg">
+                <i class="fas fa-star text-3xl mb-3" style="color: #164B64;"></i>
+                <h3 class="font-semibold text-gray-900 text-sm mb-1">Primary</h3>
+                <p class="text-xs text-gray-600">SW Blue</p>
+            </div>
+            <div class="text-center p-6 border border-gray-200 rounded-lg">
+                <i class="fas fa-star text-3xl mb-3" style="color: #E32434;"></i>
+                <h3 class="font-semibold text-gray-900 text-sm mb-1">Accent</h3>
+                <p class="text-xs text-gray-600">SW Red</p>
+            </div>
+            <div class="text-center p-6 border border-gray-200 rounded-lg">
+                <i class="fas fa-star text-3xl text-green-600 mb-3"></i>
+                <h3 class="font-semibold text-gray-900 text-sm mb-1">Success</h3>
+                <p class="text-xs text-gray-600">text-green-600</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Usage in Context -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Usage in Context</h2>
+        
+        <div class="space-y-8">
+            <!-- Buttons with Icons -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Buttons with Icons</h3>
+                <div class="flex flex-wrap gap-4">
+                    <button class="sw-button sw-button-primary">
+                        <i class="fas fa-download mr-2"></i>
+                        Download
+                    </button>
+                    <button class="sw-button sw-button-secondary">
+                        <i class="fas fa-share mr-2"></i>
+                        Share
+                    </button>
+                    <button class="sw-button sw-button-start">
+                        Start now
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Navigation with Icons -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Navigation with Icons</h3>
+                <nav class="bg-white border border-gray-200 rounded-lg p-4">
+                    <ul class="space-y-2">
+                        <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-600 py-2"><i class="fas fa-home w-5 mr-3"></i>Home</a></li>
+                        <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-600 py-2"><i class="fas fa-user w-5 mr-3"></i>Profile</a></li>
+                        <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-600 py-2"><i class="fas fa-cog w-5 mr-3"></i>Settings</a></li>
+                        <li><a href="#" class="flex items-center text-gray-700 hover:text-blue-600 py-2"><i class="fas fa-sign-out-alt w-5 mr-3"></i>Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Form Fields with Icons -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Form Fields with Icons</h3>
+                <div class="space-y-4 max-w-md">
+                    <div class="relative">
+                        <input type="email" placeholder="Enter your email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <div class="relative">
+                        <input type="password" placeholder="Enter your password" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <i class="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Icon Guidelines -->
+    <section class="mb-12 bg-blue-50 border border-blue-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Icon Guidelines</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-blue-800">
+            <div>
+                <h3 class="font-bold mb-3">✓ Do</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>• Use icons consistently across similar contexts</li>
+                    <li>• Ensure icons are large enough (minimum 16px)</li>
+                    <li>• Provide alternative text for screen readers</li>
+                    <li>• Match icon style with overall design language</li>
+                    <li>• Use familiar icons for common actions</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-3">✗ Don't</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>• Use too many different icon styles</li>
+                    <li>• Make icons the primary means of communication</li>
+                    <li>• Use complex icons at small sizes</li>
+                    <li>• Rely solely on color to convey meaning</li>
+                    <li>• Use icons that don't match user expectations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<script type="text/babel">
+
+// Icons Component Data
+function ComponentInstructions() {
+    return {
+        codeExamples: {
+            component1: {
+                html: `<!-- Basic Icon Usage -->
+<i class="fas fa-home"></i>
+<i class="fas fa-user text-lg"></i>
+<i class="fas fa-star text-2xl text-blue-600"></i>
+
+<!-- Icons in Buttons -->
+<button class="sw-button sw-button-primary">
+    <i class="fas fa-download mr-2"></i>
+    Download
+</button>
+
+<!-- Icons with Text -->
+<div class="flex items-center">
+    <i class="fas fa-envelope text-gray-400 mr-2"></i>
+    <span>Email Address</span>
+</div>
+
+<!-- Icon Sizes -->
+<i class="fas fa-heart text-xs"></i>   <!-- 12px -->
+<i class="fas fa-heart text-sm"></i>   <!-- 14px -->
+<i class="fas fa-heart text-base"></i> <!-- 16px -->
+<i class="fas fa-heart text-lg"></i>   <!-- 18px -->
+<i class="fas fa-heart text-xl"></i>   <!-- 20px -->
+<i class="fas fa-heart text-2xl"></i>  <!-- 24px -->`,
+                css: `/* Icon base styling */
+.icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Icon colors */
+.icon-primary { color: #164B64; }
+.icon-accent { color: #E32434; }
+.icon-success { color: #10B981; }
+.icon-warning { color: #F59E0B; }
+
+/* Icon sizes */
+.icon-xs { font-size: 12px; }
+.icon-sm { font-size: 14px; }
+.icon-base { font-size: 16px; }
+.icon-lg { font-size: 18px; }
+.icon-xl { font-size: 20px; }
+.icon-2xl { font-size: 24px; }`,
+                react: `function Icon({ 
+    name, 
+    size = 'base', 
+    color = 'gray-700', 
+    className = '',
+    ...props 
+}) {
+    const sizeClasses = {
+        xs: 'text-xs',
+        sm: 'text-sm',
+        base: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl',
+        '2xl': 'text-2xl'
+    };
+    
+    return (
+        <i 
+            className={\`fas fa-\${name} \${sizeClasses[size]} text-\${color} \${className}\`}
+            {...props}
+        />
+    );
+}
+
+// Usage examples:
+// <Icon name="home" size="lg" color="blue-600" />
+// <Icon name="download" size="sm" />
+// <Icon name="star" size="2xl" color="yellow-500" />`,
+                tailwind: `<!-- Icon sizes with Tailwind -->
+<i class="fas fa-home text-xs text-gray-700"></i>
+<i class="fas fa-user text-lg text-blue-600"></i>
+<i class="fas fa-star text-2xl text-yellow-500"></i>
+
+<!-- Icon positioning -->
+<div class="flex items-center space-x-2">
+    <i class="fas fa-envelope"></i>
+    <span>Contact</span>
+</div>
+
+<!-- Button with icon -->
+<button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg">
+    <i class="fas fa-download mr-2"></i>
+    Download
+</button>`
+            }
+        }
+    };
+}
+
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+
+</script>
+
+
+        </main>
+    </div>
+</div>
+
+<!-- CSS for Scrollbar Hiding and Sport Wales Navigation -->
+<style>
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/* Sport Wales Navigation Styling */
+.sw-nav-group-header {
+    color: #6b7280;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.sw-nav-group-header:hover {
+    color: #164B64;
+}
+
+.sw-nav-item {
+    font-size: 11px;
+    color: #4b5563;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.sw-nav-item:hover {
+    color: #164B64;
+}
+
+/* Sport Wales Navigation Active State - STANDARDIZED 4px border */
+.sw-nav-active {
+    border-left-color: #164B64 !important;
+    border-left-width: 4px !important;
+    color: #164B64 !important;
+    font-weight: 500;
+    background-color: transparent !important;
+}
+
+/* Ensure active group header also uses 4px border */
+.sw-nav-group-header[style*="border-[#164B64]"],
+.sw-nav-group-header:has(+ ul) {
+    border-left-width: 4px !important;
+}
+</style>
+
+<!-- Centralized Design Library Dependencies -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/css.min.js"></script>
+
+<!-- React CDN -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+const { useState, useEffect } = React;
+
+// Centralized CodeTabsComponent - FIXED COPY BUTTON
+function CodeTabsComponent({ codeExamples, tabId }) {
+    const [codeType, setCodeType] = useState('html');
+    const [copyStatus, setCopyStatus] = useState('Copy code');
+
+    // Language mapping for highlight.js
+    const getLanguageClass = (type) => {
+        const languageMap = {
+            html: 'language-html',
+            css: 'language-css', 
+            react: 'language-jsx',
+            tailwind: 'language-html'
+        };
+        return languageMap[type] || 'language-html';
+    };
+
+    // Re-highlight code when codeType changes
+    useEffect(() => {
+        const highlightCode = () => {
+            if (window.hljs) {
+                setTimeout(() => {
+                    const codeBlock = document.querySelector(`#${tabId}-code-block`);
+                    if (codeBlock) {
+                        codeBlock.removeAttribute('data-highlighted');
+                        codeBlock.className = getLanguageClass(codeType);
+                        window.hljs.highlightElement(codeBlock);
+                    }
+                }, 50);
+            } else {
+                setTimeout(highlightCode, 100);
+            }
+        };
+        highlightCode();
+    }, [codeType, tabId]);
+
+    // FIXED COPY BUTTON - Uses React state instead of DOM manipulation
+    const handleCopyClick = async () => {
+        try {
+            await navigator.clipboard.writeText(codeExamples[codeType]);
+            setCopyStatus('Copied!');
+            setTimeout(() => {
+                setCopyStatus('Copy code');
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy:', err);
+            setCopyStatus('Failed to copy');
+            setTimeout(() => {
+                setCopyStatus('Copy code');
+            }, 2000);
+        }
+    };
+
+    return (
+        <div>
+            {/* Code Type Selector */}
+            <div className="flex" role="tablist">
+                {Object.keys(codeExamples).map((type, index) => (
+                    <button
+                        key={type}
+                        onClick={() => setCodeType(type)}
+                        className={`px-4 py-3 text-sm font-semibold border-b-3 transition-all ${
+                            codeType === type
+                                ? 'border-blue-600 bg-white text-blue-600'
+                                : 'border-transparent bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        }`}
+                    >
+                        {type.toUpperCase()}
+                    </button>
+                ))}
+            </div>
+
+            {/* Code Display */}
+            <div className="bg-white">
+                <div className="relative">
+                    <button
+                        onClick={handleCopyClick}
+                        className="absolute top-2 right-2 px-3 py-1 text-xs bg-gray-700 text-gray-200 hover:bg-gray-600 rounded transition-colors duration-300 border border-gray-600"
+                    >
+                        {copyStatus}
+                    </button>
+                    <pre className="p-1 bg-gray-900 text-gray-100 rounded text-sm font-mono overflow-x-auto">
+                        <code 
+                            id={`${tabId}-code-block`}
+                            className={getLanguageClass(codeType)}
+                        >
+                            {codeExamples[codeType]}
+                        </code>
+                    </pre>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+// Initialize highlight.js
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.hljs) {
+        window.hljs.configure({
+            languages: ['html', 'css', 'javascript', 'jsx']
+        });
+        window.hljs.highlightAll();
+    }
+});
+
+</script>
+
+
+<script type="text/babel">
+
+// Icons Component Data
+function ComponentInstructions() {
+    return {
+        codeExamples: {
+            component1: {
+                html: `<!-- Basic Icon Usage -->
+<i class="fas fa-home"></i>
+<i class="fas fa-user text-lg"></i>
+<i class="fas fa-star text-2xl text-blue-600"></i>
+
+<!-- Icons in Buttons -->
+<button class="sw-button sw-button-primary">
+    <i class="fas fa-download mr-2"></i>
+    Download
+</button>
+
+<!-- Icons with Text -->
+<div class="flex items-center">
+    <i class="fas fa-envelope text-gray-400 mr-2"></i>
+    <span>Email Address</span>
+</div>
+
+<!-- Icon Sizes -->
+<i class="fas fa-heart text-xs"></i>   <!-- 12px -->
+<i class="fas fa-heart text-sm"></i>   <!-- 14px -->
+<i class="fas fa-heart text-base"></i> <!-- 16px -->
+<i class="fas fa-heart text-lg"></i>   <!-- 18px -->
+<i class="fas fa-heart text-xl"></i>   <!-- 20px -->
+<i class="fas fa-heart text-2xl"></i>  <!-- 24px -->`,
+                css: `/* Icon base styling */
+.icon {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+/* Icon colors */
+.icon-primary { color: #164B64; }
+.icon-accent { color: #E32434; }
+.icon-success { color: #10B981; }
+.icon-warning { color: #F59E0B; }
+
+/* Icon sizes */
+.icon-xs { font-size: 12px; }
+.icon-sm { font-size: 14px; }
+.icon-base { font-size: 16px; }
+.icon-lg { font-size: 18px; }
+.icon-xl { font-size: 20px; }
+.icon-2xl { font-size: 24px; }`,
+                react: `function Icon({ 
+    name, 
+    size = 'base', 
+    color = 'gray-700', 
+    className = '',
+    ...props 
+}) {
+    const sizeClasses = {
+        xs: 'text-xs',
+        sm: 'text-sm',
+        base: 'text-base',
+        lg: 'text-lg',
+        xl: 'text-xl',
+        '2xl': 'text-2xl'
+    };
+    
+    return (
+        <i 
+            className={\`fas fa-\${name} \${sizeClasses[size]} text-\${color} \${className}\`}
+            {...props}
+        />
+    );
+}
+
+// Usage examples:
+// <Icon name="home" size="lg" color="blue-600" />
+// <Icon name="download" size="sm" />
+// <Icon name="star" size="2xl" color="yellow-500" />`,
+                tailwind: `<!-- Icon sizes with Tailwind -->
+<i class="fas fa-home text-xs text-gray-700"></i>
+<i class="fas fa-user text-lg text-blue-600"></i>
+<i class="fas fa-star text-2xl text-yellow-500"></i>
+
+<!-- Icon positioning -->
+<div class="flex items-center space-x-2">
+    <i class="fas fa-envelope"></i>
+    <span>Contact</span>
+</div>
+
+<!-- Button with icon -->
+<button class="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg">
+    <i class="fas fa-download mr-2"></i>
+    Download
+</button>`
+            }
+        }
+    };
+}
+
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+
+</script>
+
+
+
+    <footer class="bg-white rounded-lg shadow m-4 mt-5 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+            <a href="https://sport.wales" target="blank" class="hover:underline">Sport Wales</a>
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="../accessibility-statement.html" class="mr-4 hover:underline md:mr-6 ">Accessibility Statement</a>
+            </li>
+            <li>
+                <a href="../privacy-policy.html" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="../developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
+            </li>
+            <li>
+                <a href="../website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
+            </li>
+            <li>
+                <a href="../contact.html" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <script src="https://use.fontawesome.com/39f4a89477.js"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    
+    <!-- Critical CSS to prevent navigation flicker -->
+    <style>
+        /* Prevent FOUC for design library navigation */
+        .sw-nav-group-header {
+            font-size: 10px !important;
+            font-weight: 600 !important;
+            color: #6b7280 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.05em !important;
+        }
+        .sw-nav-item {
+            font-size: 11px !important;
+            color: #4b5563 !important;
+        }
+        .sw-nav-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 3px !important;
+            color: #164B64 !important;
+            font-weight: 500 !important;
+        }
+        .sw-nav-group-active {
+            border-left-color: #164B64 !important;
+            border-left-width: 2px !important;
+            background-color: #f8fafc !important;
+        }
+    </style>
+    
+    <!-- Preload Tailwind for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://raw.githubusercontent.com/Sport-Wales/digital-team-site/main/assets/icons/sw_favicon.ico"
+      type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet"/>
+    <!-- own global stylesheet -->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/pres-animation.css" rel="stylesheet"/>
+    <title>Rethinking Recruitment: Exploring the future of our HR Systems | Digital and Service Design Team</title>
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center">
+            <img
+                src="https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/sport-wales-logo.webp?raw=true"
+                class="h-8 mr-3"
+                alt="Sport Wales Logo"/>
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Digital and Service Design Team</span>
+        </a>
+        <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100
+                focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8
+                    md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <li>
+                    <a
+                        href="index.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a
+                        href="principles.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Principles</a>
+                </li>
+                <li>
+                    <a
+                        href="blogs.html"
+                        class="font-bold block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0
+                            md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white
+                            md:dark:hover:bg-transparent">
+                        Blogs</a>
+                </li>
+                <li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbar"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Support
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbar"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="support.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Access support</a>
+                            </li>
+                            <li>
+                                <a href="project-request-form.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Submit Project Request Form</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarResources"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            Resources
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarResources"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="agile-tools.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Project templates</a>
+                            </li>
+                            <li>
+                                <a href="glossary.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Glossary of terms</a>
+                            </li>
+                            <li>
+                                <a href="design-library/button.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    SW Design Library</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+				<li>
+                    <button
+                        id="dropdownNavbarLink"
+                        data-dropdown-toggle="dropdownNavbarAbout"
+                        class="font-bold flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent
+                            md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white
+                            dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                            About
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </button>
+                    <div
+                        id="dropdownNavbarAbout"
+                        class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700
+                            dark:divide-gray-600 shadow-xl">
+                        <ul class="py-2 text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="about.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Meet the team</a>
+                            </li>
+                            <li>
+                                <a href="projects.html" class="font-bold hover:text-blue-500 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    Our projects</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    
+<div class="container mx-auto px-9 max-w-screen-xl mb-5">
+    <h1 class="mt-20 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        Rethinking Recruitment: Exploring the future of our HR Systems</h1>
+    <p class="mt-2 mb-7 text-slate-500">2025-07-03</p>
+    <div class="flex justify-left items-left mb-7">
+        <img
+            src="https://github.com/TaraRhoseyn/digital-team-site/blob/main/dist/img/profiles/paul-batcup.webp?raw=true"
+            alt="Paul Batcup's Picture"
+            class="h-10 w-10 rounded-full bg-gray-50 mr-3">
+        <h2 class="mt-2 text-slate-500">By Paul Batcup</h2>
+    </div>
+    
+    <p class="mt-3">In a digital world that never stops evolving, legacy systems can quickly become roadblocks.</p>
+    
+    <p class="mt-3">For Sport Wales, that reality has hit home with our ageing HR portal – a system no longer fit for purpose.</p>
+    
+    <p class="mt-3">In response, we've been carrying out a HR Portal Discovery Project: a project to uncover what isn't working, what you (as users) really need, and what the future of a streamlined, user-friendly HR system could look like.</p>
+    
+    <h2 class="mb-5 mt-9 text-3xl font-bold">Why Now?</h2>
+    
+    <p class="mt-3">The current recruitment system is heading towards obsolescence - with the software becoming unsupported by the end of the year.</p>
+    
+    <p class="mt-3">Sport Wales needs a modern solution that not only ensures compliance but works for real people – job applicants, HR staff, Sport Wales managers and employees.</p>
+    
+    <p class="mt-3">But instead of stopping at recruitment, the team are taking a wider lens.</p>
+    
+    <p class="mt-3">We thought if we're fixing part of the system, why not take the opportunity to improve the whole employee management experience?</p>
+    
+    <p class="mt-3">This led to a dual focus: reimagining both the recruitment process and the broader HR functionality such as leave booking and absence tracking.</p>
+    
+    <h2 class="mb-5 mt-9 text-3xl font-bold">The Method Behind the Discovery</h2>
+    
+    <p class="mt-3">To understand how the existing system is used, the team conducted an eight-week focused research push, including:</p>
+    
+    <ul class="mt-3 list-disc pl-6">
+        <li>Interviews with HR staff, new recruits, line managers, payroll and finance officers</li>
+        <li>A staff survey</li>
+        <li>Detailed customer journey mapping and service blueprinting</li>
+    </ul>
+    
+    <p class="mt-3">These methods have given us a current view of both the applicant experience and the internal management process.</p>
+    
+    <h2 class="mb-5 mt-9 text-3xl font-bold">What We Found</h2>
+    
+    <p class="mt-3">Some findings weren't surprising – like clunky forms and duplicated processes. Others, however, offered new insight into how even small barriers can create big problems.</p>
+    
+    <p class="mt-3 underline"><strong>1. Recruitment: Good Intentions, Poor Execution</strong></p>
+    
+    <p class="mt-3">The detail in application forms was appreciated, but users find the layout cluttered and overwhelming, especially around equality and diversity sections. Even more significantly, there is unnecessary duplication between the recruitment portal and Sport Wales' website. Applicants were spending more time than needed – a particular issue for those who are time poor, such as carers or those juggling multiple jobs.</p>
+    
+    <p class="mt-3 underline"><strong>2. The Careers Page Is Being Skipped</strong></p>
+    
+    <p class="mt-3">A major eye-opener was that many candidates bypassed the careers page entirely, heading straight from external job adverts (like on LinkedIn) into the application. As a result, they missed out on key content: pay scales, benefits, guidance, and training information. This raises an important question: how do we make sure critical information reaches applicants even if they skip the "intended" journey?</p>
+    
+    <p class="mt-3 underline"><strong>3. Accessibility Gaps</strong></p>
+    
+    <p class="mt-3">One of the more pressing issues is the reliance on a Word-based application forms. Some users lacked the right software or hardware, forcing them to borrow devices or licences. A web-based application process emerged as the clear solution – removing the need for downloads and making the process more inclusive.</p>
+    
+    <p class="mt-3 underline"><strong>4. A Desire for More Transparency</strong></p>
+    
+    <p class="mt-3">Applicants also wanted more updates on their application status. Many found the process a black hole, logging into their account only to see no clear progress updates. While it's unclear what best practice looks like here, the need for clearer communication is evident.</p>
+    
+    <p class="mt-3 underline"><strong>5. HR Management: Complex Tasks, Clunky Tools</strong></p>
+    
+    <p class="mt-3">Internally, staff are split into two groups: general users (who used the portal for basic tasks like booking leave) and specialist users (in HR, payroll, finance). The latter group reported significant friction, including:</p>
+    
+    <ul class="mt-3 list-disc pl-6">
+        <li>Manual data transfers between recruitment and HR systems</li>
+        <li>Repetitive report building</li>
+        <li>Overtime and casual staff data managed offline</li>
+        <li>Difficulties automating part-time leave calculations</li>
+    </ul>
+    
+    <p class="mt-3">It is clear the system is often forcing staff to work around it – not with it.</p>
+    
+    <h2 class="mb-5 mt-9 text-3xl font-bold">What Happens Next?</h2>
+    
+    <p class="mt-3">The team has compiled a comprehensive report, including detailed user personas and a full list of requirements – everything from 'must-haves' to 'nice-to-haves'. These include more intuitive dashboards, automated calculations, and seamless integration with other systems like payroll and Single Sign-On.</p>
+    
+    <p class="mt-3">The next step is for the HR team to review and refine the requirements, ensuring nothing critical is missed. Then, the current system provider will be approached to see if they can meet these expectations.</p>
+    
+    <p class="mt-3">We need to replace the recruitment system by the end of the calendar year, so we will need a solution fast.</p>
+    
+    <p class="mt-3"><em>Paul Batcup, Matt Davies and Anselm Powell</em></p>
+    
+</div>
+
+    <footer class="bg-white rounded-lg shadow m-4 mt-5 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024
+            <a href="https://sport.wales" target="blank" class="hover:underline">Sport Wales</a>
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="accessibility-statement.html" class="mr-4 hover:underline md:mr-6 ">Accessibility Statement</a>
+            </li>
+            <li>
+                <a href="privacy-policy.html" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+            </li>
+            <li>
+                <a href="developers.html" class="mr-4 hover:underline md:mr-6">Developers</a>
+            </li>
+            <li>
+                <a href="website-roadmap.html" class="mr-4 hover:underline">Website Roadmap</a>
+            </li>
+            <li>
+                <a href="contact.html" class="hover:underline">Contact</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+  </body>
+</html>

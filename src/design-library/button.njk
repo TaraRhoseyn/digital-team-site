@@ -1,0 +1,402 @@
+{% extends "design-library-base.njk" %}
+{% set activePage = 'button' %}
+{% set activeGroup = 'buttons' %}
+
+{% block componentContent %}
+<div class="max-w-4xl mx-auto px-6 py-8">
+    
+    <!-- Page Title -->
+    <h1 class="text-4xl font-bold text-gray-900 mb-8">Button</h1>
+
+    <!-- Primary Example Block -->
+    <div class="border border-gray-300 rounded-lg mb-8">
+
+        <!-- Live Example -->
+        <div class="p-10 bg-gray-50 flex justify-center">
+            <button class="sw-button sw-button-primary">
+                Save and continue
+            </button>
+        </div>
+        
+        <!-- React Code Tabs -->
+        <div class="border-t border-gray-200">
+            <div id="component1-code-tabs"></div>
+        </div>
+    </div>
+
+    <!-- When to use this component -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">When to use this component</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Use the button component to help users carry out an action like starting an application 
+            or saving their information in Sport Wales services.
+        </p>
+    </section>
+
+    <!-- How it works -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">How it works</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            Write button text in sentence case, describing the action it performs. Follow these guidelines:
+        </p>
+        
+        <ul class="list-disc ml-6 space-y-2 text-gray-700 leading-relaxed mb-6">
+            <li>Button height should be 46px according to Sport Wales brand guidelines</li>
+            <li>Use rounded edges (8px border radius) for all buttons</li>
+            <li>Write button text in sentence case, describing the action it performs</li>
+            <li>Align the primary action button to the left edge of your form</li>
+            <li>Primary blue button hover state changes to #2E7799</li>
+            <li>Start/Warning red button hover state changes to #C9202E</li>
+            <li>Secondary buttons use outlined style with Sport Wales blue border</li>
+            <li>Use Montserrat font family for all button text</li>
+            <li>Avoid using multiple primary buttons on a single page</li>
+            <li>Use start buttons for main call to action on service start pages</li>
+            <li>Use warning buttons sparingly for destructive actions only</li>
+            <li>Pages with too many calls to action make it hard for users to know what to do next</li>
+        </ul>
+        
+
+        <!-- Interactive Features -->
+        <div class="mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Interactive Features</h3>
+            <ul class="space-y-2 text-gray-700 leading-relaxed">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Primary Button - Sport Wales blue (#164B64) with hover effects</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Start Button - Sport Wales red (#E32434) for call-to-action</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Secondary Button - Outlined style that fills on hover</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Warning Button - Red background for destructive actions</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Smooth transition effects on all interactive states</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Consistent 46px height across all button variants</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Responsive design that works across all device sizes</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span>Accessible focus states for keyboard navigation</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Default buttons -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Default buttons</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Use a default button for the main call to action on a page.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed mb-8">
+            Avoid using multiple default buttons on a single page. Having more than one main call to 
+            action reduces their impact, and makes it harder for users to know what to do next.
+        </p>
+
+        <!-- Default Button Example -->
+        <div class="border border-gray-300 rounded-lg mb-8">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <button class="sw-button sw-button-primary">
+                    Save and continue
+                </button>
+            </div>
+            
+            <div class="border-t border-gray-200">
+                <div id="component2-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start buttons -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Start buttons</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Use a start button for the main call to action on your service's start page.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed mb-8">
+            Start buttons do not usually submit form data, so use a link tag instead of a button tag.
+        </p>
+
+        <!-- Start Button Example -->
+        <div class="border border-gray-300 rounded-lg mb-8">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <a href="#" class="sw-button sw-button-start">
+                    Start now
+                    <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-200">
+                <div id="component3-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secondary buttons -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Secondary buttons</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Use secondary buttons for secondary calls to action on a page.
+        </p>
+        
+        <p class="text-gray-700 leading-relaxed mb-8">
+            Pages with too many calls to action make it hard for users to know what to do next. 
+            Before adding lots of secondary buttons, try to simplify the page or break the content 
+            down across multiple pages.
+        </p>
+
+        <!-- Secondary Button Example -->
+        <div class="border border-gray-300 rounded-lg mb-8">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <button class="sw-button sw-button-secondary">
+                    Find address
+                </button>
+            </div>
+            
+            <div class="border-t border-gray-200">
+                <div id="component4-code-tabs"></div>
+            </div>
+        </div>
+
+        <p class="text-gray-700 leading-relaxed">
+            You can also group default and secondary buttons together.
+        </p>
+    </section>
+
+    <!-- Warning buttons -->
+    <section class="mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Warning buttons</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+            Warning buttons are designed to make users think carefully before they use them. They 
+            only work if used very sparingly. Most services should not need one.
+        </p>
+
+        <!-- Warning Button Example -->
+        <div class="border border-gray-300 rounded-lg mb-8">
+            <div class="p-10 bg-gray-50 flex justify-center">
+                <button class="sw-button sw-button-start">
+                    Delete account
+                </button>
+            </div>
+            
+            <div class="border-t border-gray-200">
+                <div id="component5-code-tabs"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sport Wales Specific Guidelines -->
+    <section class="mb-12 border border-blue-200 rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-[#164B64] mb-4">Sport Wales Guidelines</h2>
+        <ul class="list-disc ml-6 space-y-2 text-black leading-relaxed">
+            <li>Button height should be 46px according to Sport Wales brand guidelines</li>
+            <li>Use rounded edges (8px border radius) for all buttons</li>
+            <li>Primary buttons use Sport Wales blue (#164B64) with hover state (#2E7799)</li>
+            <li>Start buttons use Sport Wales red (#E32434) with hover state (#C9202E)</li>
+            <li>Use Montserrat font family for all button text</li>
+            <li>Write button text in sentence case, describing the action it performs</li>
+            <li>Align the primary action button to the left edge of your form</li>
+        </ul>
+    </section>
+
+</div>
+
+{% block componentScripts %}
+<script type="text/babel">
+{% raw %}
+// Button Component Data
+function ComponentInstructions() {
+    const componentData = {
+        codeExamples: {
+            component1: {
+                html: `<button class="sw-button sw-button-primary">
+    Save and continue
+</button>`,
+                css: `.sw-button {
+    height: 46px;
+    padding: 0 2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sw-button-primary {
+    background-color: #164B64;
+    color: white;
+}
+.sw-button-primary:hover {
+    opacity: 0.9;
+}`,
+                react: `function PrimaryButton({ children, onClick }) {
+    return (
+        <button 
+            className="sw-button sw-button-primary"
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    );
+}`,
+                tailwind: `<button class="sw-button sw-button-primary">
+    Save and continue
+</button>`
+            },
+            component2: {
+                html: `<button class="sw-button sw-button-primary">
+    Save and continue
+</button>`,
+                css: `/* Same as Primary Button */
+.sw-button-primary {
+    background-color: #164B64;
+    color: white;
+}`,
+                react: `function DefaultButton({ children, onClick }) {
+    return (
+        <button 
+            className="sw-button sw-button-primary"
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    );
+}`,
+                tailwind: `<button class="sw-button sw-button-primary">
+    Save and continue
+</button>`
+            },
+            component3: {
+                html: `<a href="/start" class="sw-button sw-button-start">
+  Start now
+  <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+  </svg>
+</a>`,
+                css: `.sw-button-start {
+    background-color: #E32434;
+    color: white;
+}
+.sw-button-start:hover {
+    background-color: #C9202E;
+    color: white;
+}`,
+                react: `function StartButton({ children, href, onClick }) {
+    return (
+        <a 
+            href={href}
+            className="sw-button sw-button-start"
+            onClick={onClick}
+        >
+            {children}
+            {/* Arrow SVG icon */}
+        </a>
+    );
+}`,
+                tailwind: `<a href="#" class="sw-button sw-button-start">Start now...</a>`
+            },
+            component4: {
+                html: `<button class="sw-button sw-button-secondary">
+    Find address
+</button>`,
+                css: `.sw-button-secondary {
+    background-color: transparent;
+    color: #164B64;
+    border: 2px solid #164B64;
+}
+.sw-button-secondary:hover {
+    background-color: #164B64;
+    color: white;
+}`,
+                react: `function SecondaryButton({ children, onClick }) {
+    return (
+        <button 
+            className="sw-button sw-button-secondary"
+            onClick={onClick}
+        >
+            {children}
+        </button>
+    );
+}`,
+                tailwind: `<button class="sw-button sw-button-secondary">
+    Find address
+</button>`
+            },
+            component5: {
+                html: `<button class="sw-button sw-button-start">
+    Delete account
+</button>`,
+                css: `/* Uses same style as Start Button */
+.sw-button-start { ... }`,
+                react: `function WarningButton({ children, onClick, disabled = false }) {
+    return (
+        <button 
+            className="sw-button sw-button-start"
+            onClick={onClick}
+            disabled={disabled}
+        >
+            {children}
+        </button>
+    );
+}`,
+                tailwind: `<button class="sw-button sw-button-start">
+    Delete account
+</button>`
+            }
+        }
+    };
+
+    return componentData;
+}
+
+// Render all button components using centralized CodeTabsComponent
+const componentData = ComponentInstructions();
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component1} tabId="component1" />,
+    document.getElementById('component1-code-tabs')
+);
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component2} tabId="component2" />,
+    document.getElementById('component2-code-tabs')
+);
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component3} tabId="component3" />,
+    document.getElementById('component3-code-tabs')
+);
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component4} tabId="component4" />,
+    document.getElementById('component4-code-tabs')
+);
+
+ReactDOM.render(
+    <CodeTabsComponent codeExamples={componentData.codeExamples.component5} tabId="component5" />,
+    document.getElementById('component5-code-tabs')
+);
+
+{% endraw %}
+</script>
+{% endblock %}
+{% endblock %}
